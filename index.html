@@ -1,115 +1,76 @@
 <!DOCTYPE html>
 <html lang="id">
-<style>
-  header{background:url('hero-kaaba.jpg') center/cover;position:relative}
-  header::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,#663399cc,#8a2be2cc)}
-  .legal-slider{display:flex;gap:20px;animation:slide 20s linear infinite}
-  @keyframes slide{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
-  .legal-slider img{height:50px;filter:brightness(0) invert(1)}
-</style>
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Attamimi Tours – Haji & Umroh Terpercaya</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Poppins',Arial,sans-serif;color:#333;background:#f8f8f8}
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Poppins',Arial,sans-serif;color:#333;background:#f8f8f8}
 
-/* HERO dengan gambar */
-header{
-  background:url('hero-kaaba.jpg') center/cover no-repeat;
-  height:350px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  position:relative;
-}
-header::before{            /* overlay gelap supaya tulisan timbul */
-  content:'';
-  position:absolute; inset:0;
-  background:rgba(0,0,0,.45);
-}
-header img{height:60px;position:relative;z-index:2}
-header h1{
-  font-size:2.4rem;
-  color:#fff;
-  margin:10px 0 8px;
-  position:relative;
-  z-index:2;
-  text-shadow:0 2px 4px #000;
-}
-header p{
-  font-size:1.1rem;
-  color:#fff;
-  position:relative;
-  z-index:2;
-  text-shadow:0 1px 3px #000;
-}
+    /* HERO */
+    header{
+      background:url('hero-kaaba.jpg') center/cover no-repeat;
+      min-height:350px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      position:relative;
+    }
+    header::before{
+      content:'';
+      position:absolute;inset:0;
+      background:rgba(0,0,0,.5);
+    }
+    header img{height:60px;position:relative;z-index:2}
+    header h1{font-size:2rem;color:#fff;margin:10px 0 8px;position:relative;z-index:2;text-shadow:0 2px 4px #000}
+    header p{font-size:1rem;color:#fff;position:relative;z-index:2;text-shadow:0 1px 3px #000}
+    .btn{
+      padding:12px 26px;background:#fff;color:#663399;border:none;border-radius:30px;font-weight:700;text-decoration:none;position:relative;z-index:2;margin-top:12px
+    }
+    .btn:hover{background:#eaeaea}
 
-.btn{
-  padding:12px 28px;
-  background:#fff;
-  color:#663399;
-  border:none;
-  border-radius:30px;
-  font-weight:700;
-  text-decoration:none;
-  position:relative;
-  z-index:2;
-  margin-top:15px;
-}
-.btn:hover{background:#eaeaea}
-</style>
-   <style>
-/* --- HERO PUTIH + OVERLAY UNGU --- */
-header{
-  background:#fff url('hero-kaaba.jpg') center/cover no-repeat;
-  position:relative;
-  color:#fff;
-}
-header::before{
-  content:'';
-  position:absolute; inset:0;
-  background:rgba(102,51,153,.75); /* ungu transparan */
-}
+    /* NAV */
+    nav{background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.1)}
+    nav ul{display:flex;flex-wrap:wrap;justify-content:center;list-style:none}
+    nav a{display:block;padding:12px 18px;color:#663399;font-weight:600;text-decoration:none}
+    nav a:hover{background:#f1f1f1}
 
-/* --- LEGALITAS DI BAGIAN “TENTANG” --- */
-.legal-strip{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:15px;
-  margin-top:15px;
-}
-.legal-strip img{
-  height:45px;
-  object-fit:contain;
-}
-</style>
+    /* CONTAINER */
+    .container{max-width:1100px;margin:auto;padding:40px 20px}
+
+    /* PAKET RESPONSIVE */
+    .paket{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+    .card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+    .card img{width:100%;height:auto;display:block}
+    .card-body{padding:18px}
+    .card-body h3{margin-bottom:8px;font-size:1.2rem}
+    .price{color:#663399;font-weight:700;margin-bottom:8px}
+
+    /* GALERI SLIDER 3 FOTO */
+    .galeri-slider{position:relative;overflow:hidden;height:200px;border-radius:12px}
+    .galeri-slider img{position:absolute;width:100%;height:100%;object-fit:cover;opacity:0;animation:fade 9s infinite}
+    .galeri-slider img:nth-child(1){animation-delay:0s}
+    .galeri-slider img:nth-child(2){animation-delay:3s}
+    .galeri-slider img:nth-child(3){animation-delay:6s}
+    @keyframes fade{0%,33.33%{opacity:1}33.34%,100%{opacity:0}}
+
+    /* FOOTER */
+    footer{background:#333;color:#ccc;text-align:center;padding:25px 10px}
+  </style>
 </head>
 
 <body>
   <!-- HERO -->
   <header>
-  <img src="Logo.png" alt="Attamimi Logo" style="position:relative;z-index:2">
-  <h1>Attamimi Tours & Travel</h1>
-  <p>Haji Khusus Tanpa Antri & Umroh Sepanjang Tahun</p>
-
-  <!-- Legalitas Slider -->
-  <div class="legal-slider">
-  <img src="LogoKemenag.png" alt="Kemenag">
-  <img src="LogoAmphuri.png" alt="Amphuri">
-  <img src="LogoSiskopatuh.jpg" alt="Siskopatuh">
-  <img src="Logo5Pasti.png" alt="5Pasti">
-  <img src="LogoIATA.png" alt="IATA">
-</div>
-
-  <a href="#packages" class="btn" style="position:relative;z-index:2">Lihat Paket</a>
-</header>
+    <img src="Logo.png" alt="Attamimi Logo">
+    <h1>Attamimi Tours & Travel</h1>
+    <p>Haji Khusus Tanpa Antri & Umroh Sepanjang Tahun</p>
+    <a href="#packages" class="btn">Lihat Paket</a>
+  </header>
 
   <!-- NAV -->
   <nav>
@@ -121,95 +82,83 @@ header::before{
     </ul>
   </nav>
 
-  <!-- ABOUT -->
+  <!-- TENTANG -->
   <section id="about" class="container">
-  <h2>Tentang Kami</h2>
-  <p>
-    PT. Attamimi Tawakakal Alalloh – berizin resmi PPIU No. U.352/2020 & PIHK No. 02202072929030002/2024.
-    Melayani Haji Khusus Langsung Berangkat 2025 dan Umroh sepanjang tahun 1447H dengan fasilitas premium.
-  </p>
+    <h2>Tentang Kami</h2>
+    <p>
+      PT. Attamimi Tawakakal Alalloh – berizin resmi PPIU No. U.352/2020 & PIHK No. 02202072929030002/2024.
+      Melayani Haji Khusus Langsung Berangkat 2025 dan Umroh sepanjang tahun 1447H dengan fasilitas premium.
+    </p>
+  </section>
 
-  <!-- Logo Legalitas -->
-  <div class="legal-strip">
-    <img src="LogoKemenag.png"   alt="Kemenag">
-    <img src="LogoAmphuri.png"   alt="Amphuri">
-    <img src="LogoSiskopatuh.jpg" alt="Siskopatuh">
-    <img src="Logo5Pasti.png"    alt="5Pasti">
-    <img src="LogoIATA.png"      alt="IATA">
-  </div>
-</section>
-
-  <!-- PACKAGES -->
+  <!-- PAKET -->
   <section id="packages" class="container">
     <h2>Pilihan Paket</h2>
-    <div class="cards">
+    <div class="paket">
       <div class="card">
         <img src="paket-haji.jpg" alt="Haji Khusus">
         <div class="card-body">
-          <h3>Haji Khusus Langsung Berangkat 2025</h3>
-          <p>Durasi 25 Hari | Hotel ★★★★★ Makkah & Madinah</p>
-          <div class="price">Reguler: Rp 295 Jt<br>Eksekutif: Rp 390 Jt</div>
-          <a href="https://wa.me/6285183049514?text=Saya%20tertarik%20Paket%20Haji%20Khusus" class="btn" target="_blank">Pesan via WA</a>
+          <h3>Haji Khusus 2025</h3>
+          <p>Durasi 25 Hari | Hotel 5★ Makkah & Madinah</p>
+          <div class="price">Reguler Rp 295 Jt</div>
+          <a href="https://wa.me/6285183049514?text=Haji%20Khusus" class="btn">Pesan WA</a>
         </div>
       </div>
+
       <div class="card">
         <img src="umroh9.jpg" alt="Umroh 9 Hari">
         <div class="card-body">
           <h3>Umroh 9 Hari</h3>
-          <p>Lion Air | Hotel Bintang 3 | 3× Umroh</p>
+          <p>Lion Air | Hotel 3★ | 3× Umroh</p>
           <div class="price">Rp 28,5 Jt</div>
-          <a href="https://wa.me/6285183049514?text=Saya%20tertarik%20Umroh%209%20Hari" class="btn" target="_blank">Pesan via WA</a>
+          <a href="https://wa.me/6285183049514?text=Umroh%209%20Hari" class="btn">Pesan WA</a>
         </div>
       </div>
+
       <div class="card">
         <img src="umroh12.jpg" alt="Umroh 12 Hari">
         <div class="card-body">
           <h3>Umroh 12 Hari</h3>
-          <p>Malaysia Airlines | Hotel Bintang 4 | 3× Umroh</p>
+          <p>Malaysia Airlines | Hotel 4★ | 3× Umroh</p>
           <div class="price">Rp 33 Jt</div>
-          <a href="https://wa.me/6285183049514?text=Saya%20tertarik%20Umroh%2012%20Hari" class="btn" target="_blank">Pesan via WA</a>
+          <a href="https://wa.me/6285183049514?text=Umroh%2012%20Hari" class="btn">Pesan WA</a>
         </div>
       </div>
+
       <div class="card">
         <img src="umroh14.jpg" alt="Umroh 14 Hari">
         <div class="card-body">
           <h3>Umroh 14 Hari</h3>
-          <p>Saudia Airlines | Hotel Bintang 4 | 3× Umroh</p>
+          <p>Saudia Airlines | Hotel 4★ | 3× Umroh</p>
           <div class="price">Rp 35,5 Jt</div>
-          <a href="https://wa.me/6285183049514?text=Saya%20tertarik%20Umroh%2014%20Hari" class="btn" target="_blank">Pesan via WA</a>
+          <a href="https://wa.me/6285183049514?text=Umroh%2014%20Hari" class="btn">Pesan WA</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- GALLERY -->
-<style>
-.gallery-mob{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
-.gallery-mob img{width:100%;max-width:300px;height:auto;border-radius:10px;margin-bottom:8px}
-@media (max-width:480px){
-  .gallery-mob img{max-width:100%}
-}
-</style>
+  <!-- GALERI SLIDER -->
+  <section id="gallery" class="container">
+    <h2>Galeri Perjalanan</h2>
+    <div class="galeri-slider">
+      <img src="galeri1.jpg" alt="Mekkah">
+      <img src="galeri2.jpg" alt="Madinah">
+      <img src="galeri3.jpg" alt="Arafah">
+    </div>
+  </section>
 
-<section id="gallery" class="container">
-  <h2>Galeri Perjalanan</h2>
-  <div class="gallery-mob">
-    <img src="galeri1.jpg" alt="Mekkah">
-    <img src="galeri2.jpg" alt="Madinah">
-    <img src="galeri3.jpg" alt="Arafah">
-  </div>
-</section>
-  <!-- CONTACT -->
-  <section id="contact" class="container contact">
+  <!-- KONTAK -->
+  <section id="contact" class="container">
     <h2>Kontak & Alamat</h2>
-    <p><i class="fas fa-map-marker-alt"></i> Kompleks Pondok Pesantren Putra Putri Al Azhar, Desa Karangsari, Kec. Purwodadi, Kab. Purworejo</p>
-    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/6285183049514" style="color:var(--primary);font-weight:600">+62 851-8304-9514</a></p>
-    <p><i class="fas fa-envelope"></i> attamimitours@gmail.com</p>
-    <a href="https://wa.me/6285183049514?text=Assalamu'alaikum%2C%20saya%20ingin%20konsultasi%20paket" class="btn" target="_blank">Chat WhatsApp Sekarang</a>
+    <p><strong>Alamat:</strong><br>
+       Kompleks Pondok Pesantren Putra Putri Al Azhar, Desa Karangsari, Kec. Purwodadi, Kab. Purworejo Jawa Tengah</p>
+    <p><strong>WhatsApp:</strong> <a href="https://wa.me/6285183049514">+62 851-8304-9514</a></p>
+    <p><strong>Email:</strong> attamimi.tours@gmail.com</p>
+    <a href="https://wa.me/6285183049514?text=Assalamu'alaikum%2C%20saya%20ingin%20konsultasi%20paket" class="btn">Chat WhatsApp Sekarang</a>
   </section>
 
   <footer>
-    &copy; @2025 Attamimi Tours - Purworejo
+    &copy; 2025 Attamimi Tours – Izin PPIU U.352/2020 & PIHK 02202072929030002/2024
   </footer>
 </body>
 </html>
