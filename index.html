@@ -39,6 +39,32 @@
     .contact i{margin-right:8px;color:var(--secondary)}
     @media(max-width:600px){header h1{font-size:2.1rem}nav a{padding:12px 15px;font-size:.9rem}}
   </style>
+   <style>
+/* --- HERO PUTIH + OVERLAY UNGU --- */
+header{
+  background:#fff url('hero-kaaba.jpg') center/cover no-repeat;
+  position:relative;
+  color:#fff;
+}
+header::before{
+  content:'';
+  position:absolute; inset:0;
+  background:rgba(102,51,153,.75); /* ungu transparan */
+}
+
+/* --- LEGALITAS DI BAGIAN “TENTANG” --- */
+.legal-strip{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:15px;
+  margin-top:15px;
+}
+.legal-strip img{
+  height:45px;
+  object-fit:contain;
+}
+</style>
 </head>
 
 <body>
@@ -72,12 +98,21 @@
 
   <!-- ABOUT -->
   <section id="about" class="container">
-    <h2>Tentang Kami</h2>
-    <p style="text-align:center;max-width:700px;margin:auto">
-      PT. Attamimi Tawakakal Alalloh – berizin resmi PPIU No. U.352/2020 & PIHK No. 02202072929030002/2024.
-      Melayani Haji Khusus Langsung Berangkat 2025 dan Umroh sepanjang tahun 1447H dengan fasilitas premium.
-    </p>
-  </section>
+  <h2>Tentang Kami</h2>
+  <p>
+    PT. Attamimi Tawakakal Alalloh – berizin resmi PPIU No. U.352/2020 & PIHK No. 02202072929030002/2024.
+    Melayani Haji Khusus Langsung Berangkat 2025 dan Umroh sepanjang tahun 1447H dengan fasilitas premium.
+  </p>
+
+  <!-- Logo Legalitas -->
+  <div class="legal-strip">
+    <img src="LogoKemenag.png"   alt="Kemenag">
+    <img src="LogoAmphuri.png"   alt="Amphuri">
+    <img src="LogoSiskopatuh.jpg" alt="Siskopatuh">
+    <img src="Logo5Pasti.png"    alt="5Pasti">
+    <img src="LogoIATA.png"      alt="IATA">
+  </div>
+</section>
 
   <!-- PACKAGES -->
   <section id="packages" class="container">
