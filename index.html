@@ -1,5 +1,51 @@
 <!DOCTYPE html>
 <html lang="id">
+<style>
+/* --- HERO BACKGROUND --- */
+header{
+  position:relative;
+  background:url('hero-kaaba.jpg') center/cover no-repeat;
+}
+header::before{
+  content:'';
+  position:absolute; inset:0;
+  background:linear-gradient(135deg,#663399cc,#8a2be2cc);
+}
+
+/* --- LOGO LEGALITAS SLIDER --- */
+.legal-slider{
+  display:flex;
+  gap:20px;
+  animation:slide 20s linear infinite;
+  align-items:center;
+}
+@keyframes slide{
+  0%  {transform:translateX(0)}
+  100%{transform:translateX(-100%)}
+}
+.legal-slider img{height:50px;object-fit:contain;filter:brightness(0) invert(1)}
+
+/* --- GALERI 3-FOTO SLIDER --- */
+.gallery-slider{
+  position:relative;
+  overflow:hidden;
+  height:250px;
+  border-radius:15px;
+}
+.gallery-slider img{
+  position:absolute;
+  width:100%;height:100%;object-fit:cover;
+  opacity:0;
+  animation:fade 9s infinite;
+}
+.gallery-slider img:nth-child(1){animation-delay:0s}
+.gallery-slider img:nth-child(2){animation-delay:3s}
+.gallery-slider img:nth-child(3){animation-delay:6s}
+@keyframes fade{
+  0%,33.33%{opacity:1}
+  33.34%,100%{opacity:0}
+}
+</style>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,11 +83,24 @@
 <body>
   <!-- HERO -->
   <header>
-    <img src="Logo.png" alt="Attamimi Logo">
-    <h1>Attamimi Tours & Travel</h1>
-    <p>Haji Khusus Tanpa Antri & Umroh Sepanjang Tahun</p>
-    <a href="#packages" class="btn">Lihat Paket</a>
-  </header>
+  <img src="Logo.png" alt="Attamimi Logo" style="position:relative;z-index:2">
+  <h1>Attamimi Tours & Travel</h1>
+  <p>Haji Khusus Tanpa Antri & Umroh Sepanjang Tahun</p>
+
+  <!-- Legalitas Slider -->
+  <div class="legal-slider">
+    <img src="LogoKemenag.png" alt="Kemenag">
+    <img src="LogoAmphuri.png" alt="Amphuri">
+    <img src="LogoSiskopatuh.jpg" alt="Siskopatuh">
+    <img src="Logo5Pasti.png" alt="5Pasti">
+    <img src="LogoIATA.png" alt="IATA">
+    <!-- duplikat agar seamless -->
+    <img src="LogoKemenag.png" alt="Kemenag">
+    <img src="LogoAmphuri.png" alt="Amphuri">
+  </div>
+
+  <a href="#packages" class="btn" style="position:relative;z-index:2">Lihat Paket</a>
+</header>
 
   <!-- NAV -->
   <nav>
@@ -107,14 +166,13 @@
 
   <!-- GALLERY -->
   <section id="gallery" class="container">
-    <h2>Galeri Perjalanan</h2>
-    <div class="cards">
-      <img src="galeri1.jpg" alt="Mekkah">
-      <img src="galeri2.jpg" alt="Madinah">
-      <img src="galeri3.jpg" alt="Turki">
-      <img src="galeri4.jpg" alt="Dubai">
-    </div>
-  </section>
+  <h2>Galeri Perjalanan</h2>
+  <div class="gallery-slider">
+    <img src="galeri1.jpg" alt="Mekkah">
+    <img src="galeri2.jpg" alt="Madinah">
+    <img src="galeri3.jpg" alt="Arafah">
+  </div>
+</section>
 
   <!-- CONTACT -->
   <section id="contact" class="container contact">
