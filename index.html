@@ -8,6 +8,14 @@
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
     body{font-family:'Poppins',Arial,sans-serif;color:#333;background:#f8f8f8}
+/* COUNTDOWN */
+.countdown {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 20px 0 10px 0;
+  color: #d9534f; /* merah agar terkesan urgent */
+}
 
     /* HERO */
     header{
@@ -225,6 +233,10 @@
       <strong>Email:</strong> attamimi.tour@gmail.com<br><br>
 
       <strong>WhatsApp:</strong> +62 851-8304-9514<br><br>
+      
+      <div class="countdown" id="countdown">
+       Buruan daftar! Waktu tersisa: <span id="time"></span>
+      </div>
 
       <!-- Tombol hijau tengah -->
       <a href="https://wa.me/6285183049514?text=Assalamu'alaikum%2C%20saya%20ingin%20konsultasi%20paket"
@@ -237,5 +249,30 @@
   <footer>
     &copy; 2025 Attamimi Tours – Izin PPIU U.352/2020 & PIHK 02202072929030002/2024
   </footer>
+  <script>
+  // Target tanggal keberangkatan
+  const targetDate = new Date("Sep 27, 2025 00:00:00").getTime();
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    if (distance < 0) {
+      document.getElementById("countdown").innerHTML = "Pendaftaran sudah ditutup!";
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("time").innerHTML =
+      days + " hari " + hours + ":" + minutes + ":" + seconds;
+  }
+
+  setInterval(updateCountdown, 1000);
+</script>
+
 </body>
 </html>
