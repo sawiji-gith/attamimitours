@@ -241,5 +241,16 @@
     }
     setInterval(updateCountdown, 1000);
   </script>
+  <script>
+  document.querySelectorAll('a[href^="https://wa.me/"]').forEach(function(el) {
+    el.addEventListener('click', function() {
+      gtag('event', 'whatsapp_click', {
+        event_category: 'contact',
+        event_label: 'tombol WA',
+        value: 1
+      });
+    });
+  });
+</script>
 </body>
 </html>
