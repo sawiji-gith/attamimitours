@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Attamimi Tours – Haji & Umroh Resmi</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attamimi Tours – Haji & Umroh Resmi Yogyakarta & Jawa Tengah</title>
 
   <!-- Google Search Console -->
   <meta name="google-site-verification" content="Umo75pcrRNEr-g9k5pQHi5maV5Y7-P8K3OMUdF7IYLY" />
@@ -24,6 +24,9 @@
   <meta name="twitter:description" content="Paket Umroh & Haji resmi dari Yogyakarta & Jawa Tengah. Hotel bintang 5, maskapai terpercaya, bimbingan ibadah amanah.">
   <meta name="twitter:image" content="https://attamimitours.biz.id/Logo.png">
 
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-69KG75SMLR"></script>
   <script>
@@ -32,95 +35,108 @@
     gtag('js', new Date());
     gtag('config', 'G-69KG75SMLR');
   </script>
-
-  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header -->
+
+  <!-- Navbar -->
   <header>
-    <div class="logo">
-      <img src="Logo.png" alt="Attamimi Tours Logo" />
-      <h1>Attamimi Tours</h1>
-    </div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#tentang">Tentang</a></li>
-        <li><a href="#paket">Paket</a></li>
+    <nav class="navbar">
+      <div class="logo">Attamimi Tours</div>
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+      <ul class="nav-links" id="navMenu">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#paket">Paket Umroh</a></li>
         <li><a href="#galeri">Galeri</a></li>
+        <li><a href="#legalitas">Legalitas</a></li>
         <li><a href="#testimoni">Testimoni</a></li>
+        <li><a href="#faq">FAQ</a></li>
         <li><a href="#kontak">Kontak</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- Hero -->
-  <section class="hero">
-    <h2>Umroh Akbar 27 September 2025</h2>
-    <p>Berangkat bersama Attamimi Tours – Travel Resmi & Amanah</p>
-    <a href="https://wa.me/6285183049514" class="btn">Daftar Sekarang</a>
+  <section id="hero" class="hero">
+    <h1>Umroh Akbar 27 September 2025</h1>
+    <p>Mulai Rp 29,9 Juta – Hotel dekat Masjidil Haram</p>
+    <a href="https://wa.me/6285183049514" class="cta">Daftar Sekarang</a>
   </section>
 
-  <!-- Tentang -->
-  <section id="tentang">
-    <h2>Tentang Kami</h2>
-    <p>Attamimi Tours adalah biro perjalanan Haji & Umroh resmi terdaftar di Kemenag RI. Kami berkomitmen memberikan pelayanan terbaik dengan fasilitas hotel bintang 5, maskapai terpercaya, dan pembimbing ibadah berpengalaman.</p>
-  </section>
-
-  <!-- Paket -->
-  <section id="paket">
+  <!-- Paket Umroh -->
+  <section id="paket" class="paket">
     <h2>Paket Umroh</h2>
     <div class="paket-container">
-      <div class="paket">
-        <img src="paket1.jpg" alt="Paket Umroh September">
-        <h3>Umroh Akbar 27 September 2025</h3>
-        <p>Harga mulai Rp 29,9 juta. Sisa seat 10 orang. Hotel bisa upgrade depan Masjidil Haram.</p>
-        <a href="https://wa.me/6285183049514" class="btn">Pesan Sekarang</a>
+      <div class="paket-card">
+        <img src="paket1.jpg" alt="Paket Umroh 9 Hari">
+        <h3>Umroh 9 Hari</h3>
+        <p>Mulai Rp 28,5 Juta</p>
       </div>
-      <div class="paket">
-        <img src="paket2.jpg" alt="Paket Umroh Ramadhan">
+      <div class="paket-card">
+        <img src="paket2.jpg" alt="Umroh Awal Ramadhan">
         <h3>Umroh Awal Ramadhan</h3>
-        <p>12 Hari, 10 hari di Makkah. Berangkat H-1 Ramadhan. Nikmati ibadah penuh berkah.</p>
-        <a href="https://wa.me/6285183049514" class="btn">Pesan Sekarang</a>
+        <p>12 Hari – Fokus Makkah</p>
+      </div>
+      <div class="paket-card">
+        <img src="paket3.jpg" alt="Umroh Akhir Ramadhan">
+        <h3>Umroh Akhir Ramadhan</h3>
+        <p>12 Hari – I’tikaf di Masjidil Haram</p>
       </div>
     </div>
   </section>
 
   <!-- Galeri -->
-  <section id="galeri">
+  <section id="galeri" class="galeri">
     <h2>Galeri Perjalanan</h2>
     <div class="galeri-container">
-      <img src="galeri1.jpg" alt="Galeri Umroh 1">
-      <img src="galeri2.jpg" alt="Galeri Umroh 2">
-      <img src="galeri3.jpg" alt="Galeri Umroh 3">
-      <img src="galeri4.jpg" alt="Galeri Umroh 4">
+      <img src="galeri1.jpg" alt="Foto Umroh">
+      <img src="galeri2.jpg" alt="Foto Jamaah">
+      <img src="galeri3.jpg" alt="Masjidil Haram">
+      <img src="galeri4.jpg" alt="Masjid Nabawi">
     </div>
   </section>
 
   <!-- Legalitas -->
-  <section id="legalitas">
+  <section id="legalitas" class="legalitas">
     <h2>Legalitas Resmi</h2>
-    <div class="legalitas-container">
-      <img src="kemenag.png" alt="Izin Kemenag">
-      <img src="amphuri.png" alt="Keanggotaan Amphuri">
-    </div>
+    <img src="legalitas.jpg" alt="Legalitas Travel Umroh">
+    <p>Terdaftar resmi di Kemenag RI dan anggota Amphuri.</p>
   </section>
 
   <!-- Testimoni -->
-  <section id="testimoni">
+  <section id="testimoni" class="testimoni">
     <h2>Testimoni Jamaah</h2>
-    <img src="testimoni.jpg" alt="Testimoni Jamaah" class="testimoni-img">
+    <img src="testimoni.jpg" alt="Testimoni Jamaah Umroh">
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="faq">
+    <h2>FAQ</h2>
+    <details>
+      <summary>Apakah Attamimi Tours resmi?</summary>
+      <p>Ya, terdaftar resmi di Kemenag RI.</p>
+    </details>
+    <details>
+      <summary>Hotel dekat Masjidil Haram?</summary>
+      <p>Bisa upgrade ke hotel depan Masjidil Haram.</p>
+    </details>
   </section>
 
   <!-- Kontak -->
-  <section id="kontak">
+  <section id="kontak" class="kontak">
     <h2>Hubungi Kami</h2>
-    <p>Untuk informasi lebih lanjut & pendaftaran, hubungi kami melalui WhatsApp:</p>
-    <a href="https://wa.me/6285183049514" class="btn">Chat via WhatsApp</a>
+    <a href="https://wa.me/6285183049514" class="wa-btn">Chat WhatsApp</a>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Attamimi Tours. Semua Hak Dilindungi.</p>
+    <p>© 2025 Attamimi Tours. Semua Hak Dilindungi.</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navMenu').classList.toggle('active');
+    }
+  </script>
+
 </body>
 </html>
