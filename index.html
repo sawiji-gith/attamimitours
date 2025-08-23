@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Attamimi Tours – Haji & Umroh Resmi Yogyakarta & Jawa Tengah</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Attamimi Tours – Haji & Umroh Resmi</title>
 
   <!-- Google Search Console -->
   <meta name="google-site-verification" content="Umo75pcrRNEr-g9k5pQHi5maV5Y7-P8K3OMUdF7IYLY" />
@@ -24,9 +24,6 @@
   <meta name="twitter:description" content="Paket Umroh & Haji resmi dari Yogyakarta & Jawa Tengah. Hotel bintang 5, maskapai terpercaya, bimbingan ibadah amanah.">
   <meta name="twitter:image" content="https://attamimitours.biz.id/Logo.png">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
-
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-69KG75SMLR"></script>
   <script>
@@ -35,108 +32,292 @@
     gtag('js', new Date());
     gtag('config', 'G-69KG75SMLR');
   </script>
-</head>
-<body>
 
-  <!-- Navbar -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">Attamimi Tours</div>
-      <button class="hamburger" onclick="toggleMenu()">☰</button>
-      <ul class="nav-links" id="navMenu">
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#paket">Paket Umroh</a></li>
-        <li><a href="#galeri">Galeri</a></li>
-        <li><a href="#legalitas">Legalitas</a></li>
-        <li><a href="#testimoni">Testimoni</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#kontak">Kontak</a></li>
-      </ul>
-    </nav>
+  <style>
+    :root{
+      --primary:#663399; --accent:#ff5722; --white:#fff; --black:#222; --bg:#f7f7fb;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{overflow-x:hidden}
+    body{font-family:'Poppins', Arial, sans-serif; background:var(--bg); color:var(--black); line-height:1.6; padding-top:76px}
+
+    /* ================= NAVBAR (Fixed + Hamburger Besar) ================ */
+    .topbar{
+      position:fixed; top:0; left:0; right:0; height:76px; z-index:1000;
+      background:#fff; box-shadow:0 2px 10px rgba(0,0,0,.08);
+      display:flex; align-items:center; justify-content:center;
+    }
+    .nav{
+      width:100%; max-width:1200px; padding:0 16px;
+      display:flex; align-items:center; justify-content:space-between;
+    }
+    .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
+    .brand img{height:44px; width:auto}
+    .brand span{font-weight:800; color:var(--primary); letter-spacing:.4px}
+
+    .nav-links{display:flex; gap:18px; align-items:center}
+    .nav-links a{
+      text-decoration:none; color:var(--primary); font-weight:600; padding:10px 12px; border-radius:10px;
+    }
+    .nav-links a:hover{background:rgba(102,51,153,.08)}
+
+    /* Hamburger (besar & klik area lebar) */
+    .hamburger{
+      width:46px; height:46px; border-radius:12px; border:1px solid #e5e5e5; background:#fff;
+      display:none; align-items:center; justify-content:center; cursor:pointer;
+      box-shadow:0 2px 6px rgba(0,0,0,.06);
+    }
+    .hamburger .bar{
+      width:26px; height:3px; background:#333; border-radius:4px; position:relative;
+    }
+    .hamburger .bar::before, .hamburger .bar::after{
+      content:''; position:absolute; left:0; right:0; height:3px; background:#333; border-radius:4px;
+    }
+    .hamburger .bar::before{top:-7px}
+    .hamburger .bar::after{top:7px}
+
+    /* Mobile menu panel */
+    @media (max-width: 900px){
+      .nav-links{position:fixed; top:76px; right:0; height:calc(100vh - 76px); width:min(320px,86vw);
+        background:#fff; box-shadow:-2px 0 12px rgba(0,0,0,.12); padding:18px; flex-direction:column;
+        align-items:flex-start; gap:6px; transform:translateX(100%); transition:transform .28s ease-in-out;}
+      .nav-links.open{transform:translateX(0)}
+      .hamburger{display:flex}
+    }
+
+    /* ================= HERO ================= */
+    header.hero{
+      background:url('hero-kaaba.jpg') center/cover no-repeat;
+      min-height:420px; position:relative; display:flex; align-items:center; justify-content:center; text-align:center;
+    }
+    header.hero::before{content:''; position:absolute; inset:0; background:rgba(0,0,0,.35)}
+    header.hero .inner{position:relative; z-index:2; color:#fff; padding:24px}
+    header.hero h1{font-size:2.2rem; text-shadow:0 2px 6px rgba(0,0,0,.5); margin-bottom:8px}
+    header.hero p.subtitle{opacity:.95; margin-bottom:16px}
+    .btn{display:inline-block; background:var(--accent); color:#fff; padding:13px 22px; border-radius:30px; text-decoration:none; font-weight:700}
+    .btn:hover{transform:translateY(-1px); filter:brightness(1.05)}
+    .count{font-weight:700; margin-top:12px}
+
+    /* ================= LAYOUT ================= */
+    .container{max-width:1100px; margin:auto; padding:40px 18px}
+    h2.section-title{text-align:center; margin-bottom:20px; color:var(--primary)}
+
+    /* ================= PAKET ================= */
+    .paket{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px}
+    .card{background:#fff; border-radius:14px; overflow:hidden; box-shadow:0 6px 16px rgba(0,0,0,.08)}
+    .card img{width:100%; height:auto; object-fit:cover; display:block}
+    .card-body{padding:16px; text-align:center}
+    .price{color:var(--primary); font-weight:800; margin:6px 0 12px}
+
+    /* ================= TENTANG ================= */
+    .about p{max-width:720px; margin:0 auto 16px; text-align:center}
+    .about ul, .about ol{max-width:760px; margin:10px auto 22px; padding-left:18px}
+
+    /* ================= LEGALITAS ================= */
+    .legalitas-logos{display:flex; flex-wrap:wrap; justify-content:center; gap:14px; margin-top:14px}
+    .legalitas-logos img{height:40px; border-radius:6px}
+
+    /* ================= GALERI (proporsional di HP) ================= */
+    .galeri-wrapper{margin-top:16px}
+    .galeri-track{display:flex; gap:12px; overflow-x:auto; padding-bottom:6px; scroll-snap-type:x mandatory}
+    .galeri-track img{
+      flex:0 0 85%; max-width:85%; border-radius:12px; object-fit:cover; aspect-ratio:16/9; scroll-snap-align:center;
+    }
+    @media(min-width: 900px){
+      .galeri-track{overflow:visible; display:grid; grid-template-columns:repeat(3, 1fr)}
+      .galeri-track img{flex:initial; max-width:100%; width:100%}
+    }
+
+    /* ================= FOOTER ================= */
+    footer{background:#333; color:#ccc; text-align:center; padding:26px 12px}
+  </style>
+</head>
+
+<body>
+  <!-- ====== NAVBAR ====== -->
+  <div class="topbar">
+    <div class="nav">
+      <a class="brand" href="#hero" aria-label="Beranda Attamimi Tours">
+        <img src="Logo.png" alt="Logo Attamimi Tours" loading="eager">
+        <span>AT-TAMIMI Tours</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#tentang">Tentang</a>
+        <a href="#packages">Paket</a>
+        <a href="#gallery">Galeri</a>
+        <a href="/news/">Berita & Tips</a>
+        <a href="#contact">Kontak</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+        <div class="bar"></div>
+      </button>
+    </div>
+  </div>
+
+  <!-- ====== HERO ====== -->
+  <header id="hero" class="hero">
+    <div class="inner">
+      <h1>Attamimi Tours & Travel</h1>
+      <p class="subtitle">Haji Khusus Tanpa Antri & Umroh Sepanjang Tahun</p>
+      <a href="#packages" class="btn">Lihat Paket</a>
+      <div class="count" id="countdown">Loading…</div>
+    </div>
   </header>
 
-  <!-- Hero -->
-  <section id="hero" class="hero">
-    <h1>Umroh Akbar 27 September 2025</h1>
-    <p>Mulai Rp 29,9 Juta – Hotel dekat Masjidil Haram</p>
-    <a href="https://wa.me/6285183049514" class="cta">Daftar Sekarang</a>
+  <!-- ====== TENTANG (berisi Mengapa, Fasilitas, Tata Cara, Persyaratan) ====== -->
+  <section id="about" class="container about">
+    <h2 class="section-title">Tentang Kami</h2>
+    <p>Dapatkan pengalaman ibadah yang nyaman, aman, dan berkah bersama PT AT-TAMIMI.</p>
+
+    <h3>1. Mengapa Memilih PT AT-TAMIMI?</h3>
+    <ul>
+      <li>Resmi & Terpercaya – Berizin Kemenag RI.</li>
+      <li>Fasilitas lengkap – tiket, hotel, perlengkapan, manasik.</li>
+      <li>Pendamping profesional – Tour Leader & Mutawwif/Mutawwifah berpengalaman.</li>
+      <li>Pelayanan optimal – Ziarah Makkah & Madinah, Air Zam-Zam.</li>
+    </ul>
+
+    <h3>2. Fasilitas yang Kami Sediakan</h3>
+    <ul>
+      <li>Tiket Domestik & Internasional (YIA-CGK-JED PP)</li>
+      <li>Pembuatan Paspor & Vaksinasi Meningitis</li>
+      <li>Bimbingan Manasik</li>
+      <li>Ziarah ke Tempat Bersejarah</li>
+      <li>Perlengkapan Lengkap: Koper, Ihrom, Tas Paspor, Syal, Seragam, dll.</li>
+      <li>Handling Bandara</li>
+    </ul>
+
+    <h3>3. Tata Cara Pendaftaran</h3>
+    <ol>
+      <li>Datang ke Kantor Pusat: Pondok Pesantren Putra Putri Al Azhar, Kebonagung 001/001, Desa Karangsari, Kec. Purwodadi, Kab. Purworejo.</li>
+      <li>Hubungi KH. Mutammimul Masholih — Telp: (0275) 2971048 | HP: +62 813-2884-9205</li>
+      <li>Konsultasi & pilih paket, isi formulir, bayar DP</li>
+    </ol>
+
+    <h3>4. Persyaratan Pendaftaran</h3>
+    <ul>
+      <li>Fotokopi KTP, KK, & Buku Nikah/Akte/Ijazah</li>
+      <li>DP Min. Rp 5 Juta (DP tidak dapat dikembalikan kecuali ada perjanjian khusus)</li>
+      <li>Pelunasan 30 Hari sebelum keberangkatan</li>
+    </ul>
   </section>
 
-  <!-- Paket Umroh -->
-  <section id="paket" class="paket">
-    <h2>Paket Umroh</h2>
-    <div class="paket-container">
-      <div class="paket-card">
-        <img src="paket1.jpg" alt="Paket Umroh 9 Hari">
-        <h3>Umroh 9 Hari</h3>
-        <p>Mulai Rp 28,5 Juta</p>
+  <!-- ====== PAKET ====== -->
+  <section id="packages" class="container">
+    <h2 class="section-title">Pilihan Paket</h2>
+    <div class="paket">
+      <div class="card">
+        <img src="umroh9.jpg" alt="Umroh 9 Hari" loading="lazy">
+        <div class="card-body">
+          <h3>Umroh 9 Hari</h3>
+          <p>Lion Air | Hotel 3★ | 3× Umroh</p>
+          <div class="price">Rp 28,5 Jt</div>
+          <a class="btn" href="https://wa.me/6285183049514?text=Saya%20tertarik%20Umroh%209%20Hari">Pesan via WA</a>
+        </div>
       </div>
-      <div class="paket-card">
-        <img src="paket2.jpg" alt="Umroh Awal Ramadhan">
-        <h3>Umroh Awal Ramadhan</h3>
-        <p>12 Hari – Fokus Makkah</p>
+      <div class="card">
+        <img src="umroh12.jpg" alt="Umroh 12 Hari" loading="lazy">
+        <div class="card-body">
+          <h3>Umroh 12 Hari</h3>
+          <p>Malaysia Airlines | Hotel 4★ | 3× Umroh</p>
+          <div class="price">Rp 33 Jt</div>
+          <a class="btn" href="https://wa.me/6285183049514?text=Saya%20tertarik%20Umroh%2012%20Hari">Pesan via WA</a>
+        </div>
       </div>
-      <div class="paket-card">
-        <img src="paket3.jpg" alt="Umroh Akhir Ramadhan">
-        <h3>Umroh Akhir Ramadhan</h3>
-        <p>12 Hari – I’tikaf di Masjidil Haram</p>
+      <div class="card">
+        <img src="umroh14.jpg" alt="Umroh 14 Hari" loading="lazy">
+        <div class="card-body">
+          <h3>Umroh 14 Hari</h3>
+          <p>Saudia Airlines | Hotel 4★ | 3× Umroh</p>
+          <div class="price">Rp 35,5 Jt</div>
+          <a class="btn" href="https://wa.me/6285183049514?text=Saya%20tertarik%20Umroh%2014%20Hari">Pesan via WA</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:22px">
+      <img src="paket-haji.jpg" alt="Haji Khusus 2025" loading="lazy">
+      <div class="card-body">
+        <h3>Haji Khusus 2025</h3>
+        <p>Durasi 25 Hari | Hotel 5★ Makkah & Madinah</p>
+        <div class="price">Reguler Rp 295 Jt</div>
+        <a class="btn" href="https://wa.me/6285183049514?text=Saya%20tertarik%20Paket%20Haji%20Khusus">Pesan via WA</a>
       </div>
     </div>
   </section>
 
-  <!-- Galeri -->
-  <section id="galeri" class="galeri">
-    <h2>Galeri Perjalanan</h2>
-    <div class="galeri-container">
-      <img src="galeri1.jpg" alt="Foto Umroh">
-      <img src="galeri2.jpg" alt="Foto Jamaah">
-      <img src="galeri3.jpg" alt="Masjidil Haram">
-      <img src="galeri4.jpg" alt="Masjid Nabawi">
+  <!-- ====== GALERI (proporsional di HP) ====== -->
+  <section id="gallery" class="container">
+    <h2 class="section-title">Galeri Perjalanan</h2>
+    <div class="galeri-wrapper">
+      <div class="galeri-track">
+        <img src="galeri1.jpg" alt="Mekkah">
+        <img src="galeri2.jpg" alt="Madinah">
+        <img src="galeri3.jpg" alt="Arafah">
+      </div>
     </div>
   </section>
 
-  <!-- Legalitas -->
-  <section id="legalitas" class="legalitas">
-    <h2>Legalitas Resmi</h2>
-    <img src="legalitas.jpg" alt="Legalitas Travel Umroh">
-    <p>Terdaftar resmi di Kemenag RI dan anggota Amphuri.</p>
+  <!-- ====== TESTIMONI (dengan testimoni.jpg) ====== -->
+  <section id="testimoni" class="container">
+    <h2 class="section-title">Testimoni Jamaah</h2>
+    <div class="card" style="max-width:640px;margin:0 auto">
+      <img src="testimoni.jpg" alt="Testimoni WhatsApp Jamaah" loading="lazy" style="width:100%;height:auto;display:block">
+      <div class="card-body" style="text-align:left">
+        <p style="font-style:italic">"Le sanjang kok paling sae pelayanane ing antarane sing ana ing Purworejo. Mugi-mugi kulo kalih bapak/ibu saged nyusul."</p>
+        <p style="opacity:.7; font-size:.95rem; margin-top:6px">— Jamaah Attamimi Tours (screenshoot WhatsApp)</p>
+      </div>
+    </div>
   </section>
 
-  <!-- Testimoni -->
-  <section id="testimoni" class="testimoni">
-    <h2>Testimoni Jamaah</h2>
-    <img src="testimoni.jpg" alt="Testimoni Jamaah Umroh">
+  <!-- ====== LEGALITAS ====== -->
+  <section id="legal" class="container">
+    <h2 class="section-title">Legalitas & Keanggotaan</h2>
+    <div class="legalitas-logos">
+      <img src="LogoKemenag.png" alt="Kemenag" loading="lazy">
+      <img src="LogoAmphuri.png" alt="Amphuri" loading="lazy">
+      <img src="LogoSiskopatuh.jpg" alt="Siskopatuh" loading="lazy">
+      <img src="Logo5Pasti.png" alt="5 Pasti Umrah" loading="lazy">
+      <img src="LogoIATA.png" alt="IATA" loading="lazy">
+    </div>
   </section>
 
-  <!-- FAQ -->
-  <section id="faq" class="faq">
-    <h2>FAQ</h2>
-    <details>
-      <summary>Apakah Attamimi Tours resmi?</summary>
-      <p>Ya, terdaftar resmi di Kemenag RI.</p>
-    </details>
-    <details>
-      <summary>Hotel dekat Masjidil Haram?</summary>
-      <p>Bisa upgrade ke hotel depan Masjidil Haram.</p>
-    </details>
+  <!-- ====== KONTAK ====== -->
+  <section id="contact" class="container" style="text-align:center">
+    <h2 class="section-title">Kontak & Alamat</h2>
+    <p><strong>Alamat:</strong> Kompleks Pondok Pesantren Putra Putri Al Azhar, Purworejo<br>
+    <strong>Email:</strong> attamimi.tour@gmail.com<br>
+    <strong>WhatsApp:</strong> +62 851-8304-9514</p>
+    <a href="https://wa.me/6285183049514?text=Assalamu'alaikum" class="btn">Chat WhatsApp Sekarang</a>
   </section>
 
-  <!-- Kontak -->
-  <section id="kontak" class="kontak">
-    <h2>Hubungi Kami</h2>
-    <a href="https://wa.me/6285183049514" class="wa-btn">Chat WhatsApp</a>
-  </section>
-
-  <!-- Footer -->
   <footer>
-    <p>© 2025 Attamimi Tours. Semua Hak Dilindungi.</p>
+    &copy; 2025 Attamimi Tours – Izin PPIU U.352/2020 & PIHK 02202072929030002/2024
   </footer>
 
   <script>
-    function toggleMenu() {
-      document.getElementById('navMenu').classList.toggle('active');
+    // Toggle hamburger
+    const burger = document.getElementById('hamburger');
+    const links  = document.getElementById('navLinks');
+    burger.addEventListener('click', () => {
+      const isOpen = links.classList.toggle('open');
+      burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    // Countdown keberangkatan (opsional)
+    const target = new Date("Sep 27, 2025 00:00:00").getTime();
+    const el = document.getElementById("countdown");
+    if(el){
+      const iv = setInterval(()=>{
+        const now = Date.now(); const d = target - now;
+        if(d <= 0){ clearInterval(iv); el.textContent = "Berangkat hari ini!"; return; }
+        const day = Math.floor(d/86400000);
+        const hr  = Math.floor((d%86400000)/3600000);
+        const min = Math.floor((d%3600000)/60000);
+        const sec = Math.floor((d%60000)/1000);
+        el.textContent = `${day}h ${hr}j ${min}m ${sec}d`;
+      },1000);
     }
   </script>
-
 </body>
 </html>
