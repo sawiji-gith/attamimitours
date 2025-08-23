@@ -6,38 +6,27 @@
   <title>Berita & Tips – Attamimi Tours</title>
   <style>
     body { font-family: Arial, sans-serif; max-width: 800px; margin: 20px auto; padding: 10px; background:#f7f7fb; }
-<a href="index.html" style="
-  display:inline-block;
-  margin-bottom:20px;
-  text-decoration:none;
-  background:#663399;
-  color:#fff;
-  padding:8px 16px;
-  border-radius:6px;
-">← Kembali ke Beranda</a>
     h1 { color: #663399; text-align: center; margin-bottom: 20px; }
     #berita-container { display: flex; flex-direction: column; gap: 20px; }
     article { background: #fff; padding: 16px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
     article h2 { margin-bottom: 8px; color: #ff5722; }
     article small { color: #666; display:block; margin-top:8px; }
     .share { margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap; }
-    .share a, .like-btn { 
-      display:inline-block; padding:6px 12px; border-radius:6px; text-decoration:none; font-size:14px; font-weight:bold; color:#fff; cursor:pointer;
+    .share a, .like-btn, .back-btn { 
+      display:inline-block; padding:6px 12px; border-radius:6px; 
+      text-decoration:none; font-size:14px; font-weight:bold; color:#fff; cursor:pointer;
     }
     .wa { background:#25D366; }
     .fb { background:#1877F2; }
     .ig { background:#E4405F; }
     .like-btn { background:#ff1744; border:none; }
+    .back-btn { background:#663399; margin-bottom:20px; }
   </style>
 </head>
 <body>
-<nav style="background:#663399; padding:10px; border-radius:8px; margin-bottom:20px;">
-  <a href="index.html" style="color:#fff; margin:0 10px; text-decoration:none;">Beranda</a>
-  <a href="tentang.html" style="color:#fff; margin:0 10px; text-decoration:none;">Tentang</a>
-  <a href="layanan.html" style="color:#fff; margin:0 10px; text-decoration:none;">Layanan</a>
-  <a href="kontak.html" style="color:#fff; margin:0 10px; text-decoration:none;">Kontak</a>
-  <a href="news.html" style="color:#ffd700; margin:0 10px; text-decoration:none; font-weight:bold;">Berita & Tips</a>
-</nav>
+  <!-- Tombol kembali ke beranda -->
+  <a href="index.html" class="back-btn">← Kembali ke Beranda</a>
+
   <h1>Berita & Tips</h1>
   <div id="berita-container">Loading berita...</div>
 
