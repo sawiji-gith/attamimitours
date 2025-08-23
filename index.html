@@ -3,84 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Attamimi Tours – Haji & Umroh Resmi Yogyakarta & Jawa Tengah. Hotel bintang 5, visa lengkap, berangkat tanpa antri.">
+  <meta name="description" content="Attamimi Tours – Haji & Umroh Resmi Yogyakarta & Jawa Tengah">
   <title>Attamimi Tours – Haji & Umroh Resmi</title>
 
-  <!-- GA4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-69KG75SMLR"></script>
-  <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-69KG75SMLR');</script>
-
   <style>
-    :root{--primary:#663399;--white:#fff;--black:#222;--accent:#ff5722}
+    :root{--primary:#663399;--accent:#ff5722;--white:#fff;--black:#222;--bg:#f8f8f8}
     *{margin:0;padding:0;box-sizing:border-box}
-    body{font-family:'Poppins',Arial,sans-serif;color:var(--black);background:#f8f8f8;line-height:1.6}
+    html,body{overflow-x:hidden}
+    body{font-family:'Poppins',Arial,sans-serif;color:var(--black);background:var(--bg);line-height:1.6}
 
-    /* HERO lebih terang & jernih */
+    /* HEADER */
     header{
       background:url('hero-kaaba.jpg') center/cover no-repeat;
-      filter:brightness(1.1) contrast(1.05);
+      filter:brightness(1.15) contrast(1.05);
       min-height:400px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative
     }
-    header::before{content:'';position:absolute;inset:0;background:rgba(0,0,0,.35)}
+    header::before{content:'';position:absolute;inset:0;background:rgba(0,0,0,.3)}
     header>*{position:relative;z-index:2}
     .logo-rounded{height:60px;border-radius:16px;margin-bottom:10px}
-    h1{color:var(--white);font-size:2.2rem;text-shadow:0 2px 4px #000;margin-bottom:8px}
-    .subtitle{color:var(--white);font-size:1.1rem;text-shadow:0 1px 3px #000;margin-bottom:20px}
-    .btn-primary{background:var(--accent);color:var(--white);padding:15px 32px;border:none;border-radius:30px;font-weight:700;font-size:1rem;text-decoration:none;transition:.3s}
+    h1{color:#fff;font-size:2.2rem;text-shadow:0 2px 4px #000;margin-bottom:8px}
+    .subtitle{color:#fff;font-size:1.1rem;text-shadow:0 1px 3px #000;margin-bottom:20px}
+    .btn-primary{background:var(--accent);color:#fff;padding:15px 32px;border:none;border-radius:30px;font-weight:700;font-size:1rem;text-decoration:none;transition:.3s}
     .btn-primary:hover{background:#e64a19;transform:scale(1.05)}
 
-    /* NAVBAR */
-    .navbar{display:flex;align-items:center;justify-content:space-between;background:var(--white);padding:10px 20px;box-shadow:0 2px 6px rgba(0,0,0,.1)}
-    .navbar .logo{height:45px}
-    .navbar ul{display:flex;gap:20px;list-style:none}
-    .navbar a{color:var(--primary);font-weight:600;text-decoration:none;padding:8px 12px;border-radius:6px;transition:.2s}
-    .navbar a:hover{background:#f1f1f1}
-    .hamburger{display:none;flex-direction:column;gap:4px;cursor:pointer}
-    .hamburger span{width:25px;height:3px;background:var(--primary);border-radius:2px}
+    /* SIDEBAR STICKY (tidak hilang saat scroll) */
+    .sidebar{
+      position:fixed;
+      top:0;
+      left:0;
+      width:220px;
+      height:100vh;
+      background:#fff;
+      box-shadow:2px 0 8px rgba(0,0,0,.15);
+      z-index:1000;
+      display:flex;
+      flex-direction:column;
+      padding:20px 15px;
+    }
+    .sidebar .logo{height:45px;margin-bottom:20px}
+    .sidebar ul{list-style:none}
+    .sidebar li{margin:15px 0}
+    .sidebar a{color:var(--primary);font-weight:600;text-decoration:none}
+    .sidebar a:hover{color:var(--accent)}
 
-    /* SIDEBAR */
-    #sidebar{position:fixed;top:0;left:-260px;width:260px;height:100%;background:var(--white);box-shadow:2px 0 8px rgba(0,0,0,.2);transition:left .3s ease;z-index:10000;padding:20px}
-    #sidebar.open{left:0}
-    #sidebar .close-btn{position:absolute;top:10px;right:10px;font-size:24px;background:none;border:none;cursor:pointer;color:var(--primary)}
-    #sidebar ul{list-style:none;margin-top:50px}
-    #sidebar li{margin:15px 0}
-    #sidebar a{color:var(--primary);font-weight:600}
+    /* Legalitas di sidebar */
+    .sidebar .legalitas{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:20px}
+    .sidebar .legalitas img{height:35px;border-radius:4px}
+
+    /* Main content offset */
+    .main{margin-left:220px;padding:0 20px}
+
+    /* Responsive */
     @media(max-width:768px){
-      .navbar ul{display:none}
-      .hamburger{display:flex}
+      .sidebar{display:none}
+      .main{margin-left:0;padding:0 15px}
     }
 
-    /* GALERI RESPONSIF */
-    .galeri-wrapper{max-width:100%;margin:auto}
-    .galeri-slider{display:flex;gap:10px;overflow-x:auto;padding:10px 0}
-    .galeri-slider img{flex:0 0 85%;max-width:85%;height:auto;border-radius:8px;object-fit:cover;margin:0 auto}
-    @media(min-width:768px){
-      .galeri-slider{gap:15px}
-      .galeri-slider img{flex:0 0 30%;max-width:30%}
-    }
-
-    /* LAYOUT */
-    .container{max-width:1100px;margin:auto;padding:40px 20px}
+    /* Layout */
+    .container{max-width:1000px;margin:auto;padding:40px 20px}
     .paket{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
     .card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,.08)}
     .card img{width:100%;height:auto;display:block}
     .card-body{padding:18px;text-align:center}
-    .price{color:var(--primary);font-weight:700;margin-bottom:8px}
+    .price{color:var(--primary);font-weight:700}
     footer{background:#333;color:#ccc;text-align:center;padding:25px 10px}
   </style>
 </head>
 
 <body>
-  <!-- HEADER -->
-  <header>
-    <img src="Logo.png" alt="Attamimi Logo" class="logo-rounded">
-    <h1>Attamimi Tours & Travel</h1>
-    <p class="subtitle">Haji Khusus Tanpa Antri & Umroh Sepanjang Tahun</p>
-    <a href="#packages" class="btn-primary">Lihat Paket</a>
-  </header>
-
-  <!-- NAVBAR -->
-  <div class="navbar">
+  <!-- Sidebar Sticky -->
+  <aside class="sidebar">
     <img src="Logo.png" alt="Attamimi Logo" class="logo">
     <ul>
       <li><a href="#about">Tentang</a></li>
@@ -89,77 +81,102 @@
       <li><a href="/news/">Berita & Tips</a></li>
       <li><a href="#contact">Kontak</a></li>
     </ul>
-    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
-  </div>
-
-  <!-- SIDEBAR -->
-  <nav id="sidebar">
-    <button id="close-sidebar" class="close-btn">✖</button>
-    <ul>
-      <li><a href="#about">Tentang</a></li>
-      <li><a href="#packages">Paket</a></li>
-      <li><a href="#gallery">Galeri</a></li>
-      <li><a href="/news/">Berita & Tips</a></li>
-      <li><a href="#contact">Kontak</a></li>
-    </ul>
-  </nav>
-
-  <!-- KONTEN -->
-  <section id="about" class="container"><h2>Tentang Kami</h2><p style="max-width:700px;margin:auto;text-align:center">Attamimi Tours resmi PPIU & PIHK – ribuan jamaah telah percaya kepada kami.</p></section>
-  <section id="packages" class="container"><h2>Pilihan Paket</h2>
-    <div class="paket">
-      <div class="card"><img src="umroh9.jpg" alt="Umroh 9 Hari"><div class="card-body"><h3>Umroh 9 Hari</h3><p>Lion Air | Hotel 3★ | 3× Umroh</p><div class="price">Rp 28,5 Jt</div><a href="https://wa.me/6285183049514?text=Saya%20tertarik%20Umroh%209%20Hari" class="btn-primary">Pesan via WA</a></div></div>
-      <div class="card"><img src="umroh12.jpg" alt="Umroh 12 Hari"><div class="card-body"><h3>Umroh 12 Hari</h3><p>Malaysia Airlines | Hotel 4★ | 3× Umroh</p><div class="price">Rp 33 Jt</div><a href="https://wa.me/6285183049514?text=Saya%20tertarik%20Umroh%2012%20Hari" class="btn-primary">Pesan via WA</a></div></div>
-      <div class="card"><img src="umroh14.jpg" alt="Umroh 14 Hari"><div class="card-body"><h3>Umroh 14 Hari</h3><p>Saudia Airlines | Hotel 4★ | 3× Umroh</p><div class="price">Rp 35,5 Jt</div><a href="https://wa.me/6285183049514?text=Saya%20tertarik%20Umroh%2014%20Hari" class="btn-primary">Pesan via WA</a></div></div>
+    <div class="legalitas">
+      <img src="LogoKemenag.png"   alt="Kemenag">
+      <img src="LogoAmphuri.png"   alt="Amphuri">
+      <img src="LogoSiskopatuh.jpg" alt="Siskopatuh">
+      <img src="Logo5Pasti.png"    alt="5Pasti">
+      <img src="LogoIATA.png"      alt="IATA">
     </div>
-    <div class="card haji"><img src="paket-haji.jpg" alt="Haji Khusus"><div class="card-body"><h3>Haji Khusus 2025</h3><p>Durasi 25 Hari | Hotel 5★ Makkah & Madinah</p><div class="price">Reguler Rp 295 Jt</div><a href="https://wa.me/6285183049514?text=Saya%20tertarik%20Paket%20Haji%20Khusus" class="btn-primary">Pesan via WA</a></div></div>
-  </section>
+  </aside>
 
-  <!-- GALERI RESPONSIF -->
-  <section id="gallery" class="container"><h2>Galeri Perjalanan</h2>
-    <div class="galeri-wrapper">
-      <div class="galeri-slider">
-        <img src="galeri1.jpg" alt="Mekkah">
-        <img src="galeri2.jpg" alt="Madinah">
-        <img src="galeri3.jpg" alt="Arafah">
+  <!-- Main Content -->
+  <div class="main">
+    <!-- Header -->
+    <header>
+      <h1>Attamimi Tours & Travel</h1>
+      <p class="subtitle">Haji Khusus Tanpa Antri & Umroh Sepanjang Tahun</p>
+      <a href="#packages" class="btn-primary">Lihat Paket</a>
+    </header>
+
+    <!-- ABOUT -->
+    <section id="about" class="container">
+      <h2>Tentang Kami</h2>
+      <p style="max-width:700px;margin:auto;text-align:center">
+        Dapatkan pengalaman ibadah yang nyaman, aman, dan berkah bersama PT AT-TAMIMI.
+      </p>
+
+      <!-- 4 Poin Utama -->
+      <div style="margin-top:30px">
+        <h3>1. Mengapa Memilih PT AT-TAMIMI?</h3>
+        <ul>
+          <li>Izin resmi PPIU & PIHK – legalitas lengkap</li>
+          <li>Hotel bintang 5 di Makkah & Madinah</li>
+          <li>Maskapai terpercaya (Saudia, Emirates, dll)</li>
+          <li>Petugas lapangan & muthawif berpengalaman</li>
+          <li>Gratis konsultasi & simulasi</li>
+        </ul>
+
+        <h3>2. Fasilitas yang Kami Sediakan</h3>
+        <ul>
+          <li>Visa & asuransi lengkap</li>
+          <li>Bus AC private Madinah-Makkah</li>
+          <li>Makan 3× sehari (buffet)</li>
+          <li>Wi-Fi gratis selama perjalanan</li>
+          <li>Air zam-zam & souvenir</li>
+        </ul>
+
+        <h3>3. Tata Cara Pendaftaran</h3>
+        <ol>
+          <li>Konsultasi & pilih paket</li>
+          <li>Isi form & bayar DP 30%</li>
+          <li>Serahkan dokumen (paspor, foto, dll)</li>
+          <li>Undang briefing & tes kesehatan</li>
+          <li>Keberangkatan!</li>
+        </ol>
+
+        <h3>4. Persyaratan Pendaftaran</h3>
+        <ul>
+          <li>Paspor minimal 8 bulan masa berlaku</li>
+          <li>KTP & KK asli & fotokopi</li>
+          <li>Foto 4×6 cm latar putih (4 lembar)</li>
+          <li>Sertifikat vaksin meningitis & COVID-19</li>
+          <li>Surat keterangan sehat dari dokter</li>
+        </ul>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contact" class="container" style="text-align:center"><h2>Kontak & Alamat</h2>
-    <p><strong>Alamat:</strong> Kompleks Pondok Pesantren Putra Putri Al Azhar, Purworejo<br>
-    <strong>Email:</strong> attamimi.tour@gmail.com<br>
-    <strong>WhatsApp:</strong> +62 851-8304-9514</p>
-    <a href="https://wa.me/6285183049514?text=Assalamu'alaikum" class="btn-primary">Chat WhatsApp Sekarang</a>
-  </section>
+    <!-- Packages -->
+    <section id="packages" class="container">
+      <h2>Pilihan Paket</h2>
+      <div class="paket">
+        <div class="card"><img src="umroh9.jpg" alt="Umroh 9 Hari"><div class="card-body"><h3>Umroh 9 Hari</h3><p>Lion Air | Hotel 3★ | 3× Umroh</p><div class="price">Rp 28,5 Jt</div><a href="https://wa.me/6285183049514?text=Saya%20tertarik%20Umroh%209%20Hari" class="btn-primary">Pesan via WA</a></div></div>
+        <div class="card"><img src="umroh12.jpg" alt="Umroh 12 Hari"><div class="card-body"><h3>Umroh 12 Hari</h3><p>Malaysia Airlines | Hotel 4★ | 3× Umroh</p><div class="price">Rp 33 Jt</div><a href="https://wa.me/6285183049514?text=Saya%20tertarik%20Umroh%2012%20Hari" class="btn-primary">Pesan via WA</a></div></div>
+        <div class="card"><img src="umroh14.jpg" alt="Umroh 14 Hari"><div class="card-body"><h3>Umroh 14 Hari</h3><p>Saudia Airlines | Hotel 4★ | 3× Umroh</p><div class="price">Rp 35,5 Jt</div><a href="https://wa.me/6285183049514?text=Saya%20tertarik%20Umroh%2014%20Hari" class="btn-primary">Pesan via WA</a></div></div>
+      </div>
+      <div class="card haji"><img src="paket-haji.jpg" alt="Haji Khusus"><div class="card-body"><h3>Haji Khusus 2025</h3><p>Durasi 25 Hari | Hotel 5★ Makkah & Madinah</p><div class="price">Reguler Rp 295 Jt</div><a href="https://wa.me/6285183049514?text=Saya%20tertarik%20Paket%20Haji%20Khusus" class="btn-primary">Pesan via WA</a></div></div>
+    </section>
 
-  <footer>&copy; 2025 Attamimi Tours – Izin PPIU U.352/2020 & PIHK 02202072929030002/2024</footer>
+    <!-- Galeri -->
+    <section id="gallery" class="container"><h2>Galeri Perjalanan</h2>
+      <div class="galeri-wrapper">
+        <div class="galeri-slider">
+          <img src="galeri1.jpg" alt="Mekkah">
+          <img src="galeri2.jpg" alt="Madinah">
+          <img src="galeri3.jpg" alt="Arafah">
+        </div>
+      </div>
+    </section>
 
-  <!-- Sidebar Script -->
-  <script>
-    const hamburger = document.getElementById('hamburger');
-    const sidebar   = document.getElementById('sidebar');
-    const closeBtn  = document.getElementById('close-sidebar');
-    const backdrop  = document.createElement('div');
-    backdrop.id = 'backdrop';
-    backdrop.style.cssText = 'display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.4);z-index:9998;';
-    document.body.appendChild(backdrop);
-
-    function toggleSidebar() {
-      const open = sidebar.classList.toggle('open');
-      backdrop.style.display = open ? 'block' : 'none';
-    }
-    function closeSidebar() {
-      sidebar.classList.remove('open');
-      backdrop.style.display = 'none';
-    }
-
-    hamburger.addEventListener('click', toggleSidebar);
-    closeBtn.addEventListener('click', closeSidebar);
-    backdrop.addEventListener('click', closeSidebar);
-    sidebar.addEventListener('click', e => {
-      if (e.target.tagName === 'A') closeSidebar();
-    });
-  </script>
+    <!-- Contact -->
+    <section id="contact" class="container" style="text-align:center">
+      <h2>Kontak & Alamat</h2>
+      <p><strong>Alamat:</strong> Kompleks Pondok Pesantren Putra Putri Al Azhar, Purworejo<br>
+      <strong>Email:</strong> attamimi.tour@gmail.com<br>
+      <strong>WhatsApp:</strong> +62 851-8304-9514</p>
+      <a href="https://wa.me/6285183049514?text=Assalamu'alaikum" class="btn-primary">Chat WhatsApp Sekarang</a>
+    </section>
+    <footer>&copy; 2025 Attamimi Tours – Izin PPIU U.352/2020 & PIHK 02202072929030002/2024</footer>
+  </div>
 </body>
 </html>
