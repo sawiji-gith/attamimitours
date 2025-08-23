@@ -2,23 +2,23 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- Google Search Console -->
-  <meta name="google-site-verification" content="Umo75pcrRNEr-g9k5pQHi5maV5Y7-P8K3OMUdF7IYLY" />
-  
-  <!-- SEO Meta -->
-  <meta name="description" content="PT AT-TAMIMI Tours – Travel Umroh & Haji resmi berizin Kemenag RI. Aman, nyaman, fasilitas lengkap, pendamping berpengalaman.">
-  <meta name="keywords" content="umroh jogja, umroh purworejo, travel umroh jogja, haji khusus jogja, biro umroh resmi, paket umroh jawa tengah, umroh semarang, umroh solo">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PT Attamimi Tours – Umroh & Haji Resmi</title>
+
+  <!-- SEO -->
+  <meta name="description" content="PT Attamimi Tours – Travel Umroh & Haji resmi Kemenag. Berangkat dari Yogyakarta & Jawa Tengah. Hotel dekat Masjidil Haram. Harga mulai 29,9 juta.">
+  <meta name="keywords" content="umroh jogja, umroh yogyakarta, travel umroh purworejo, biro haji resmi, attamimi tours">
+
   <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="PT AT-TAMIMI Tours – Travel Umroh & Haji Resmi">
-  <meta property="og:description" content="Umroh & Haji resmi, hotel dekat Masjidil Haram, fasilitas lengkap, bimbingan ibadah amanah.">
+  <meta property="og:title" content="PT Attamimi Tours – Umroh & Haji Resmi">
+  <meta property="og:description" content="Umroh bersama PT Attamimi Tours. Resmi Kemenag, fasilitas lengkap, bimbingan manasik, dan pendamping berpengalaman.">
+  <meta property="og:image" content="https://attamimitours.biz.id/logo.png">
   <meta property="og:url" content="https://attamimitours.biz.id">
-  <meta property="og:image" content="https://attamimitours.biz.id/Logo.png">
-  <meta property="og:site_name" content="PT AT-TAMIMI Tours">
-  
+  <meta property="og:type" content="website">
+
+  <!-- Google Verification -->
+  <meta name="google-site-verification" content="ISI_KODE_VERIFIKASI" />
+
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-69KG75SMLR"></script>
   <script>
@@ -27,145 +27,165 @@
     gtag('js', new Date());
     gtag('config', 'G-69KG75SMLR');
   </script>
-  
-  <title>PT AT-TAMIMI Tours – Umroh & Haji Resmi</title>
-  
+
+  <!-- Styles -->
   <style>
-    body {font-family: Arial, sans-serif; margin:0; padding:0; line-height:1.6; color:#333;}
-    header {background:#004d40; color:#fff; padding:15px; position:sticky; top:0; z-index:1000;}
-    header h1 {margin:0; font-size:1.4em;}
-    nav {margin-top:10px;}
-    nav a {color:#fff; margin:0 10px; text-decoration:none; font-weight:bold;}
-    nav a:hover {text-decoration:underline;}
-    
-    .hero {background:url('https://attamimitours.biz.id/Kaabah.jpg') center/cover no-repeat; color:#fff; padding:60px 20px; text-align:center;}
-    .hero h2 {font-size:2em; margin-bottom:10px;}
-    .countdown {font-size:1.5em; margin:15px 0; font-weight:bold;}
-    .btn {display:inline-block; background:#e67e22; color:#fff; padding:12px 20px; border-radius:8px; text-decoration:none;}
-    .btn:hover {background:#cf711f;}
-    
-    section {padding:40px 20px; max-width:1000px; margin:auto;}
-    section h2 {text-align:center; margin-bottom:20px; color:#004d40;}
-    ul {list-style:none; padding:0;}
-    ul li {margin:8px 0; padding-left:25px; position:relative;}
-    ul li::before {content:"✔"; position:absolute; left:0; color:#009688;}
-    
-    .gallery img {width:100%; border-radius:10px; margin-bottom:15px;}
-    .grid {display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:20px;}
-    
-    footer {background:#004d40; color:#fff; text-align:center; padding:20px;}
+    body {margin:0;font-family:Arial, sans-serif;line-height:1.6;color:#333;}
+    header {background:#fff;box-shadow:0 2px 5px rgba(0,0,0,0.1);position:fixed;width:100%;z-index:1000;}
+    .navbar {display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:auto;padding:10px 20px;}
+    .logo {display:flex;align-items:center;font-size:20px;font-weight:bold;color:#333;text-decoration:none;}
+    .logo img {height:35px;margin-right:8px;}
+    nav ul {list-style:none;display:flex;gap:15px;margin:0;padding:0;}
+    nav ul li a {text-decoration:none;color:#333;font-weight:600;}
+    .menu-toggle {display:none;cursor:pointer;}
+    .hero {background:url('masjid.jpg') center/cover no-repeat;color:#fff;text-align:center;padding:120px 20px;}
+    .hero h1 {font-size:36px;margin-bottom:10px;}
+    .countdown {font-size:20px;font-weight:bold;margin-top:15px;}
+    section {padding:60px 20px;max-width:1100px;margin:auto;}
+    h2 {text-align:center;margin-bottom:20px;}
+    .gallery {display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;}
+    .gallery img {width:100%;border-radius:10px;}
+    .testimoni,.faq {background:#f9f9f9;padding:40px 20px;border-radius:10px;}
+    footer {background:#222;color:#fff;text-align:center;padding:20px;}
+    .whatsapp {position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:12px 18px;border-radius:50px;text-decoration:none;font-weight:bold;box-shadow:0 4px 8px rgba(0,0,0,0.3);}
+    @media(max-width:768px){nav ul{display:none;flex-direction:column;background:#fff;position:absolute;top:60px;right:0;width:200px;padding:10px;}nav ul.show{display:flex;}.menu-toggle{display:block;}}
   </style>
 </head>
 <body>
 
-<header>
-  <h1>PT AT-TAMIMI Tours & Travel</h1>
-  <nav>
-    <a href="#mengapa">Mengapa Kami</a>
-    <a href="#fasilitas">Fasilitas</a>
-    <a href="#pendaftaran">Pendaftaran</a>
-    <a href="#syarat">Persyaratan</a>
-    <a href="#galeri">Galeri</a>
-    <a href="#kontak">Kontak</a>
-  </nav>
-</header>
+  <!-- Navbar -->
+  <header>
+    <div class="navbar">
+      <a href="#" class="logo">
+        <img src="logo.png" alt="Attamimi Logo"> Attamimi Tours
+      </a>
+      <div class="menu-toggle">☰</div>
+      <nav>
+        <ul>
+          <li><a href="#mengapa">Mengapa Memilih</a></li>
+          <li><a href="#fasilitas">Fasilitas</a></li>
+          <li><a href="#pendaftaran">Pendaftaran</a></li>
+          <li><a href="#persyaratan">Persyaratan</a></li>
+          <li><a href="#galeri">Galeri</a></li>
+          <li><a href="#testimoni">Testimoni</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<!-- HERO -->
-<section class="hero">
-  <h2>Umroh Akbar 27 September 2025</h2>
-  <p>Harga Mulai 29,9 Juta – Hotel Bisa Upgrade Depan Masjidil Haram</p>
-  <div class="countdown" id="countdown"></div>
-  <a href="https://wa.me/6285183049514" class="btn">Daftar Sekarang via WhatsApp</a>
-</section>
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Umroh Akbar 27 September 2025</h1>
+    <p>Harga mulai Rp 29,9 Juta – Seat terbatas 10 Jamaah</p>
+    <div id="countdown" class="countdown"></div>
+  </section>
 
-<!-- Mengapa Memilih -->
-<section id="mengapa">
-  <h2>Mengapa Memilih PT AT-TAMIMI?</h2>
-  <ul>
-    <li>Resmi & Terpercaya – Berizin dari Kemenag RI, memastikan perjalanan yang aman dan nyaman.</li>
-    <li>Fasilitas Lengkap – Mulai dari tiket penerbangan, akomodasi, perlengkapan, hingga bimbingan manasik.</li>
-    <li>Pendamping Profesional – Didampingi oleh Tour Leader dan Mutowwif/Mutawwifah berpengalaman.</li>
-    <li>Pelayanan Ibadah Optimal – Paket perjalanan mencakup Ziarah Makkah & Madinah, serta fasilitas Air Zam-Zam.</li>
-  </ul>
-</section>
+  <!-- Mengapa Memilih -->
+  <section id="mengapa">
+    <h2>Mengapa Memilih PT AT-TAMIMI?</h2>
+    <ul>
+      <li>✅ Resmi & Terpercaya – Berizin dari Kemenag RI, memastikan perjalanan yang aman dan nyaman.</li>
+      <li>✅ Fasilitas Lengkap – Mulai dari tiket penerbangan, akomodasi, perlengkapan, hingga bimbingan manasik.</li>
+      <li>✅ Pendamping Profesional – Didampingi oleh Tour Leader dan Mutowwif/Mutawwifah berpengalaman.</li>
+      <li>✅ Pelayanan Ibadah Optimal – Paket perjalanan mencakup Ziarah Makkah & Madinah, serta fasilitas Air Zam-Zam.</li>
+    </ul>
+  </section>
 
-<!-- Fasilitas -->
-<section id="fasilitas">
-  <h2>Fasilitas yang Kami Sediakan</h2>
-  <ul>
-    <li>Tiket Domestik & Internasional (YIA-CGK-JED PP)</li>
-    <li>Pembuatan Paspor & Vaksinasi Meningitis</li>
-    <li>Bimbingan Manasik</li>
-    <li>Ziarah ke Tempat-Tempat Bersejarah</li>
-    <li>Perlengkapan Lengkap: Koper, Ihrom, Tas Paspor, Syal, Seragam, dll.</li>
-    <li>Handling Bandara</li>
-  </ul>
-</section>
+  <!-- Fasilitas -->
+  <section id="fasilitas">
+    <h2>Fasilitas yang Kami Sediakan</h2>
+    <ul>
+      <li>🔹 Tiket Domestik & Internasional (YIA-CGK-JED PP)</li>
+      <li>🔹 Pembuatan Paspor & Vaksinasi Meningitis</li>
+      <li>🔹 Bimbingan Manasik</li>
+      <li>🔹 Ziarah ke Tempat-Tempat Bersejarah</li>
+      <li>🔹 Perlengkapan Lengkap: Koper, Ihrom, Tas Paspor, Syal, Seragam, dll.</li>
+      <li>🔹 Handling Bandara</li>
+    </ul>
+  </section>
 
-<!-- Tata Cara Pendaftaran -->
-<section id="pendaftaran">
-  <h2>Tata Cara Pendaftaran</h2>
-  <p>📍 Datang Langsung ke Kantor Pusat:<br>
-  Pondok Pesantren Putra Putri Al Azhar, Kebonagung 001/001, Desa Karangsari, Kec. Purwodadi, Kab. Purworejo.</p>
-  <p>🕋 Hubungi Kami:<br>
-  KH. Mutammimul Masholih<br>
-  </p>
-  <a href="https://wa.me/6285183049514" class="btn">Chat via WhatsApp</a>
-</section>
+  <!-- Tata Cara Pendaftaran -->
+  <section id="pendaftaran">
+    <h2>Tata Cara Pendaftaran</h2>
+    <p>📍 Datang Langsung ke Kantor Pusat:<br>
+    Pondok Pesantren Putra Putri Al Azhar, Kebonagung 001/001, Desa Karangsari, Kec. Purwodadi, Kab. Purworejo.</p>
+    <p>🕋 Hubungi Kami:<br>
+    KH. Mutammimul Masholih<br>
+    📞 Telp: (0275) 2971048<br>
+    📱 HP: +62 813-2884-9205</p>
+    <p>Ingin bertanya tentang Umrah dan Haji? Klik tombol di bawah untuk menghubungi kami melalui WhatsApp.</p>
+  </section>
 
-<!-- Persyaratan -->
-<section id="syarat">
-  <h2>Persyaratan Pendaftaran</h2>
-  <ul>
-    <li>Fotokopi KTP, KK, & Buku Nikah/Akte/Ijazah</li>
-    <li>DP Min. Rp 5 Juta</li>
-    <li>Pelunasan 30 Hari Sebelum Keberangkatan</li>
-    <li>DP Tidak Dapat Dikembalikan Jika Pembatalan dari Jamaah (Kecuali Ada Perjanjian Khusus)</li>
-  </ul>
-  <p><strong>Mari wujudkan impian suci Anda untuk menunaikan ibadah Umroh dan Haji dengan nyaman, aman, dan penuh keberkahan bersama PT AT-TAMIMI.</strong></p>
-  <p>📢 Barakallahu fiikum – Semoga Allah memberkahi langkah kita dalam menunaikan ibadah.</p>
-</section>
+  <!-- Persyaratan -->
+  <section id="persyaratan">
+    <h2>Persyaratan Pendaftaran</h2>
+    <ul>
+      <li>✔ Fotokopi KTP, KK, & Buku Nikah/Akte/Ijazah</li>
+      <li>✔ DP Min. Rp 5 Juta</li>
+      <li>✔ Pelunasan 30 Hari Sebelum Keberangkatan</li>
+      <li>✔ DP Tidak Dapat Dikembalikan Jika Pembatalan dari Jamaah (Kecuali Ada Perjanjian Khusus)</li>
+    </ul>
+  </section>
 
-<!-- Galeri -->
-<section id="galeri">
-  <h2>Galeri Perjalanan</h2>
-  <div class="grid gallery">
-    <img src="https://attamimitours.biz.id/img1.jpg" alt="Umroh Attamimi">
-    <img src="https://attamimitours.biz.id/img2.jpg" alt="Jamaah di Makkah">
-    <img src="https://attamimitours.biz.id/img3.jpg" alt="Masjid Nabawi">
-    <img src="https://attamimitours.biz.id/img4.jpg" alt="Pembimbing Jamaah">
-  </div>
-</section>
+  <!-- Galeri -->
+  <section id="galeri">
+    <h2>Galeri</h2>
+    <div class="gallery">
+      <img src="galeri1.jpg" alt="Umroh 1">
+      <img src="galeri2.jpg" alt="Umroh 2">
+      <img src="galeri3.jpg" alt="Umroh 3">
+      <img src="galeri4.jpg" alt="Umroh 4">
+    </div>
+  </section>
 
-<!-- Kontak -->
-<section id="kontak">
-  <h2>Kontak Kami</h2>
-  <p>Alamat: Pondok Pesantren Putra Putri Al Azhar, Kebonagung, Purwodadi, Purworejo</p>
-  <p>WhatsApp: <a href="https://wa.me/6285183049514">0851-8304-9514</a></p>
-  <p>Email: info@attamimitours.biz.id</p>
-</section>
+  <!-- Testimoni -->
+  <section id="testimoni" class="testimoni">
+    <h2>Testimoni Jamaah</h2>
+    <p>"Alhamdulillah perjalanan umroh bersama PT Attamimi Tours sangat nyaman dan berkesan. Pelayanan luar biasa." – Jamaah A</p>
+  </section>
 
-<footer>
-  <p>© 2025 PT AT-TAMIMI Tours & Travel – Resmi Terdaftar di Kemenag RI</p>
-</footer>
+  <!-- FAQ -->
+  <section id="faq" class="faq">
+    <h2>FAQ</h2>
+    <p><b>Tanya:</b> Apakah PT Attamimi Tours resmi?<br>
+    <b>Jawab:</b> Ya, kami berizin resmi Kemenag RI dan anggota AMPHURI.</p>
+  </section>
 
-<script>
-// Countdown
-const targetDate = new Date("Sep 27, 2025 00:00:00").getTime();
-const countdownEl = document.getElementById("countdown");
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 PT Attamimi Tours. All Rights Reserved.</p>
+  </footer>
 
-setInterval(function(){
-  const now = new Date().getTime();
-  const distance = targetDate - now;
-  
-  const days = Math.floor(distance / (1000*60*60*24));
-  const hours = Math.floor((distance % (1000*60*60*24))/(1000*60*60));
-  const minutes = Math.floor((distance % (1000*60*60))/(1000*60));
-  const seconds = Math.floor((distance % (1000*60))/1000);
-  
-  countdownEl.innerHTML = days + " hari " + hours + " jam " + minutes + " mnt " + seconds + " dtk ";
-}, 1000);
-</script>
+  <!-- WhatsApp -->
+  <a href="https://wa.me/6285183049514" class="whatsapp">💬 Chat via WhatsApp</a>
+
+  <!-- Script Countdown & Toggle -->
+  <script>
+    // Hamburger menu
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav ul');
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('show');
+    });
+
+    // Countdown
+    const countDownDate = new Date("Sep 27, 2025 00:00:00").getTime();
+    const countdown = document.getElementById("countdown");
+    setInterval(() => {
+      const now = new Date().getTime();
+      const distance = countDownDate - now;
+      if (distance < 0) {
+        countdown.innerHTML = "Acara sudah dimulai!";
+        return;
+      }
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      countdown.innerHTML = `${days} Hari ${hours} Jam ${minutes} Menit ${seconds} Detik`;
+    }, 1000);
+  </script>
 
 </body>
 </html>
