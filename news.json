@@ -1,14 +1,26 @@
 [
   {
-    "judul": "Promo Umroh Awal Tahun",
-    "isi": "Attamimi Tours menghadirkan promo spesial untuk paket umroh di awal tahun 2025. Segera daftar sebelum kuota habis!",
+    "judul": "Promo Umroh Awal Tahun 2025",
+    "isi": "Attamimi Tours menghadirkan promo spesial untuk paket umroh awal tahun. Segera daftar sebelum kuota habis!",
     "tanggal": "2025-08-23",
     "gambar": "images/umroh-promo.jpg"
   },
   {
     "judul": "Tips Perjalanan Nyaman",
-    "isi": "Bawa barang seperlunya, gunakan tas ringan, dan jangan lupa bawa dokumen perjalanan di tempat aman.",
+    "isi": "Bawa barang seperlunya, gunakan tas ringan, dan jangan lupa simpan dokumen perjalanan di tempat aman.",
     "tanggal": "2025-08-20",
     "gambar": "images/tips-travel.png"
+  },
+  {
+    "judul": "Video Perjalanan Jamaah",
+    "isi": "Simak perjalanan jamaah umroh bersama Attamimi Tours dalam video berikut.",
+    "tanggal": "2025-08-18",
+    "video": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  },
+  {
+    "judul": "Pendaftaran Haji 2026 Dibuka",
+    "isi": "Kami membuka pendaftaran haji reguler tahun 2026 dengan fasilitas terbaik dan pembimbing berpengalaman.",
+    "tanggal": "2025-08-15",
+    "gambar": "images/haji2026.jpg"
   }
 ]
