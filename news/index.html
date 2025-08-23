@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Berita & Tips - Attamimi Tours</title>
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+      background:#f9f9f9;
+      margin:0;
+      padding:0;
+    }
+    header{
+      background:#663399;
+      color:#fff;
+      padding:15px;
+      position:sticky;
+      top:0;
+      z-index:999;
+    }
+    header a{
+      color:#fff;
+      text-decoration:none;
+    }
+    .container{
+      max-width:800px;
+      margin:20px auto;
+      padding:20px;
+      background:#fff;
+      border-radius:8px;
+      box-shadow:0 2px 6px rgba(0,0,0,.1);
+    }
+    ul{
+      list-style:none;
+      padding:0;
+    }
+    li{
+      margin:15px 0;
+    }
+    li a{
+      color:#663399;
+      font-weight:bold;
+      font-size:18px;
+      text-decoration:none;
+    }
+    li a:hover{
+      text-decoration:underline;
+    }
+    footer{
+      text-align:center;
+      margin-top:30px;
+      font-size:14px;
+      color:#777;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="../index.html">← Kembali ke Beranda</a>
+</header>
+
+<div class="container">
+  <h1>Berita & Tips</h1>
+  <ul>
+    <li>
+      <a href="karnaval.html">
+        Pemuda Karangsari Purwodadi Meriahkan Karnaval HUT RI ke-80
+      </a>
+    </li>
+    <!-- Tambahkan berita lain di bawah ini -->
+    <!-- Contoh:
+    <li><a href="news-lain.html">Judul Berita Lain</a></li>
+    -->
+  </ul>
+
+  <footer>
+    &copy; <span id="yr"></span> Attamimi Tours
+  </footer>
+</div>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
