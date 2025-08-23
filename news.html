@@ -3,185 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Berita & Tips – Attamimi Tours</title>
+  <title>Berita & Tips - Attamimi Tours</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 80px 15px 20px;
-      background: #f7f7fb;
-    }
-    h1 { color: #663399; text-align: center; margin-bottom: 20px; }
-
-    /* NAVBAR FIXED */
-    .navbar {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%;
-      background: #663399;
-      padding: 12px 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      z-index: 1000;
-    }
-    .navbar a {
-      color: #fff;
-      font-weight: bold;
-      text-decoration: none;
-      background: #4a2673;
-      padding: 8px 16px;
-      border-radius: 8px;
-      transition: background 0.3s;
-    }
-    .navbar a:hover { background: #8254c0; }
-
-    #berita-container { display: flex; flex-direction: column; gap: 20px; }
-    article {
-      background: #fff;
-      padding: 16px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    article h2 { margin-bottom: 8px; color: #ff5722; }
-    article small { color: #666; display:block; margin-top:8px; }
-    article img, article iframe {
-      width: 100%; 
-      max-height: 300px; 
-      object-fit: cover; 
-      border-radius: 8px; 
-      margin-bottom: 10px;
-    }
-    .share { margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap; }
-    .share a, .like-btn { 
-      display:inline-block; padding:6px 12px; border-radius:6px; 
-      text-decoration:none; font-size:14px; font-weight:bold; color:#fff; cursor:pointer;
-    }
-    .wa { background:#25D366; }
-    .fb { background:#1877F2; }
-    .ig { background:#E4405F; }
-    .like-btn { background:#ff1744; border:none; }
-
-    /* Komentar */
-    .comments { margin-top:15px; }
-    .comments h4 { margin:8px 0; }
-    .comment-box {
-      display: flex;
-      gap: 6px;
-      margin-top: 8px;
-    }
-    .comment-box input {
-      flex:1;
-      padding:6px;
-      border:1px solid #ccc;
-      border-radius:6px;
-    }
-    .comment-box button {
-      padding:6px 12px;
-      border:none;
-      border-radius:6px;
-      background:#663399;
-      color:#fff;
-      font-weight:bold;
-      cursor:pointer;
-    }
-    ul.comment-list {
-      list-style: none;
-      padding-left: 0;
-      margin-top: 10px;
-    }
-    ul.comment-list li {
-      background:#f2f2f7;
-      padding:6px 10px;
-      border-radius:6px;
-      margin-bottom:5px;
-      font-size:14px;
-    }
+    body { font-family: Arial, sans-serif; background:#f9f9f9; margin:0; padding:0; }
+    header { background:#663399; color:#fff; padding:15px; position:sticky; top:0; }
+    header a { color:#fff; text-decoration:none; }
+    .container { max-width:800px; margin:20px auto; padding:20px; background:#fff; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
+    ul { list-style:none; padding:0; }
+    li { margin:15px 0; }
+    li a { text-decoration:none; color:#663399; font-weight:bold; font-size:18px; }
+    li a:hover { text-decoration:underline; }
   </style>
 </head>
 <body>
-  <!-- Navbar Fixed -->
-  <div class="navbar">
-    <a href="index.html">← Kembali ke Beranda</a>
-  </div>
+<header>
+  <a href="index.html">← Kembali ke Beranda</a>
+</header>
 
+<div class="container">
   <h1>Berita & Tips</h1>
-  <div id="berita-container">Loading berita...</div>
-
-  <script>
-    // Load berita dari JSON
-    fetch("news.json")
-      .then(res => res.json())
-      .then(data => {
-        let container = document.getElementById("berita-container");
-        container.innerHTML = "";
-        data.forEach((item, index) => {
-          let shareText = encodeURIComponent(item.judul + " - " + window.location.href);
-          let likeKey = "like_" + index;
-          let likes = localStorage.getItem(likeKey) || 0;
-
-          // Ambil komentar dari localStorage
-          let commentKey = "comments_" + index;
-          let comments = JSON.parse(localStorage.getItem(commentKey) || "[]");
-
-          container.innerHTML += `
-            <article id="news-${index}">
-              <h2>${item.judul}</h2>
-              ${item.gambar ? `<img src="${item.gambar}" alt="${item.judul}">` : ""}
-              ${item.video ? `<iframe src="${item.video}" frameborder="0" allowfullscreen></iframe>` : ""}
-              <p>${item.isi}</p>
-              <small>${item.tanggal}</small>
-
-              <div class="share">
-                <a class="wa" href="https://wa.me/?text=${shareText}" target="_blank">WhatsApp</a>
-                <a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=${window.location.href}" target="_blank">Facebook</a>
-                <a class="ig" href="https://instagram.com/attamimitours" target="_blank">Instagram</a>
-                <button class="like-btn" data-key="${likeKey}">❤️ Like (<span>${likes}</span>)</button>
-              </div>
-
-              <!-- Komentar -->
-              <div class="comments">
-                <h4>Komentar:</h4>
-                <ul class="comment-list" id="comment-list-${index}">
-                  ${comments.map(c => `<li>${c}</li>`).join("")}
-                </ul>
-                <div class="comment-box">
-                  <input type="text" id="comment-input-${index}" placeholder="Tulis komentar...">
-                  <button onclick="addComment(${index})">Kirim</button>
-                </div>
-              </div>
-            </article>
-          `;
-        });
-
-        // Event listener tombol like
-        document.querySelectorAll(".like-btn").forEach(btn => {
-          btn.addEventListener("click", function() {
-            let key = this.getAttribute("data-key");
-            let count = parseInt(localStorage.getItem(key) || 0) + 1;
-            localStorage.setItem(key, count);
-            this.innerHTML = `❤️ Like (<span>${count}</span>)`;
-          });
-        });
-      })
-      .catch(err => {
-        document.getElementById("berita-container").innerHTML = "Gagal memuat berita.";
-        console.error(err);
-      });
-
-    // Fungsi tambah komentar
-    function addComment(index) {
-      let input = document.getElementById("comment-input-" + index);
-      let val = input.value.trim();
-      if (!val) return;
-      let key = "comments_" + index;
-      let comments = JSON.parse(localStorage.getItem(key) || "[]");
-      comments.push(val);
-      localStorage.setItem(key, JSON.stringify(comments));
-
-      let list = document.getElementById("comment-list-" + index);
-      list.innerHTML += `<li>${val}</li>`;
-      input.value = "";
-    }
-  </script>
+  <ul>
+    <!-- Daftar berita -->
+    <li><a href="news-karnaval.html">Pemuda Karangsari Purwodadi Meriahkan Karnaval HUT RI ke-80</a></li>
+  </ul>
+</div>
 </body>
 </html>
