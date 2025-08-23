@@ -199,3 +199,20 @@ footer {
   text-align: center;
   padding: 10px;
 }
+<style>
+  .whatsapp-button {
+    display: inline-block;
+    background-color: #ff6600; /* Orange */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: background 0.3s ease;
+  }
+  .whatsapp-button:hover {
+    background-color: #e65c00; /* Orange lebih gelap */
+  }
+</style>
