@@ -1,115 +1,136 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Attamimi Tours – Haji & Umroh Resmi Yogyakarta & Jawa Tengah">
-  <title>Attamimi Tours – Haji & Umroh Resmi</title>
 
+  <!-- Google Search Console -->
+  <meta name="google-site-verification" content="Umo75pcrRNEr-g9k5pQHi5maV5Y7-P8K3OMUdF7IYLY" />
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Attamimi Tours – Haji & Umroh Resmi Yogyakarta & Jawa Tengah. Hotel bintang 5, visa lengkap, berangkat tanpa antri.">
+  <meta name="keywords" content="umroh jogja, umroh yogyakarta, travel umroh jogja, haji khusus jogja, biro umroh resmi jogja, paket umroh jawa tengah, umroh semarang, umroh solo, umroh purworejo, travel haji jawa tengah">
+
+  <!-- Open Graph (untuk share di FB/WA) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Attamimi Tours – Haji & Umroh Resmi Yogyakarta & Jawa Tengah">
+  <meta property="og:description" content="Paket Umroh & Haji resmi dari Yogyakarta & Jawa Tengah. Hotel bintang 5, maskapai terpercaya, bimbingan ibadah amanah.">
+  <meta property="og:url" content="https://attamimitours.biz.id">
+  <meta property="og:image" content="https://attamimitours.biz.id/Logo.png">
+  <meta property="og:site_name" content="Attamimi Tours">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Attamimi Tours – Haji & Umroh Resmi Yogyakarta & Jawa Tengah">
+  <meta name="twitter:description" content="Paket Umroh & Haji resmi dari Yogyakarta & Jawa Tengah. Hotel bintang 5, maskapai terpercaya, bimbingan ibadah amanah.">
+  <meta name="twitter:image" content="https://attamimitours.biz.id/Logo.png">
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-69KG75SMLR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-69KG75SMLR');
+  </script>
+
+  <title>Attamimi Tours – Haji & Umroh Resmi</title>
+  <!-- CSS & Style bisa menyusul di bawah -->
+</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Attamimi Tours – Haji & Umroh Resmi</title>
   <style>
     :root{--primary:#663399;--accent:#ff5722;--white:#fff;--black:#222;--bg:#f8f8f8}
     *{margin:0;padding:0;box-sizing:border-box}
-    html,body{overflow-x:hidden}
     body{font-family:'Poppins',Arial,sans-serif;color:var(--black);background:var(--bg);line-height:1.6}
 
-    /* HEADER */
-    header{
-      background:url('hero-kaaba.jpg') center/cover no-repeat;
-      filter:brightness(1.15) contrast(1.05);
-      min-height:400px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative
-    }
-    header::before{content:'';position:absolute;inset:0;background:rgba(0,0,0,.3)}
-    header>*{position:relative;z-index:2}
-    .logo-rounded{height:60px;border-radius:16px;margin-bottom:10px}
-    h1{color:#fff;font-size:2.2rem;text-shadow:0 2px 4px #000;margin-bottom:8px}
-    .subtitle{color:#fff;font-size:1.1rem;text-shadow:0 1px 3px #000;margin-bottom:20px}
-    .btn-primary{background:var(--accent);color:#fff;padding:15px 32px;border:none;border-radius:30px;font-weight:700;font-size:1rem;text-decoration:none;transition:.3s}
-    .btn-primary:hover{background:#e64a19;transform:scale(1.05)}
-
-    /* SIDEBAR STICKY (tidak hilang saat scroll) */
+    /* SIDEBAR DESKTOP */
     .sidebar{
-      position:fixed;
-      top:0;
-      left:0;
-      width:220px;
-      height:100vh;
-      background:#fff;
-      box-shadow:2px 0 8px rgba(0,0,0,.15);
-      z-index:1000;
-      display:flex;
-      flex-direction:column;
-      padding:20px 15px;
+      position:fixed;top:0;left:0;width:220px;height:100vh;
+      background:#fff;box-shadow:2px 0 8px rgba(0,0,0,.15);
+      z-index:1000;display:flex;flex-direction:column;padding:20px 15px;
     }
     .sidebar .logo{height:45px;margin-bottom:20px}
     .sidebar ul{list-style:none}
     .sidebar li{margin:15px 0}
     .sidebar a{color:var(--primary);font-weight:600;text-decoration:none}
     .sidebar a:hover{color:var(--accent)}
-
-    /* Legalitas di sidebar */
     .sidebar .legalitas{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:20px}
     .sidebar .legalitas img{height:35px;border-radius:4px}
 
-    /* Main content offset */
-    .main{margin-left:220px;padding:0 20px}
-
-    /* Responsive */
-    @media(max-width:768px){
-      .sidebar{display:none}
-      .main{margin-left:0;padding:0 15px}
+    /* HAMBURGER MOBILE */
+    .mobile-header{
+      display:none;position:fixed;top:0;left:0;width:100%;z-index:1100;
+      background:var(--primary);color:#fff;display:flex;align-items:center;
+      justify-content:space-between;padding:12px 20px;
     }
+    .hamburger{font-size:28px;cursor:pointer}
+    .mobile-menu{
+      display:none;position:fixed;top:0;left:0;width:70%;height:100%;
+      background:#fff;z-index:1200;box-shadow:2px 0 10px rgba(0,0,0,.2);
+      padding:20px;
+    }
+    .mobile-menu.active{display:block}
+    .mobile-menu ul{list-style:none}
+    .mobile-menu li{margin:15px 0}
+    .mobile-menu a{color:var(--primary);text-decoration:none;font-weight:600}
+    .mobile-menu a:hover{color:var(--accent)}
 
-    /* Layout */
+    /* MAIN CONTENT */
+    .main{margin-left:220px;padding:0 20px}
+    header{
+      background:url('hero-kaaba.jpg') center/cover no-repeat;
+      min-height:400px;display:flex;flex-direction:column;
+      justify-content:center;align-items:center;text-align:center;position:relative;
+    }
+    header::before{content:'';position:absolute;inset:0;background:rgba(0,0,0,.4)}
+    header>*{position:relative;z-index:2}
+    h1{color:#fff;font-size:2.2rem;text-shadow:0 2px 4px #000;margin-bottom:8px}
+    .subtitle{color:#fff;font-size:1.1rem;text-shadow:0 1px 3px #000;margin-bottom:20px}
+    .btn-primary{background:var(--accent);color:#fff;padding:12px 28px;border:none;border-radius:30px;font-weight:700;text-decoration:none;transition:.3s}
+    .btn-primary:hover{background:#e64a19;transform:scale(1.05)}
+
     .container{max-width:1000px;margin:auto;padding:40px 20px}
     .paket{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
     .card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,.08)}
-    .card img{width:100%;height:auto;display:block}
+    .card img{width:100%;height:180px;object-fit:cover;display:block}
     .card-body{padding:18px;text-align:center}
     .price{color:var(--primary);font-weight:700}
-    footer{background:#333;color:#ccc;text-align:center;padding:25px 10px}
+
+    /* GALERI */
+    .galeri-wrapper{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+    .galeri-wrapper img{width:100%;height:200px;object-fit:cover;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,.2)}
+
+    footer{background:#333;color:#ccc;text-align:center;padding:25px 10px;margin-top:40px}
+
+    /* RESPONSIVE */
+    @media(max-width:768px){
+      .sidebar{display:none}
+      .main{margin-left:0}
+      .mobile-header{display:flex}
+    }
   </style>
-<!-- Google Search Console -->
-<meta name="google-site-verification" content="Umo75pcrRNEr-g9k5pQHi5maV5Y7-P8K3OMUdF7IYLY" />
-
-<!-- Google Analytics 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-69KG75SMLR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-69KG75SMLR');
-</script>
-<!-- Google Search Console -->
-<meta name="google-site-verification" content="Umo75pcrRNEr-g9k5pQHi5maV5Y7-P8K3OMUdF7IYLY" />
-
-<!-- SEO Meta -->
-<meta name="description" content="Attamimi Tours – Haji & Umroh Resmi Yogyakarta & Jawa Tengah. Hotel bintang 5, visa lengkap, berangkat tanpa antri.">
-<meta name="keywords" content="umroh jogja, umroh yogyakarta, travel umroh jogja, haji khusus jogja, biro umroh resmi jogja, paket umroh jawa tengah, umroh semarang, umroh solo, umroh purworejo, travel haji jawa tengah">
-
-<!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Attamimi Tours – Haji & Umroh Resmi Yogyakarta & Jawa Tengah">
-<meta property="og:description" content="Paket Umroh & Haji resmi dari Yogyakarta & Jawa Tengah. Hotel bintang 5, maskapai terpercaya, bimbingan ibadah amanah.">
-<meta property="og:url" content="https://attamimitours.biz.id">
-<meta property="og:image" content="https://attamimitours.biz.id/Logo.png">
-<meta property="og:site_name" content="Attamimi Tours">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Attamimi Tours – Haji & Umroh Resmi Yogyakarta & Jawa Tengah">
-<meta name="twitter:description" content="Paket Umroh & Haji resmi dari Yogyakarta & Jawa Tengah. Hotel bintang 5, maskapai terpercaya, bimbingan ibadah amanah.">
-<meta name="twitter:image" content="https://attamimitours.biz.id/Logo.png">
-
-<!-- Google Analytics 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-69KG75SMLR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-69KG75SMLR');
-</script>
 </head>
-
 <body>
-  <!-- Sidebar Sticky -->
+
+  <!-- Header Mobile + Hamburger -->
+  <div class="mobile-header">
+    <span>Attamimi Tours</span>
+    <span class="hamburger" onclick="toggleMenu()">☰</span>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" onclick="toggleMenu()">Tentang</a></li>
+      <li><a href="#packages" onclick="toggleMenu()">Paket</a></li>
+      <li><a href="#gallery" onclick="toggleMenu()">Galeri</a></li>
+      <li><a href="/news/" onclick="toggleMenu()">Berita & Tips</a></li>
+      <li><a href="#contact" onclick="toggleMenu()">Kontak</a></li>
+    </ul>
+  </div>
+
+  <!-- Sidebar Desktop -->
   <aside class="sidebar">
     <img src="Logo.png" alt="Attamimi Logo" class="logo">
     <ul>
@@ -120,101 +141,59 @@
       <li><a href="#contact">Kontak</a></li>
     </ul>
     <div class="legalitas">
-      <img src="LogoKemenag.png"   alt="Kemenag">
-      <img src="LogoAmphuri.png"   alt="Amphuri">
+      <img src="LogoKemenag.png" alt="Kemenag">
+      <img src="LogoAmphuri.png" alt="Amphuri">
       <img src="LogoSiskopatuh.jpg" alt="Siskopatuh">
-      <img src="Logo5Pasti.png"    alt="5Pasti">
-      <img src="LogoIATA.png"      alt="IATA">
+      <img src="Logo5Pasti.png" alt="5Pasti">
+      <img src="LogoIATA.png" alt="IATA">
     </div>
   </aside>
 
-  <!-- Main Content -->
+  <!-- Main -->
   <div class="main">
-    <!-- Header -->
     <header>
       <h1>Attamimi Tours & Travel</h1>
       <p class="subtitle">Haji Khusus Tanpa Antri & Umroh Sepanjang Tahun</p>
       <a href="#packages" class="btn-primary">Lihat Paket</a>
     </header>
 
-    <!-- ABOUT -->
     <section id="about" class="container">
       <h2>Tentang Kami</h2>
       <p style="max-width:700px;margin:auto;text-align:center">
         Dapatkan pengalaman ibadah yang nyaman, aman, dan berkah bersama PT AT-TAMIMI.
       </p>
-
-      <!-- 4 Poin Utama -->
-      <div style="margin-top:30px">
-        <h3>1. Mengapa Memilih PT AT-TAMIMI?</h3>
-        <ul>
-          <li>Izin resmi PPIU & PIHK – legalitas lengkap</li>
-          <li>Hotel bintang 5 di Makkah & Madinah</li>
-          <li>Maskapai terpercaya (Saudia, Emirates, dll)</li>
-          <li>Petugas lapangan & muthawif berpengalaman</li>
-          <li>Gratis konsultasi & simulasi</li>
-        </ul>
-
-        <h3>2. Fasilitas yang Kami Sediakan</h3>
-        <ul>
-          <li>Visa & asuransi lengkap</li>
-          <li>Bus AC private Madinah-Makkah</li>
-          <li>Makan 3× sehari (buffet)</li>
-          <li>Wi-Fi gratis selama perjalanan</li>
-          <li>Air zam-zam & souvenir</li>
-        </ul>
-
-        <h3>3. Tata Cara Pendaftaran</h3>
-        <ol>
-          <li>Konsultasi & pilih paket</li>
-          <li>Isi form & bayar DP 30%</li>
-          <li>Serahkan dokumen (paspor, foto, dll)</li>
-          <li>Undang briefing & tes kesehatan</li>
-          <li>Keberangkatan!</li>
-        </ol>
-
-        <h3>4. Persyaratan Pendaftaran</h3>
-        <ul>
-          <li>Paspor minimal 8 bulan masa berlaku</li>
-          <li>KTP & KK asli & fotokopi</li>
-          <li>Foto 4×6 cm latar putih (4 lembar)</li>
-          <li>Sertifikat vaksin meningitis & COVID-19</li>
-          <li>Surat keterangan sehat dari dokter</li>
-        </ul>
-      </div>
     </section>
 
-    <!-- Packages -->
     <section id="packages" class="container">
       <h2>Pilihan Paket</h2>
       <div class="paket">
-        <div class="card"><img src="umroh9.jpg" alt="Umroh 9 Hari"><div class="card-body"><h3>Umroh 9 Hari</h3><p>Lion Air | Hotel 3★ | 3× Umroh</p><div class="price">Rp 28,5 Jt</div><a href="https://wa.me/6285183049514?text=Saya%20tertarik%20Umroh%209%20Hari" class="btn-primary">Pesan via WA</a></div></div>
-        <div class="card"><img src="umroh12.jpg" alt="Umroh 12 Hari"><div class="card-body"><h3>Umroh 12 Hari</h3><p>Malaysia Airlines | Hotel 4★ | 3× Umroh</p><div class="price">Rp 33 Jt</div><a href="https://wa.me/6285183049514?text=Saya%20tertarik%20Umroh%2012%20Hari" class="btn-primary">Pesan via WA</a></div></div>
-        <div class="card"><img src="umroh14.jpg" alt="Umroh 14 Hari"><div class="card-body"><h3>Umroh 14 Hari</h3><p>Saudia Airlines | Hotel 4★ | 3× Umroh</p><div class="price">Rp 35,5 Jt</div><a href="https://wa.me/6285183049514?text=Saya%20tertarik%20Umroh%2014%20Hari" class="btn-primary">Pesan via WA</a></div></div>
+        <div class="card"><img src="umroh9.jpg"><div class="card-body"><h3>Umroh 9 Hari</h3><div class="price">Rp 28,5 Jt</div></div></div>
+        <div class="card"><img src="umroh12.jpg"><div class="card-body"><h3>Umroh 12 Hari</h3><div class="price">Rp 33 Jt</div></div></div>
       </div>
-      <div class="card haji"><img src="paket-haji.jpg" alt="Haji Khusus"><div class="card-body"><h3>Haji Khusus 2025</h3><p>Durasi 25 Hari | Hotel 5★ Makkah & Madinah</p><div class="price">Reguler Rp 295 Jt</div><a href="https://wa.me/6285183049514?text=Saya%20tertarik%20Paket%20Haji%20Khusus" class="btn-primary">Pesan via WA</a></div></div>
     </section>
 
-    <!-- Galeri -->
-    <section id="gallery" class="container"><h2>Galeri Perjalanan</h2>
+    <section id="gallery" class="container">
+      <h2>Galeri Perjalanan</h2>
       <div class="galeri-wrapper">
-        <div class="galeri-slider">
-          <img src="galeri1.jpg" alt="Mekkah">
-          <img src="galeri2.jpg" alt="Madinah">
-          <img src="galeri3.jpg" alt="Arafah">
-        </div>
+        <img src="galeri1.jpg" alt="Mekkah">
+        <img src="galeri2.jpg" alt="Madinah">
+        <img src="galeri3.jpg" alt="Arafah">
       </div>
     </section>
 
-    <!-- Contact -->
     <section id="contact" class="container" style="text-align:center">
-      <h2>Kontak & Alamat</h2>
-      <p><strong>Alamat:</strong> Kompleks Pondok Pesantren Putra Putri Al Azhar, Purworejo<br>
-      <strong>Email:</strong> attamimi.tour@gmail.com<br>
-      <strong>WhatsApp:</strong> +62 851-8304-9514</p>
-      <a href="https://wa.me/6285183049514?text=Assalamu'alaikum" class="btn-primary">Chat WhatsApp Sekarang</a>
+      <h2>Kontak</h2>
+      <p><strong>WhatsApp:</strong> +62 851-8304-9514</p>
+      <a href="https://wa.me/6285183049514" class="btn-primary">Chat WhatsApp</a>
     </section>
-    <footer>&copy; 2025 Attamimi Tours – Izin PPIU U.352/2020 & PIHK 02202072929030002/2024</footer>
+
+    <footer>&copy; 2025 Attamimi Tours</footer>
   </div>
+
+<script>
+function toggleMenu(){
+  document.getElementById("mobileMenu").classList.toggle("active");
+}
+</script>
 </body>
 </html>
