@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Berita & Tips – Attamimi Tours</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: 20px auto; padding: 10px; background:#f7f7fb; }
+    h1 { color: #663399; text-align: center; margin-bottom: 20px; }
+    #berita-container { display: flex; flex-direction: column; gap: 20px; }
+    article { background: #fff; padding: 16px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    article h2 { margin-bottom: 8px; color: #ff5722; }
+    article small { color: #666; display:block; margin-top:8px; }
+    .share { margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap; }
+    .share a, .like-btn { 
+      display:inline-block; padding:6px 12px; border-radius:6px; text-decoration:none; font-size:14px; font-weight:bold; color:#fff; cursor:pointer;
+    }
+    .wa { background:#25D366; }
+    .fb { background:#1877F2; }
+    .ig { background:#E4405F; }
+    .like-btn { background:#ff1744; border:none; }
+  </style>
+</head>
+<body>
+  <h1>Berita & Tips</h1>
+  <div id="berita-container">Loading berita...</div>
+
+  <script>
+    // Load data berita
+    fetch("news.json")
+      .then(res => res.json())
+      .then(data => {
+        let container = document.getElementById("berita-container");
+        container.innerHTML = "";
+        data.forEach((item, index) => {
+          let shareText = encodeURIComponent(item.judul + " - " + window.location.href);
+          let likeKey = "like_" + index;
+          let likes = localStorage.getItem(likeKey) || 0;
+
+          container.innerHTML += `
+            <article>
+              <h2>${item.judul}</h2>
+              <p>${item.isi}</p>
+              <small>${item.tanggal}</small>
+              <div class="share">
+                <a class="wa" href="https://wa.me/?text=${shareText}" target="_blank">WhatsApp</a>
+                <a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=${window.location.href}" target="_blank">Facebook</a>
+                <a class="ig" href="https://instagram.com/attamimitours" target="_blank">Instagram</a>
+                <button class="like-btn" data-key="${likeKey}">❤️ Like (<span>${likes}</span>)</button>
+              </div>
+            </article>
+          `;
+        });
+
+        // Tambahkan event listener untuk tombol like
+        document.querySelectorAll(".like-btn").forEach(btn => {
+          btn.addEventListener("click", function() {
+            let key = this.getAttribute("data-key");
+            let count = parseInt(localStorage.getItem(key) || 0) + 1;
+            localStorage.setItem(key, count);
+            this.innerHTML = `❤️ Like (<span>${count}</span>)`;
+          });
+        });
+      })
+      .catch(err => {
+        document.getElementById("berita-container").innerHTML = "Gagal memuat berita.";
+        console.error(err);
+      });
+  </script>
+</body>
+</html>
