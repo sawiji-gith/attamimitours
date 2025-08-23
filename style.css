@@ -206,13 +206,14 @@ footer {
     color: white;
     font-size: 18px;
     font-weight: bold;
-    padding: 12px 20px;
-    border-radius: 8px;
+    padding: 12px 28px; /* lebih panjang biar lonjong */
+    border-radius: 50px; /* bikin bulat lonjong */
     text-decoration: none;
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, transform 0.2s ease;
   }
   .whatsapp-button:hover {
     background-color: #e65c00; /* Orange lebih gelap */
+    transform: scale(1.05);
   }
 </style>
