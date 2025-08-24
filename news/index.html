@@ -14,46 +14,29 @@
 
 <div class="container">
   <h1>Berita & Tips</h1>
-  <ul id="news-list">Memuat…</ul>
+
+  <!-- Daftar berita (jika menambah baru, salin blok <li> & ubah isinya) -->
+  <ul class="news-list">
+    <li>
+      <a href="sertifikat-eas-2024.html">
+        <img src="../images/sertifikat-eas-attamimi.jpg" alt="Sertifikat EAS">
+        <h2>Attamimi Tours Resmi Ter-Akreditasi EAS 2024-2029</h2>
+        <p>Sertifikasi EAS-BMX-2024 resmi diterima Attamimi Tours untuk penyelenggaraan umrah berstandar nasional.</p>
+        <time>06 Agustus 2024</time>
+      </a>
+    </li>
+
+    <li>
+      <a href="karnaval.html">
+        <img src="../images/1000558468.jpg" alt="Karnaval">
+        <h2>Parade Kreatif Karangsari: Filosofi Bambu & Pangeran Diponegoro</h2>
+        <p>Pemuda Karangsari menampilkan karnaval replika bambu Pangeran Diponegoro.</p>
+        <time>23 Agustus 2023</time>
+      </a>
+    </li>
+
+    <!-- Tambah berita baru: salin blok <li> di atas & ubah isinya -->
+  </ul>
 </div>
-
-<script>
-// Daftar statis file berita (update manual saja menambah berita baru)
-const fileList = [
-  {
-    file: 'sertifikat-eas-2024.html',
-    title: 'Attamimi Tours Resmi Ter-Akreditasi EAS 2024-2029',
-    summary: 'Sertifikasi EAS-BMX-2024 resmi diterima Attamimi Tours untuk penyelenggaraan umrah berstandar nasional.',
-    image: '../images/sertifikat-eas-attamimi.jpg',
-    date: '2024-08-06'
-  },
-  {
-    file: 'karnaval.html',
-    title: 'Parade Kreatif Karangsari: Filosofi Bambu & Pangeran Diponegoro',
-    summary: 'Pemuda Karangsari menampilkan karnaval replika bambu Pangeran Diponegoro.',
-    image: '../images/1000558468.jpg',
-    date: '2023-08-23'
-  }
-  // Tambahkan objek baru di sini kalau ada berita berikutnya
-];
-
-// Render daftar
-const list = document.getElementById('news-list');
-list.innerHTML = '';
-fileList
-  .sort((a, b) => new Date(b.date) - new Date(a.date))
-  .forEach(item => {
-    list.insertAdjacentHTML('beforeend', `
-      <li>
-        <a href="${item.file}">
-          <img src="${item.image}" alt="${item.title}">
-          <h2>${item.title}</h2>
-          <p>${item.summary}</p>
-          <time>${item.date}</time>
-        </a>
-      </li>
-    `);
-  });
-</script>
 </body>
 </html>
