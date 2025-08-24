@@ -47,13 +47,8 @@ p  { margin-bottom: .8rem; }
   bottom: 20px;
   right: 20px;
   z-index: 9999;
-  padding: 12px 18px;
-  background: #663399;
-  color: #fff;
-  font-size: .9rem;
-  text-decoration: none;
-  border-radius: 50px;
-  box-shadow: 0 4px 12px rgba(102,51,153,.4);
-  transition: transform .2s;
+  will-change: transform; /* perbaiki flicker di iOS/Android */
+  backface-visibility: hidden;
+  /* … properti lain tetap … */
 }
 .btn-float:hover { transform: scale(1.08); }
