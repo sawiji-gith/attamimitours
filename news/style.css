@@ -1,48 +1,59 @@
-.news-list {
-  list-style: none;
-  padding: 0;
-}
-.news-list li {
-  margin-bottom: 1.5rem;
-  border: 1px solid #e5e5e5;
-  border-radius: 8px;
-  overflow: hidden;
-}
-.news-list img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-.news-list h2 {
-  font-size: 1.2rem;
-  margin: .5rem .75rem 0;
-}
-.news-list p {
-  margin: .25rem .75rem .5rem;
-  font-size: .95rem;
-}
-.news-list time {
-  margin: 0 .75rem .75rem;
-  font-size: .85rem;
-  color: #777;
+/* ===== news/style.css ===== */
+
+/* 1. Reset & base mobile-first */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-family: system-ui, Arial, sans-serif; font-size: 17px; line-height: 1.6; color: #222; background: #f5f5f5; }
+body { padding: 0 12px; }
+
+/* 2. Kontainer utama */
+.container, article {
+  max-width: 800px;
+  margin: 0 auto 80px; /* ruang untuk tombol fixed */
+  padding: 16px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
 }
 
-/* Tombol Back Fixed */
-.back-fixed {
+/* 3. Header halaman */
+header {
+  background: #663399;
+  color: #fff;
+  padding: 12px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+header a { color: #fff; text-decoration: none; }
+
+/* 4. Gambar responsif */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 16px 0;
+  border-radius: 12px;
+}
+
+/* 5. Judul & teks */
+h1 { font-size: 1.5rem; margin-bottom: .6rem; }
+h2 { font-size: 1.25rem; margin-bottom: .4rem; }
+p  { margin-bottom: .8rem; }
+
+/* 6. Tombol kembali lonjong 3D fixed */
+.btn-float {
   position: fixed;
   bottom: 20px;
   right: 20px;
   z-index: 9999;
-  padding: 10px 14px;
+  padding: 12px 18px;
   background: #663399;
   color: #fff;
-  border-radius: 50px;
+  font-size: .9rem;
   text-decoration: none;
-  font-size: 0.9rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,.25);
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(102,51,153,.4);
   transition: transform .2s;
 }
-
-.back-fixed:hover {
-  transform: scale(1.05);
-}
+.btn-float:hover { transform: scale(1.08); }
