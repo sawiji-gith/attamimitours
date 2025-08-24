@@ -4,95 +4,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Berita & Tips - Attamimi Tours</title>
-  <style>
-    body{
-      font-family: Arial, sans-serif;
-      background:#f9f9f9;
-      margin:0;
-      padding:0;
-    }
-    header{
-      background:#663399;
-      color:#fff;
-      padding:15px;
-      position:sticky;
-      top:0;
-      z-index:999;
-    }
-    header a{
-      color:#fff;
-      text-decoration:none;
-    }
-    .container{
-      max-width:800px;
-      margin:20px auto;
-      padding:20px;
-      background:#fff;
-      border-radius:8px;
-      box-shadow:0 2px 6px rgba(0,0,0,.1);
-    }
-    ul{
-      list-style:none;
-      padding:0;
-    }
-    li{
-      margin:15px 0;
-    }
-    li a{
-      color:#663399;
-      font-weight:bold;
-      font-size:18px;
-      text-decoration:none;
-    }
-    li a:hover{
-      text-decoration:underline;
-    }
-    footer{
-      text-align:center;
-      margin-top:30px;
-      font-size:14px;
-      color:#777;
-    }
-  </style>
-
-<link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+<body>
 <header>
   <a href="../index.html">← Kembali ke Beranda</a>
 </header>
 
 <div class="container">
   <h1>Berita & Tips</h1>
-  <ul>
-    <li>
-      <a href="karnaval.html">
-        Pemuda Karangsari Purwodadi Meriahkan Karnaval HUT RI ke-80
-      </a>
-</li>
-a href="/news/eas-ppiu-akreditasi-a-2024.html">PT Attamimi Tawakkal Alalloh Raih Akreditasi A PPIU</a>
-</li>
-
-    </li>
-    <!-- Tambahkan berita lain di bawah ini -->
-    <!-- Contoh:
-    <li>
-    <a href="news-lain.html">Judul Berita
-    </a>
-    </li>
-    -->
-  </ul>
-
-  <footer>
-    &copy; <span id="yr"></span> Attamimi Tours
-  </footer>
+  <ul id="news-list">Memuat…</ul>
 </div>
 
 <script>
-  document.getElementById('yr').textContent = new Date().getFullYear();
-</script>
+// Daftar statis file berita (update manual saja menambah berita baru)
+const fileList = [
+  {
+    file: 'sertifikat-eas-2024.html',
+    title: 'Attamimi Tours Resmi Ter-Akreditasi EAS 2024-2029',
+    summary: 'Sertifikasi EAS-BMX-2024 resmi diterima Attamimi Tours untuk penyelenggaraan umrah berstandar nasional.',
+    image: '../images/1000558604.jpg',
+    date: '2024-08-06'
+  },
+  {
+    file: 'karnaval.html',
+    title: 'Parade Kreatif Karangsari: Filosofi Bambu & Pangeran Diponegoro',
+    summary: 'Pemuda Karangsari menampilkan karnaval replika bambu Pangeran Diponegoro.',
+    image: '../images/1000558468.jpg',
+    date: '2023-08-23'
+  }
+  // Tambahkan objek baru di sini kalau ada berita berikutnya
+];
 
+// Render daftar
+const list = document.getElementById('news-list');
+list.innerHTML = '';
+fileList
+  .sort((a, b) => new Date(b.date) - new Date(a.date))
+  .forEach(item => {
+    list.insertAdjacentHTML('beforeend', `
+      <li>
+        <a href="${item.file}">
+          <img src="${item.image}" alt="${item.title}">
+          <h2>${item.title}</h2>
+          <p>${item.summary}</p>
+          <time>${item.date}</time>
+        </a>
+      </li>
+    `);
+  });
+</script>
 </body>
 </html>
