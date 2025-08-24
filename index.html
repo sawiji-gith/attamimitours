@@ -385,5 +385,17 @@
       },1000);
     }
   </script>
+
+<!-- Background Islamic music -->
+<audio id="bg-music" src="islamic-bg.mp3" autoplay muted loop></audio>
+<script>
+  // biar autoplay di browser baru (harus muted terlebih dahulu)
+  document.addEventListener('click', () => {
+    const audio = document.getElementById('bg-music');
+    audio.muted = false;
+    audio.play();
+  });
+</script>
+
 </body>
 </html>
