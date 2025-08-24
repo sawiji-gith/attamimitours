@@ -359,15 +359,23 @@
   </script>
 
 <!-- Background Islamic music -->
-<audio id="bg-music" src="islamic-bg.mp3" autoplay muted loop></audio>
+<audio id="bg-music" src="islamic-bg.mp3" muted></audio>
+
 <script>
-  // biar autoplay di browser baru (harus muted terlebih dahulu)
-  document.addEventListener('click', () => {
-    const audio = document.getElementById('bg-music');
-    audio.muted = false;
-    audio.play();
-  });
+  // Autoplay setelah user pertama kali klik (sekali putar)
+  document.addEventListener(
+    'click',
+    () => {
+      const audio = document.getElementById('bg-music');
+      if (audio.paused) {
+        audio.muted = false;
+        audio.play();
+      }
+    },
+    { once: true } // listener dihapus setelah dieksekusi sekali
+  );
 </script>
+
 
 </body>
 </html>
