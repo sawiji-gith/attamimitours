@@ -26,3 +26,23 @@
   font-size: .85rem;
   color: #777;
 }
+
+/* Tombol Back Fixed */
+.back-fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  padding: 10px 14px;
+  background: #663399;
+  color: #fff;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,.25);
+  transition: transform .2s;
+}
+
+.back-fixed:hover {
+  transform: scale(1.05);
+}
