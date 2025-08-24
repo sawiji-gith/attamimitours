@@ -1,11 +1,11 @@
 [
-  [
   {
-    "title": "Pemuda Karangsari Purwodadi Meriahkan Karnaval HUT RI ke-80",
-    "date": "2025-08-23",
-    "image": "images/1000558468.jpg",
-     "image": "images/1000558467.jpg",
-    "link": "karnaval.html",
-    "description": "Pemuda dan pemudi Karangtaruna Desa Karangsari Purwodadi ikut karnaval HUT RI ke-80 di Alun-Alun Purworejo dengan dukungan KH. Mutammimul Masholih."
+    "id": 1,
+    "slug": "karnaval",
+    "title": "Parade Kreatif Karangsari: Filosofi Bambu & Pangeran Diponegoro di HUT RI ke-80",
+    "summary": "Pemuda Karangsari menampilkan karnaval replika bambu Pangeran Diponegoro untuk memperingati 200 Tahun Perang Jawa & HUT RI ke-80.",
+    "image": "../images/1000558468.jpg",
+    "url": "karnaval.html",
+    "date": "2025-08-23"
   }
-  ]
+]
