@@ -359,48 +359,5 @@
     }
   </script>
 
-<!-- Background Islamic music -->
-<audio id="bg-music" src="islamic-bg.mp3" muted></audio>
-
-<script>
-  // Autoplay setelah user pertama kali klik (sekali putar)
-  document.addEventListener(
-    'click',
-    () => {
-      const audio = document.getElementById('bg-music');
-      if (audio.paused) {
-        audio.muted = false;
-        audio.play();
-      }
-    },
-    { once: true } // listener dihapus setelah dieksekusi sekali
-  );
-</script>
-
-/* Back-to-Top Button */
-#backToTop{
-  position:fixed;
-  bottom:24px;
-  right:24px;
-  width:46px;
-  height:46px;
-  border:none;
-  border-radius:50%;
-  background:var(--accent); /* warna oranye seperti tombol CTA */
-  color:#fff;
-  font-size:22px;
-  cursor:pointer;
-  opacity:0;
-  visibility:hidden;
-  transition:opacity .3s, visibility .3s, transform .2s;
-  z-index:9999;
-}
-#backToTop.show{opacity:1; visibility:visible;}
-#backToTop:hover{transform:scale(1.1);}
-@media (max-width:600px){
-  #backToTop{bottom:18px; right:18px; width:42px; height:42px; font-size:18px;}
-}
-
-
 </body>
 </html>
