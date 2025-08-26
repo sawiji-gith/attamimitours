@@ -113,6 +113,25 @@
     .container{max-width:1100px; margin:auto; padding:60px 18px}
     h2.section-title{text-align:center; margin-bottom:40px; color:var(--primary); font-size:2rem}
 
+    /* ===== BERITA & TIPS SLIDER ===== */
+    .news-slider{
+      position:relative; overflow:hidden;
+      background:#fff; border-radius:16px;
+      box-shadow:0 8px 20px rgba(0,0,0,.08);
+      padding:24px 32px; min-height:120px;
+    }
+    .slide{
+      display:none; animation:fade 1.2s;
+    }
+    .slide.active{display:block}
+    @keyframes fade{from{opacity:.4}to{opacity:1}}
+    .slide a{
+      text-decoration:none; color:var(--primary);
+      font-size:1.25rem; font-weight:600;
+      line-height:1.4;
+    }
+    .slide a:hover{color:var(--accent)}
+
     /* ===== PAKET ===== */
     .paket{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:32px}
     .card{
@@ -204,7 +223,7 @@
         <a href="#about">Tentang</a>
         <a href="#packages">Paket</a>
         <a href="#gallery">Galeri</a>
-        <a href="/news/">Berita & Tips</a>
+        <a href="#news">Berita & Tips</a>
         <a href="#contact">Kontak</a>
       </nav>
       <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -259,6 +278,17 @@
       <li>DP Min. Rp 5 Juta (DP tidak dapat dikembalikan kecuali ada perjanjian khusus)</li>
       <li>Pelunasan 30 Hari sebelum keberangkatan</li>
     </ul>
+  </section>
+
+  <!-- ====== BERITA & TIPS SLIDER ====== -->
+  <section id="news" class="container">
+    <h2 class="section-title">Berita & Tips</h2>
+    <div class="news-slider">
+      <div class="slide active"><a href="/news/1">7 Tips Hemat Biaya Umroh 2025</a></div>
+      <div class="slide"><a href="/news/2">Jadwal Keberangkatan Umroh Bulan Depan</a></div>
+      <div class="slide"><a href="/news/3">Panduan Vaksin Meningitis untuk Jamaah</a></div>
+      <div class="slide"><a href="/news/4">Doa & Zikir yang Dianjurkan di Tanah Suci</a></div>
+    </div>
   </section>
 
   <!-- ====== PAKET ====== -->
@@ -351,7 +381,7 @@
     <p><strong>Alamat:</strong> Kompleks Pondok Pesantren Putra Putri Al Azhar, Purworejo<br>
     <strong>Email:</strong> attamimi.tour@gmail.com<br>
     <strong>WhatsApp:</strong> +62 851-8304-9514</p>
-    <a href="https://wa.me/6285183049514?text=Assalamu%20%27alaikum" class="btn">Chat WhatsApp Sekarang</a>
+    <a href="https://wa.me/6285183049514?text=Assalamu%27alaikum%2C%20saya%20mau%20tanya%20paket%20umroh" class="btn">Chat WhatsApp Sekarang</a>
   </section>
 
   <!-- ====== SOCIAL LINKS ====== -->
@@ -377,12 +407,13 @@
   </footer>
 
   <!-- ====== STICKY WHATSAPP FLOAT ====== -->
-  <a class="wa-float" href="https://wa.me/6285183049514?text=Assalamu%27alaikum,%20saya%20mau%20tanya%20paket%20umroh" target="_blank" aria-label="Chat WhatsApp">
+  <a class="wa-float" href="https://wa.me/6285183049514?text=Assalamu%27alaikum%2C%20saya%20mau%20tanya%20paket%20umroh" target="_blank" aria-label="Chat WhatsApp">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
   </a>
 
-  <!-- ====== JS NAV TOGGLE ====== -->
+  <!-- ====== NAV TOGGLE + SLIDER SCRIPT ====== -->
   <script>
+    /* NAV TOGGLE */
     const burger = document.getElementById('hamburger');
     const links  = document.getElementById('navLinks');
     burger.addEventListener('click', () => {
@@ -390,7 +421,7 @@
       burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
 
-    // Countdown
+    /* COUNTDOWN */
     const target = new Date("Sep 27, 2025 00:00:00").getTime();
     const el = document.getElementById("countdown");
     if(el){
@@ -404,6 +435,18 @@
         el.textContent = `${day}h ${hr}j ${min}m ${sec}d`;
       },1000);
     }
+
+    /* BERITA SLIDER */
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    function showSlides(){
+      slides.forEach(s=>s.classList.remove('active'));
+      slideIndex++;
+      if(slideIndex >= slides.length) slideIndex = 0;
+      slides[slideIndex].classList.add('active');
+      setTimeout(showSlides, 4000);
+    }
+    showSlides();
   </script>
 </body>
 </html>
