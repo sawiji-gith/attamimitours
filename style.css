@@ -76,3 +76,35 @@ footer{background:#333;color:#ccc;text-align:center;padding:28px 12px}
   .nav-links.open{transform:translateX(0)}
   .hamburger{display:flex}
 }
+.hamburger{
+  display:none;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  width:44px;
+  height:44px;
+  border:none;
+  background:#fff;
+  border-radius:8px;
+  cursor:pointer;
+  box-shadow:0 2px 6px rgba(0,0,0,.06);
+}
+.hamburger span,
+.hamburger span::before,
+.hamburger span::after{
+  content:'';
+  display:block;
+  width:22px;
+  height:3px;
+  background:#333;
+  border-radius:2px;
+  transition:.3s;
+}
+.hamburger span::before,
+.hamburger span::after{
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+}
+.hamburger span::before{top: -8px}
+.hamburger span::after{top: 8px}
