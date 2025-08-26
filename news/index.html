@@ -2,55 +2,109 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Berita & Tips - Attamimi Tours</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Berita Terkini – Attamimi Tours</title>
+  <meta name="description"
+        content="Semua berita & update terkini seputar umrah, haji, dan kegiatan komunitas Attamimi Tours Purworejo.">
+  <meta name="keywords"
+        content="berita umrah, berita haji, Attamimi Tours, Purworejo, karnaval Karangsari">
+  <meta name="author" content="Attamimi Tours">
+  <meta name="geo.region" content="ID-JT">
+  <meta name="geo.placename" content="Purworejo">
+  <meta name="geo.position" content="-7.7086;109.9966">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-<header>
-  <a href="../index.html">← Kembali ke Beranda</a>
-</header>
+  <div class="container">
+    <a href="../index.html" class="back">← Kembali ke Beranda</a>
 
-<div class="container">
-  <h1>Berita & Tips</h1>
+    <h1>Berita & Update Attamimi Tours</h1>
+    <p class="meta">Ikuti perkembangan terbaru kami di Purworejo dan sekitarnya.</p>
 
-  <!-- Daftar berita (jika menambah baru, salin blok <li> & ubah isinya) -->
-  <ul class="news-list">
-    
-  <!-- Berita terbaru di paling atas -->
-    <li>
-      <a href="bp-haji-jadi-kementerian-2025.html">
-      <h2>BP Haji Jadi Kementerian Haji dan Umrah ...</h2>
-      <time>26 Agustus 2025</time> 
-    </li>
-    <li>
-    <a href="umrah-2025-12-juta-jamaah.html">
-      <img src="../images/umrah-2025-arrival.jpg" alt="Jamaah Umrah 2025">
-      <h2>Umrah 2025: Lebih 1,2 Juta Jama’ah ...</h2>
-      <p>Data resmi Kementerian Haji & Umrah KSA ...</p>
-      <time>25 Agustus 2025</time>
-    </a>
-  </li>
+    <!-- Daftar Berita -->
+    <section class="news-list">
+      <!-- Berita 1 -->
+      <article class="news-card">
+        <img src="../images/1000558468.jpg" alt="Karnaval Karangsari">
+        <h2><a href="karnaval.html">Parade Kreatif Karangsari: Filosofi Bambu & Pangeran Diponegoro</a></h2>
+        <p class="meta">23 Agustus 2025</p>
+        <p>Replika bambu raksasa Pangeran Diponegoro di HUT RI ke-80.</p>
+      </article>
 
-  <li>
-    <a href="sertifikat-eas-2024.html">
-      <img src="../images/sertifikat-eas-attamimi.jpg" alt="Sertifikat EAS">
-      <h2>Attamimi Tours Resmi Ter-Akreditasi EAS 2024-2029</h2>
-      <p>Sertifikasi EAS-BMX-2024 resmi diterima ...</p>
-      <time>06 Agustus 2024</time>
-    </a>
-  </li>
+      <!-- Berita 2 -->
+      <article class="news-card">
+        <img src="../images/sertifikat-eas-attamimi.jpg" alt="Sertifikat EAS">
+        <h2><a href="sertifikat-eas-2024.html">Attamimi Tours Resmi Ter-Akreditasi EAS 2024-2029</a></h2>
+        <p class="meta">06 Agustus 2024</p>
+        <p>Sertifikasi nasional untuk penyelenggaraan umrah berstandar.</p>
+      </article>
 
-  <li>
-    <a href="karnaval.html">
-      <img src="../images/1000558468.jpg" alt="Karnaval">
-      <h2>Parade Kreatif Karangsari: Filosofi Bambu & Pangeran Diponegoro</h2>
-      <p>Pemuda Karangsari menampilkan ...</p>
-      <time>23 Agustus 2023</time>
-    </a>
-  </li>
-</ul>
-</div>
+      <!-- Berita 3 -->
+      <article class="news-card">
+        <img src="../images/umrah-2025-arrival.jpg" alt="Jamaah Umrah">
+        <h2><a href="umrah-2025-12-juta-jamaah.html">Umrah 2025: 1,2 Juta Jamaah Tiba di Arab Saudi</a></h2>
+        <p class="meta">25 Agustus 2025</p>
+        <p>Lonjakan 30 % jemaah global & paket umrah Purworejo terbaru.</p>
+      </article>
+
+      <!-- Berita 4 -->
+      <article class="news-card">
+        <img src="../images/bp-haji-kementerian.jpg" alt="BP Haji">
+        <h2><a href="bp-haji-jadi-kementerian-2025.html">BP Haji Resmi Jadi Kementerian Haji dan Umrah</a></h2>
+        <p class="meta">26 Agustus 2025</p>
+        <p>Ditjen PHU Kemenag akan dihapus efektif 1 Januari 2026.</p>
+      </article>
+    </section>
+
+    <div class="share">
+      <strong>Bagikan:</strong>
+      <a href="https://api.whatsapp.com/send?text=Baca%20semua%20berita%20terbaru%20Attamimi%20Tours%20di%20https://attamimitours.biz.id/news/" target="_blank">WhatsApp</a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://attamimitours.biz.id/news/" target="_blank">Facebook</a>
+    </div>
+  </div>
+
+  <!-- Tambahan CSS inline agar card tampil rapi -->
+  <style>
+    .news-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+    .news-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,.08);
+      transition: .2s;
+    }
+    .news-card:hover { transform: translateY(-2px); }
+    .news-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .news-card h2 {
+      font-size: 1.125rem;
+      margin: .75rem 1rem 0;
+      line-height: 1.4;
+    }
+    .news-card p.meta {
+      margin: .25rem 1rem .75rem;
+      font-size: .875rem;
+      color: var(--muted);
+    }
+    .news-card p {
+      margin: 0 1rem 1rem;
+      font-size: .95rem;
+    }
+    @media (min-width:600px) {
+      .news-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      }
+    }
+  </style>
 </body>
 </html>
