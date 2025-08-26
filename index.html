@@ -5,371 +5,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Attamimi Tours – Haji & Umroh Resmi</title>
 
-  <!-- Google Search Console -->
-  <meta name="google-site-verification" content="Umo75pcrRNEr-g9k5pQHi5maV5Y7-P8K3OMUdF7IYLY">
-
-  <!-- SEO Meta -->
+  <!-- SEO -->
   <meta name="description" content="Attamimi Tours – Haji & Umroh Resmi Yogyakarta & Jawa Tengah. Hotel bintang 5, visa lengkap, berangkat tanpa antri.">
-  <meta name="keywords" content="umroh jogja, umroh yogyakarta, travel umroh jogja, haji khusus jogja, biro umroh resmi jogja, paket umroh jawa tengah, umroh semarang, umroh solo, umroh purworejo, travel haji jawa tengah">
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Attamimi Tours – Haji & Umroh Resmi Yogyakarta & Jawa Tengah">
-  <meta property="og:description" content="Paket Umroh & Haji resmi dari Yogyakarta & Jawa Tengah. Hotel bintang 5, maskapai terpercaya, bimbingan ibadah amanah.">
-  <meta property="og:url" content="https://attamimitours.biz.id">
-  <meta property="og:image" content="https://attamimitours.biz.id/Logo.png">
-  <meta property="og:site_name" content="Attamimi Tours">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Attamimi Tours – Haji & Umroh Resmi Yogyakarta & Jawa Tengah">
-  <meta name="twitter:description" content="Paket Umroh & Haji resmi dari Yogyakarta & Jawa Tengah. Hotel bintang 5, maskapai terpercaya, bimbingan ibadah amanah.">
-  <meta name="twitter:image" content="https://attamimitours.biz.id/Logo.png">
-
-  <!-- Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-69KG75SMLR"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-69KG75SMLR');
-  </script>
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    :root{
-      --primary:#663399;
-      --accent:#ff5722;
-      --white:#fff;
-      --black:#222;
-      --bg:#f7f7fb;
-    }
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{
-      font-family:'Poppins', Arial, sans-serif;
-      background:var(--bg);
-      color:var(--black);
-      line-height:1.7;
-      -webkit-font-smoothing:antialiased;
-      padding-top:76px;
-    }
-
-    /* ===== NAVBAR ===== */
-    .topbar{
-      position:fixed; inset:0 0 auto 0; height:76px; z-index:1000;
-      background:var(--white); box-shadow:0 2px 10px rgba(0,0,0,.08);
-    }
-    .nav{
-      max-width:1200px; margin:auto; height:100%;
-      display:flex; align-items:center; justify-content:space-between;
-      padding:0 18px;
-    }
-    .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
-    .brand img{height:46px}
-    .brand span{font-weight:700; color:var(--primary); letter-spacing:.4px}
-
-    .nav-links{display:flex; gap:22px; align-items:center}
-    .nav-links a{
-      text-decoration:none; color:var(--primary); font-weight:600;
-      padding:10px 14px; border-radius:10px;
-      transition:background .25s;
-    }
-    .nav-links a:hover{background:rgba(102,51,153,.08)}
-    .hamburger{
-      width:44px; height:44px; border-radius:8px; border:1px solid #e5e5e5;
-      background:var(--white); cursor:pointer; display:none; align-items:center; justify-content:center;
-      box-shadow:0 2px 6px rgba(0,0,0,.06);
-    }
-    .hamburger .bar{
-      width:24px; height:3px; background:#333; border-radius:4px; position:relative;
-    }
-    .hamburger .bar::before, .hamburger .bar::after{
-      content:''; position:absolute; left:0; right:0; height:3px; background:#333; border-radius:4px;
-    }
-    .hamburger .bar::before{top:-7px}
-    .hamburger .bar::after{top:7px}
-
-    /* ===== HERO ===== */
-    header.hero{
-      background:url('hero-kaaba.jpg') center/cover no-repeat;
-      min-height:480px; position:relative; display:flex; align-items:center; justify-content:center;
-      text-align:center; color:var(--white);
-    }
-    header.hero::before{
-      content:''; position:absolute; inset:0; background:rgba(0,0,0,.45);
-    }
-    header.hero .inner{position:relative; z-index:2; padding:24px}
-    header.hero h1{font-size:2.6rem; text-shadow:0 2px 6px rgba(0,0,0,.6); margin-bottom:8px}
-    header.hero .subtitle{opacity:.95; margin-bottom:20px; font-size:1.1rem}
-    .btn{
-      display:inline-block; background:var(--accent); color:var(--white);
-      padding:14px 28px; border-radius:50px; text-decoration:none; font-weight:700;
-      transition:transform .25s, filter .25s;
-    }
-    .btn:hover{transform:translateY(-2px); filter:brightness(1.05)}
-
-    /* ===== LAYOUT ===== */
-    .container{max-width:1100px; margin:auto; padding:60px 18px}
-    h2.section-title{text-align:center; margin-bottom:40px; color:var(--primary); font-size:2rem}
-
-    /* ===== BERITA & TIPS SLIDER ===== */
-    .news-slider{
-      position:relative; overflow:hidden;
-      background:#fff; border-radius:16px;
-      box-shadow:0 8px 20px rgba(0,0,0,.08);
-      padding:24px 32px; min-height:120px;
-    }
-    .slide{
-      display:none; animation:fade 1.2s;
-    }
-    .slide.active{display:block}
-    @keyframes fade{from{opacity:.4}to{opacity:1}}
-    .slide a{
-      text-decoration:none; color:var(--primary);
-      font-size:1.25rem; font-weight:600;
-      line-height:1.4;
-    }
-    .slide a:hover{color:var(--accent)}
-
-    /* ===== PAKET ===== */
-    .paket{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:32px}
-    .card{
-      background:var(--white); border-radius:16px; overflow:hidden;
-      box-shadow:0 8px 20px rgba(0,0,0,.08); transition:transform .3s;
-    }
-    .card:hover{transform:translateY(-4px)}
-    .card img{width:100%; height:auto; display:block}
-    .card-body{padding:24px; text-align:center}
-    .price{color:var(--primary); font-weight:800; margin:8px 0 16px; font-size:1.1rem}
-
-    /* ===== TENTANG ===== */
-    .about p, .about ul, .about ol{max-width:720px; margin:0 auto 16px}
-    .about ul, .about ol{padding-left:22px}
-
-    /* ===== GALERI ===== */
-    .galeri-track{
-      display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:20px; margin-top:10px;
-    }
-    .galeri-track img{
-      border-radius:12px; width:100%; height:180px; object-fit:cover;
-      box-shadow:0 4px 10px rgba(0,0,0,.1); transition:transform .25s;
-    }
-    .galeri-track img:hover{transform:scale(1.03)}
-
-    /* ===== TESTIMONI ===== */
-    .testi-card{max-width:640px; margin:0 auto}
-
-    /* ===== LEGALITAS ===== */
-    .legalitas-logos{display:flex; flex-wrap:wrap; justify-content:center; gap:18px}
-    .legalitas-logos img{height:44px; border-radius:6px; transition:transform .25s}
-    .legalitas-logos img:hover{transform:scale(1.05)}
-
-    /* ===== FOOTER ===== */
-    footer{background:#333; color:#ccc; text-align:center; padding:28px 12px}
-
-    /* ===== STICKY WHATSAPP FLOAT ===== */
-    .wa-float{
-      position:fixed; bottom:20px; right:20px; z-index:999;
-      width:60px; height:60px; border-radius:50%;
-      background:#25D366; display:flex; align-items:center; justify-content:center;
-      box-shadow:0 4px 12px rgba(0,0,0,.2); transition:transform .25s;
-    }
-    .wa-float:hover{transform:scale(1.1)}
-    .wa-float img{width:32px; height:32px}
-
-    /* ===== RESPONSIVE NAV ===== */
-    @media(max-width:900px){
-      .nav-links{
-        position:fixed; top:76px; right:0;
-        height:calc(100vh - 76px); width:min(300px,80vw);
-        background:var(--white); box-shadow:-2px 0 12px rgba(0,0,0,.12);
-        padding:24px; flex-direction:column; align-items:flex-start; gap:8px;
-        transform:translateX(100%); transition:transform .28s;
-      }
-      .nav-links.open{transform:translateX(0)}
-      .hamburger{display:flex}
-    }
-  </style>
-
-  <!-- Social Schema -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"Attamimi Tours",
-    "url":"https://attamimitours.biz.id",
-    "logo":"https://attamimitours.biz.id/Logo.png",
-    "sameAs":[
-      "https://www.facebook.com/attamimi.tours",
-      "https://www.instagram.com/attamimi.tours/",
-      "https://www.threads.com/@attamimi.tours",
-      "https://www.youtube.com/@AttamimiTours"
-    ]
-  }
-  </script>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="brand">
+        <img src="Logo.png" alt="Attamimi Tours" height="46">
+        <span>AT-TAMIMI Tours</span>
+      </a>
 
-<!-- NAVBAR -->
-<nav class="nav-links" id="navLinks">
-  <a href="#about">Tentang</a>
-  <a href="#packages">Paket</a>
-  <a href="#gallery">Galeri</a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">Tentang</a>
+        <a href="#packages">Paket</a>
+        <a href="#gallery">Galeri</a>
+        <a href="#news">Berita & Tips</a>
+        <a href="#contact">Kontak</a>
+      </nav>
 
-  <!-- Menu Berita & Tips (dengan dropdown) -->
-  <div class="dropdown">
-    <a href="#news" class="dropdown-toggle">Berita & Tips</a>
-    <ul class="dropdown-menu">
-      <li><a href="news/karnaval.html">Parade Karangsari – Bambu & Diponegoro</a></li>
-      <li><a href="news/sertifikat-eas-2024.html">Akreditasi EAS 2024-2029</a></li>
-      <li><a href="news/umrah-2025-12-juta-jamaah.html">Umrah 2025: 1,2 Juta Jamaah</a></li>
-      <li><a href="news/bp-haji-jadi-kementerian-2025.html">BP Haji Jadi Kementerian</a></li>
-    </ul>
-  </div>
-
-  <a href="#contact">Kontak</a>
-</nav>
-
-
-  <!-- ====== HERO ====== -->
-  <header id="hero" class="hero">
-    <div class="inner">
-      <h1>Attamimi Tours</h1>
-      <p class="subtitle">Haji Khusus Tanpa Antri & Umroh Sepanjang Tahun</p>
-      <a href="#packages" class="btn">Lihat Paket</a>
-      <div class="count" id="countdown">Loading…</div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <div class="bar"></div>
+      </button>
     </div>
   </header>
 
-  <!-- ====== TENTANG ====== -->
-  <section id="about" class="container about">
-    <h2 class="section-title">Tentang Kami</h2>
-    <p>Dapatkan pengalaman ibadah yang nyaman, aman, dan berkah bersama PT ATTAMIMI TAWAKKAL ALALLOH.</p>
+  <!-- ===== HERO ===== -->
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <h1>Attamimi Tours</h1>
+      <p class="subtitle">Haji Khusus Tanpa Antri & Umroh Sepanjang Tahun</p>
+      <a href="#packages" class="btn">Lihat Paket</a>
+      <div id="countdown">Loading…</div>
+    </div>
+  </section>
 
-    <h3>1. Mengapa Memilih PT ATTAMIMI TAWAKKAL ALALLOH?</h3>
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="container">
+    <h2 class="section-title">Tentang Kami</h2>
+    <p>Dapatkan pengalaman ibadah nyaman, aman, dan berkah bersama PT ATTAMIMI TAWAKKAL ALALLOH.</p>
+
+    <h3>Mengapa Memilih Kami?</h3>
     <ul>
       <li>Resmi & Terpercaya – Berizin Kemenag RI.</li>
       <li>Fasilitas lengkap – tiket, hotel, perlengkapan, manasik.</li>
-      <li>Pendamping profesional – Tour Leader & Mutawwif/Mutawwifah berpengalaman.</li>
-      <li>Pelayanan optimal – Ziarah Makkah & Madinah, Air Zam-Zam.</li>
+      <li>Pendamping profesional – Tour Leader & Mutawwif berpengalaman.</li>
+      <li>Pelayanan optimal – Ziarah & Air Zam-Zam.</li>
     </ul>
 
-    <h3>2. Fasilitas yang Kami Sediakan</h3>
-    <ul>
-      <li>Tiket Domestik & Internasional (YIA-CGK-JED PP)</li>
-      <li>Pembuatan Paspor & Vaksinasi Meningitis</li>
-      <li>Bimbingan Manasik</li>
-      <li>Ziarah ke Tempat Bersejarah</li>
-      <li>Perlengkapan Lengkap: Koper, Ihrom, Tas Paspor, Syal, Seragam, dll.</li>
-      <li>Handling Bandara</li>
-    </ul>
-
-    <h3>3. Tata Cara Pendaftaran</h3>
+    <h3>Tata Cara Pendaftaran</h3>
     <ol>
-      <li>Datang ke Kantor Pusat: Pondok Pesantren Putra Putri Al Azhar, Kebonagung 001/001, Desa Karangsari, Kec. Purwodadi, Kab. Purworejo.</li>
-      <li>Hubungi KH. Mutammimul Masholih atau hubungi Admin di nomor whatsapp 0851-8304-9514</li>
-      <li>Konsultasi & pilih paket, isi formulir, bayar DP</li>
+      <li>Datang ke Kantor Pusat: Pondok Pesantren Putra Putri Al Azhar, Purworejo.</li>
+      <li>Hubungi Admin WhatsApp 0851-8304-9514.</li>
+      <li>Konsultasi, pilih paket, isi formulir, bayar DP.</li>
     </ol>
-
-    <h3>4. Persyaratan Pendaftaran</h3>
-    <ul>
-      <li>Fotokopi KTP, KK, & Buku Nikah/Akte/Ijazah</li>
-      <li>DP Min. Rp 5 Juta (DP tidak dapat dikembalikan kecuali ada perjanjian khusus)</li>
-      <li>Pelunasan 30 Hari sebelum keberangkatan</li>
-    </ul>
   </section>
 
- <!-- ===== BERITA & TIPS – SLIDER MANUAL ===== -->
-<section id="news" class="container">
-  <h2 class="section-title">Berita & Tips</h2>
-
-  <!-- Container slider -->
-  <div class="news-manual-slider">
-    <!-- Slide 1 -->
-    <div class="news-slide active">
-      <img src="1000558468.jpg" alt="Karnaval Karangsari">
-      <div class="news-info">
-        <h3><a href="news/karnaval.html">Parade Kreatif Karangsari – Filosofi Bambu & Pangeran Diponegoro</a></h3>
-        <p class="date">23 Agustus 2025</p>
-        <a href="news/karnaval.html" class="read-more">Baca Selengkapnya</a>
-      </div>
-    </div>
-
-    <!-- Slide 2 -->
-    <div class="news-slide">
-      <img src="sertifikat-eas-attamimi.jpg" alt="Sertifikat EAS">
-      <div class="news-info">
-        <h3><a href="news/sertifikat-eas-2024.html">Attamimi Tours Resmi Ter-Akreditasi EAS 2024-2029</a></h3>
-        <p class="date">06 Agustus 2024</p>
-        <a href="news/sertifikat-eas-2024.html" class="read-more">Baca Selengkapnya</a>
-      </div>
-    </div>
-
-    <!-- Slide 3 -->
-    <div class="news-slide">
-      <img src="umrah-2025-arrival.jpg" alt="Jamaah Umrah">
-      <div class="news-info">
-        <h3><a href="news/umrah-2025-12-juta-jamaah.html">Umrah 2025: 1,2 Juta Jamaah Tiba di Arab Saudi</a></h3>
-        <p class="date">25 Agustus 2025</p>
-        <a href="news/umrah-2025-12-juta-jamaah.html" class="read-more">Baca Selengkapnya</a>
-      </div>
-    </div>
-
-    <!-- Slide 4 -->
-    <div class="news-slide">
-      <img src="bp-haji-kementerian.jpg" alt="BP Haji">
-      <div class="news-info">
-        <h3><a href="news/bp-haji-jadi-kementerian-2025.html">BP Haji Resmi Jadi Kementerian Haji dan Umrah</a></h3>
-        <p class="date">26 Agustus 2025</p>
-        <a href="news/bp-haji-jadi-kementerian-2025.html" class="read-more">Baca Selengkapnya</a>
-      </div>
-    </div>
-
-    <!-- Tombol navigasi -->
-    <button class="nav-btn prev" onclick="changeSlide(-1)">‹ Prev</button>
-    <button class="nav-btn next" onclick="changeSlide(1)">Next ›</button>
-  </div>
-
-  <!-- CSS -->
-  <style>
-    .news-manual-slider{position:relative;max-width:800px;margin:auto;overflow:hidden;background:#fff;border-radius:16px;box-shadow:0 8px 20px rgba(0,0,0,.08)}
-    .news-slide{display:none;align-items:center;gap:20px;padding:20px}
-    .news-slide.active{display:flex}
-    .news-slide img{width:120px;height:80px;object-fit:cover;border-radius:8px}
-    .news-info{flex:1}
-    .news-info h3{margin:0 0 4px;font-size:1.1rem}
-    .news-info a{color:var(--primary);text-decoration:none}
-    .read-more{display:inline-block;margin-top:8px;background:var(--accent);color:#fff;padding:6px 12px;border-radius:20px;font-size:.8rem;text-decoration:none}
-    .nav-btn{position:absolute;top:50%;transform:translateY(-50%);background:#663399;color:#fff;border:none;padding:8px 12px;cursor:pointer;border-radius:4px;font-size:1rem}
-    .prev{left:10px}
-    .next{right:10px}
-  </style>
-
-  <!-- JavaScript -->
-  <script>
-    let slideIdx = 0;
-    const slides = document.querySelectorAll('.news-slide');
-    function changeSlide(dir){
-      slides[slideIdx].classList.remove('active');
-      slideIdx += dir;
-      if(slideIdx < 0) slideIdx = slides.length - 1;
-      if(slideIdx >= slides.length) slideIdx = 0;
-      slides[slideIdx].classList.add('active');
-    }
-  </script>
-</section>
-
-
-
-  <!-- ====== PAKET ====== -->
+  <!-- ===== PACKAGES ===== -->
   <section id="packages" class="container">
     <h2 class="section-title">Pilihan Paket</h2>
     <div class="paket">
       <div class="card">
-        <img src="umroh9.jpg" alt="Umroh 9 Hari" loading="lazy">
+        <img src="umroh9.jpg" alt="Umroh 9 Hari">
         <div class="card-body">
           <h3>Umroh 9 Hari</h3>
           <p>Lion Air | Hotel 3★ | 3× Umroh</p>
@@ -378,7 +78,7 @@
         </div>
       </div>
       <div class="card">
-        <img src="umroh12.jpg" alt="Umroh 12 Hari" loading="lazy">
+        <img src="umroh12.jpg" alt="Umroh 12 Hari">
         <div class="card-body">
           <h3>Umroh 12 Hari</h3>
           <p>Malaysia Airlines | Hotel 4★ | 3× Umroh</p>
@@ -387,7 +87,7 @@
         </div>
       </div>
       <div class="card">
-        <img src="umroh14.jpg" alt="Umroh 14 Hari" loading="lazy">
+        <img src="umroh14.jpg" alt="Umroh 14 Hari">
         <div class="card-body">
           <h3>Umroh 14 Hari</h3>
           <p>Saudia Airlines | Hotel 4★ | 3× Umroh</p>
@@ -396,19 +96,56 @@
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="card" style="margin:40px auto 0; max-width:480px">
-      <img src="paket-haji.jpg" alt="Haji Khusus 2025" loading="lazy">
-      <div class="card-body">
-        <h3>Haji Khusus 2025</h3>
-        <p>Durasi 25 Hari | Hotel 5★ Makkah & Madinah</p>
-        <div class="price">Reguler Rp 295 Jt</div>
-        <a class="btn" href="https://wa.me/6285183049514?text=Saya%20tertarik%20Paket%20Haji%20Khusus">Pesan via WA</a>
+  <!-- ===== NEWS MANUAL SLIDER ===== -->
+  <section id="news" class="container">
+    <h2 class="section-title">Berita & Tips</h2>
+    <div class="news-slider">
+      <!-- Slide 1 -->
+      <div class="news-slide active">
+        <img src="1000558468.jpg" alt="Karnaval Karangsari">
+        <div class="news-info">
+          <h3><a href="news/karnaval.html">Parade Kreatif Karangsari – Filosofi Bambu & Pangeran Diponegoro</a></h3>
+          <p class="date">23 Agustus 2025</p>
+          <a href="news/karnaval.html" class="read-more">Baca Selengkapnya</a>
+        </div>
       </div>
+      <!-- Slide 2 -->
+      <div class="news-slide">
+        <img src="sertifikat-eas-attamimi.jpg" alt="Sertifikat EAS">
+        <div class="news-info">
+          <h3><a href="news/sertifikat-eas-2024.html">Attamimi Tours Resmi Ter-Akreditasi EAS 2024-2029</a></h3>
+          <p class="date">06 Agustus 2024</p>
+          <a href="news/sertifikat-eas-2024.html" class="read-more">Baca Selengkapnya</a>
+        </div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="news-slide">
+        <img src="umrah-2025-arrival.jpg" alt="Jamaah Umrah">
+        <div class="news-info">
+          <h3><a href="news/umrah-2025-12-juta-jamaah.html">Umrah 2025: 1,2 Juta Jamaah Tiba di Arab Saudi</a></h3>
+          <p class="date">25 Agustus 2025</p>
+          <a href="news/umrah-2025-12-juta-jamaah.html" class="read-more">Baca Selengkapnya</a>
+        </div>
+      </div>
+      <!-- Slide 4 -->
+      <div class="news-slide">
+        <img src="bp-haji-kementerian.jpg" alt="BP Haji">
+        <div class="news-info">
+          <h3><a href="news/bp-haji-jadi-kementerian-2025.html">BP Haji Resmi Jadi Kementerian Haji dan Umrah</a></h3>
+          <p class="date">26 Agustus 2025</p>
+          <a href="news/bp-haji-jadi-kementerian-2025.html" class="read-more">Baca Selengkapnya</a>
+        </div>
+      </div>
+
+      <!-- Nav buttons -->
+      <button class="nav-btn prev" onclick="changeSlide(-1)">‹ Prev</button>
+      <button class="nav-btn next" onclick="changeSlide(1)">Next ›</button>
     </div>
   </section>
 
-  <!-- ====== GALERI ====== -->
+  <!-- ===== GALLERY ===== -->
   <section id="gallery" class="container">
     <h2 class="section-title">Galeri Perjalanan</h2>
     <div class="galeri-track">
@@ -418,133 +155,88 @@
     </div>
   </section>
 
-  <!-- ====== TESTIMONI ====== -->
+  <!-- ===== TESTIMONI ===== -->
   <section id="testimoni" class="container">
     <h2 class="section-title">Testimoni Jamaah</h2>
     <div class="card testi-card">
-      <img src="testimoni.jpg" alt="Testimoni WhatsApp" loading="lazy">
+      <img src="testimoni.jpg" alt="Testimoni WhatsApp">
       <div class="card-body">
-        <p style="font-style:italic">"Le sanjang kok paling sae pelayanane ing antarane sing ana ing Purworejo. Mugi-mugi kulo kalih bapak/ibu saged nyusul."</p>
-        <p style="opacity:.7; font-size:.9rem; margin-top:6px">— Jamaah Attamimi Tours (screenshoot WhatsApp)</p>
+        <p style="font-style:italic">"Le sanjang kok paling sae pelayanane ing antarane sing ana ing Purworejo..."</p>
+        <p style="opacity:.7; font-size:.9rem">— Jamaah Attamimi Tours</p>
       </div>
     </div>
   </section>
 
-  <!-- ====== LEGALITAS ====== -->
+  <!-- ===== LEGALITAS ===== -->
   <section id="legal" class="container">
     <h2 class="section-title">Legalitas & Keanggotaan</h2>
     <div class="legalitas-logos">
       <img src="LogoKemenag.png" alt="Kemenag">
       <img src="LogoAmphuri.png" alt="Amphuri">
       <img src="LogoSiskopatuh.jpg" alt="Siskopatuh">
-      <img src="Logo5Pasti.png" alt="5 Pasti Umrah">
+      <img src="Logo5Pasti.png" alt="5 Pasti">
       <img src="LogoIATA.png" alt="IATA">
-      <a href="https://ekualindo.com/" target="_blank" rel="noopener"><img src="LogoEAS.jpg" alt="EAS"></a>
-      <a href="https://haji.go.id/v5/search/pihk/detail/3847" target="_blank" rel="noopener"><img src="pihk.png" alt="PIHK"></a>
+      <a href="https://ekualindo.com/" target="_blank"><img src="LogoEAS.jpg" alt="EAS"></a>
+      <a href="https://haji.go.id/v5/search/pihk/detail/3847" target="_blank"><img src="pihk.png" alt="PIHK"></a>
     </div>
   </section>
 
-  <!-- ====== KONTAK ====== -->
+  <!-- ===== CONTACT ===== -->
   <section id="contact" class="container">
     <h2 class="section-title">Kontak & Alamat</h2>
     <div class="map-wrapper">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1976.0970051766535!2d110.03633320941621!3d-7.874758061388144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7ae795e6ede6a5%3A0xe6588f56f4e820d4!2sPT%20ATTAMIMI%20TAWAKKAL%20ALALLOH%20Travel%20Umroh%20dan%20Hajji%20Khusus%20Purworejo!5e0!3m2!1sid!2sid!4v1756091923849!5m2!1sid!2sid" width="100%" height="400" style="border:0;" allowfullscreen loading="lazy"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="400" style="border:0;" allowfullscreen loading="lazy"></iframe>
     </div>
-
-    <p><strong>Alamat:</strong> Kompleks Pondok Pesantren Putra Putri Al Azhar, Purworejo<br>
-    <strong>Email:</strong> attamimi.tour@gmail.com<br>
-    <strong>WhatsApp:</strong> +62 851-8304-9514</p>
-    <a href="https://wa.me/6285183049514?text=Assalamu%27alaikum%2C%20saya%20mau%20tanya%20paket%20umroh" class="btn">Chat WhatsApp Sekarang</a>
+    <p><strong>Alamat:</strong> Kompleks Pondok Pesantren Putra Putri Al Azhar, Purworejo</p>
+    <p><strong>Email:</strong> attamimi.tour@gmail.com</p>
+    <p><strong>WhatsApp:</strong> +62 851-8304-9514</p>
+    <a class="btn" href="https://wa.me/6285183049514?text=Assalamu%27alaikum">Chat WhatsApp</a>
   </section>
 
-  <!-- ====== SOCIAL LINKS ====== -->
-  <section style="text-align:center; margin:30px 0">
-    <a href="https://www.facebook.com/attamimi.tours" target="_blank" style="margin:0 12px">
-      <img src="/facebook.png" alt="Facebook" width="32" height="32">
-    </a>
-    <a href="https://www.instagram.com/attamimi.tours/" target="_blank" style="margin:0 12px">
-      <img src="/instagram.png" alt="Instagram" width="32" height="32">
-    </a>
-    <a href="https://www.threads.com/@attamimi.tours" target="_blank" style="margin:0 12px">
-      <img src="/threads.png" alt="Threads" width="32" height="32">
-    </a>
-    <a href="https://www.youtube.com/@AttamimiTours" target="_blank" style="margin:0 12px">
-      <img src="/youtube.png" alt="YouTube" width="32" height="32">
-    </a>
-  </section>
-
-  <!-- ====== FOOTER ====== -->
+  <!-- Footer -->
   <footer>
-    &copy; 2025 Attamimi Tours – Purworejo
-    <p>Izin PPIU U.352/2020 & PIHK 02202072929030002/2024</p>
+    &copy; 2025 Attamimi Tours – Purworejo<br>
+    Izin PPIU U.352/2020 & PIHK 02202072929030002/2024
   </footer>
 
-  <!-- ====== STICKY WHATSAPP FLOAT ====== -->
-  <a class="wa-float" href="https://wa.me/6285183049514?text=Assalamu%27alaikum%2C%20saya%20mau%20tanya%20paket%20umroh" target="_blank" aria-label="Chat WhatsApp">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  <!-- WhatsApp Float -->
+  <a class="wa-float" href="https://wa.me/6285183049514" aria-label="Chat WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WA">
   </a>
 
-  <!-- ====== NAV TOGGLE + SLIDER SCRIPT ====== -->
+  <!-- Scripts -->
   <script>
-    /* NAV TOGGLE */
+    /* Hamburger toggle */
     const burger = document.getElementById('hamburger');
-    const links  = document.getElementById('navLinks');
+    const nav    = document.getElementById('navLinks');
     burger.addEventListener('click', () => {
-      const isOpen = links.classList.toggle('open');
-      burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      nav.classList.toggle('open');
     });
 
-    /* COUNTDOWN */
+    /* Countdown */
     const target = new Date("Sep 27, 2025 00:00:00").getTime();
-    const el = document.getElementById("countdown");
-    if(el){
-      const iv = setInterval(()=>{
-        const now = Date.now(); const d = target - now;
-        if(d <= 0){ clearInterval(iv); el.textContent = "Berangkat hari ini!"; return; }
-        const day = Math.floor(d/86400000);
-        const hr  = Math.floor((d%86400000)/3600000);
-        const min = Math.floor((d%3600000)/60000);
-        const sec = Math.floor((d%60000)/1000);
-        el.textContent = `${day}h ${hr}j ${min}m ${sec}d`;
-      },1000);
-    }
+    const el = document.getElementById('countdown');
+    setInterval(() => {
+      const now = Date.now();
+      const d = target - now;
+      if (d <= 0) { el.textContent = "Berangkat hari ini!"; return; }
+      const day = Math.floor(d / 86400000);
+      const hr  = Math.floor((d % 86400000) / 3600000);
+      const min = Math.floor((d % 3600000) / 60000);
+      const sec = Math.floor((d % 60000) / 1000);
+      el.textContent = `${day}h ${hr}j ${min}m ${sec}d`;
+    }, 1000);
 
-    /* BERITA SLIDER */
-    let slideIndex = 0;
-    const slides = document.querySelectorAll('.slide');
-    function showSlides(){
-      slides.forEach(s=>s.classList.remove('active'));
-      slideIndex++;
-      if(slideIndex >= slides.length) slideIndex = 0;
-      slides[slideIndex].classList.add('active');
-      setTimeout(showSlides, 4000);
+    /* News manual slider */
+    let slideIdx = 0;
+    const slides = document.querySelectorAll('.news-slide');
+    function changeSlide(dir){
+      slides.forEach(s => s.classList.remove('active'));
+      slideIdx += dir;
+      if (slideIdx < 0) slideIdx = slides.length - 1;
+      if (slideIdx >= slides.length) slideIdx = 0;
+      slides[slideIdx].classList.add('active');
     }
-    showSlides();
   </script>
-
-<!-- ====== SCRIPT DI AKHIR BODY ====== -->
-<script>
-  /* NAV TOGGLE */
-  const burger = document.getElementById('hamburger');
-  const nav    = document.getElementById('navLinks');
-  burger.addEventListener('click', () => {
-    nav.classList.toggle('open');
-    burger.setAttribute('aria-expanded', nav.classList.contains('open'));
-  });
-</script>
-<script>
-  /* Toggle dropdown di mobile */
-  const dropdownToggle = document.querySelector('.dropdown-toggle');
-  const dropdown       = document.querySelector('.dropdown');
-
-  dropdownToggle?.addEventListener('click', (e) => {
-    e.preventDefault();           // jangan scroll
-    dropdown.classList.toggle('open');
-  });
-</script>
-
-</body>
-</html>
-
 </body>
 </html>
