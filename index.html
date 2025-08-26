@@ -510,5 +510,19 @@
     }
     showSlides();
   </script>
+
+<!-- ====== SCRIPT DI AKHIR BODY ====== -->
+<script>
+  /* NAV TOGGLE */
+  const burger = document.getElementById('hamburger');
+  const nav    = document.getElementById('navLinks');
+  burger.addEventListener('click', () => {
+    nav.classList.toggle('open');
+    burger.setAttribute('aria-expanded', nav.classList.contains('open'));
+  });
+</script>
+</body>
+</html>
+
 </body>
 </html>
