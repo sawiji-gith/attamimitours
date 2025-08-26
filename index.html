@@ -212,27 +212,27 @@
 </head>
 
 <body>
-  <!-- ====== NAVBAR ====== -->
-  <div class="topbar">
-    <div class="nav">
-      <a class="brand" href="#hero">
-        <img src="Logo.png" alt="Attamimi Tours">
-        <span>AT-TAMIMI Tours</span>
-      </a>
-     <!-- NAVBAR -->
+
+<!-- NAVBAR -->
 <nav class="nav-links" id="navLinks">
   <a href="#about">Tentang</a>
   <a href="#packages">Paket</a>
   <a href="#gallery">Galeri</a>
-  <a href="#news">Berita & Tips</a>
+
+  <!-- Menu Berita & Tips (dengan dropdown) -->
+  <div class="dropdown">
+    <a href="#news" class="dropdown-toggle">Berita & Tips</a>
+    <ul class="dropdown-menu">
+      <li><a href="news/karnaval.html">Parade Karangsari – Bambu & Diponegoro</a></li>
+      <li><a href="news/sertifikat-eas-2024.html">Akreditasi EAS 2024-2029</a></li>
+      <li><a href="news/umrah-2025-12-juta-jamaah.html">Umrah 2025: 1,2 Juta Jamaah</a></li>
+      <li><a href="news/bp-haji-jadi-kementerian-2025.html">BP Haji Jadi Kementerian</a></li>
+    </ul>
+  </div>
+
   <a href="#contact">Kontak</a>
 </nav>
 
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <div class="bar"></div>
-      </button>
-    </div>
-  </div>
 
   <!-- ====== HERO ====== -->
   <header id="hero" class="hero">
@@ -532,6 +532,17 @@
     burger.setAttribute('aria-expanded', nav.classList.contains('open'));
   });
 </script>
+<script>
+  /* Toggle dropdown di mobile */
+  const dropdownToggle = document.querySelector('.dropdown-toggle');
+  const dropdown       = document.querySelector('.dropdown');
+
+  dropdownToggle?.addEventListener('click', (e) => {
+    e.preventDefault();           // jangan scroll
+    dropdown.classList.toggle('open');
+  });
+</script>
+
 </body>
 </html>
 
