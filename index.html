@@ -280,77 +280,75 @@
     </ul>
   </section>
 
- <!-- ===== BERITA & TIPS (slider otomatis) ===== -->
+ <!-- ===== BERITA & TIPS (slider otomatis + gambar) ===== -->
 <section id="news" class="container">
   <h2 class="section-title">Berita & Tips</h2>
 
   <div class="news-slider">
     <!-- Slide 1 -->
     <div class="slide active">
-      <a href="news/7-tips-hemat-umroh.html">7 Tips Hemat Biaya Umroh 2025</a>
+      <img src="images/1000558468.jpg" alt="Karnaval Karangsari">
+      <div class="slide-content">
+        <h3><a href="news/karnaval.html">Parade Kreatif Karangsari – Filosofi Bambu & Pangeran Diponegoro</a></h3>
+        <p class="date">23 Agustus 2025</p>
+      </div>
     </div>
+
     <!-- Slide 2 -->
     <div class="slide">
-      <a href="news/jadwal-terbaru.html">Jadwal Keberangkatan Umroh Bulan Depan</a>
+      <img src="images/sertifikat-eas-attamimi.jpg" alt="Sertifikat EAS">
+      <div class="slide-content">
+        <h3><a href="news/sertifikat-eas-2024.html">Attamimi Tours Resmi Ter-Akreditasi EAS 2024-2029</a></h3>
+        <p class="date">06 Agustus 2024</p>
+      </div>
     </div>
+
     <!-- Slide 3 -->
     <div class="slide">
-      <a href="news/panduan-vaksin.html">Panduan Vaksin Meningitis untuk Jamaah</a>
+      <img src="images/umrah-2025-arrival.jpg" alt="Jamaah Umrah">
+      <div class="slide-content">
+        <h3><a href="news/umrah-2025-12-juta-jamaah.html">Umrah 2025: 1,2 Juta Jamaah Tiba di Arab Saudi</a></h3>
+        <p class="date">25 Agustus 2025</p>
+      </div>
     </div>
+
     <!-- Slide 4 -->
     <div class="slide">
-      <a href="news/doa-zikir.html">Doa & Zikir yang Dianjurkan di Tanah Suci</a>
+      <img src="images/bp-haji-kementerian.jpg" alt="BP Haji">
+      <div class="slide-content">
+        <h3><a href="news/bp-haji-jadi-kementerian-2025.html">BP Haji Resmi Jadi Kementerian Haji dan Umrah</a></h3>
+        <p class="date">26 Agustus 2025</p>
+      </div>
     </div>
   </div>
 
-  <!-- CSS & JS slider -->
+  <!-- CSS slider -->
   <style>
-    .news-slider{position:relative;overflow:hidden;background:#fff;border-radius:16px;box-shadow:0 8px 20px rgba(0,0,0,.08);padding:24px 32px;text-align:center;min-height:120px}
-    .slide{display:none;animation:fade 1.2s}
-    .slide.active{display:block}
+    .news-slider{position:relative;max-width:800px;margin:auto;overflow:hidden;background:#fff;border-radius:16px;box-shadow:0 8px 20px rgba(0,0,0,.08)}
+    .slide{display:none;align-items:center;gap:20px;padding:20px;animation:fade 1.2s}
+    .slide.active{display:flex}
     @keyframes fade{from{opacity:.4}to{opacity:1}}
-    .slide a{text-decoration:none;color:var(--primary);font-size:1.3rem;font-weight:600}
-    .slide a:hover{color:var(--accent)}
+    .slide img{width:140px;height:80px;object-fit:cover;border-radius:8px}
+    .slide-content{flex:1}
+    .slide-content h3{margin:0 0 4px;font-size:1.1rem}
+    .slide-content a{color:var(--primary);text-decoration:none}
+    .slide-content a:hover{color:var(--accent)}
+    .slide-content .date{font-size:.9rem;color:#666}
   </style>
 
+  <!-- JS slider -->
   <script>
     let slideIndex = 0;
     const slides = document.querySelectorAll('.news-slider .slide');
     function showSlides(){
       slides.forEach(s=>s.classList.remove('active'));
-      slideIndex++;
-      if(slideIndex >= slides.length) slideIndex = 0;
+      slideIndex++; if(slideIndex >= slides.length) slideIndex = 0;
       slides[slideIndex].classList.add('active');
     }
-    setInterval(showSlides, 4000); // ganti 4000 = 4 detik
+    setInterval(showSlides, 4000);
   </script>
 </section>
 
-    </div>
-  </div>
-
-  <!-- CSS & JS slider -->
-  <style>
-    .news-slider{position:relative;overflow:hidden;background:#fff;border-radius:16px;box-shadow:0 8px 20px rgba(0,0,0,.08);padding:24px 32px;text-align:center;min-height:120px}
-    .slide{display:none;animation:fade 1.2s}
-    .slide.active{display:block}
-    @keyframes fade{from{opacity:.4}to{opacity:1}}
-    .slide a{text-decoration:none;color:var(--primary);font-size:1.3rem;font-weight:600}
-    .slide a:hover{color:var(--accent)}
-  </style>
-
-  <script>
-    let i = 0;
-    const slides = document.querySelectorAll('#news .slide');
-    function autoSlide(){
-      slides.forEach(s=>s.classList.remove('active'));
-      i = (i + 1) % slides.length;
-      slides[i].classList.add('active');
-      setTimeout(autoSlide, 4000); // ganti 4000 = 4 detik
-    }
-    setTimeout(autoSlide, 4000);
-  </script>
-</section>
 
 
   <!-- ====== PAKET ====== -->
