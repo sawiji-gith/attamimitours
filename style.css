@@ -262,3 +262,21 @@ body {
 @media (max-width:600px){
   #backToTop{bottom:18px; right:18px; width:42px; height:42px; font-size:18px;}
 }
+
+/* Dropdown di hamburger */
+.dropdown{position:relative}
+.dropdown-toggle{cursor:pointer}
+.dropdown-menu{
+  display:none;          /* auto-hide */
+  flex-direction:column;
+  margin:0;
+  padding-left:12px;
+  list-style:none;
+}
+.dropdown-menu li a{
+  color:#663399;
+  font-size:.9rem;
+  padding:8px 0;
+  text-decoration:none;
+}
+.dropdown.open .dropdown-menu{display:flex}
