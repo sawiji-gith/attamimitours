@@ -282,72 +282,83 @@
     </ul>
   </section>
 
- <!-- ===== BERITA & TIPS (slider otomatis + gambar) ===== -->
+ <!-- ===== BERITA & TIPS – SLIDER MANUAL ===== -->
 <section id="news" class="container">
   <h2 class="section-title">Berita & Tips</h2>
 
-  <div class="news-slider">
+  <!-- Container slider -->
+  <div class="news-manual-slider">
     <!-- Slide 1 -->
-    <div class="slide active">
-      <img src="images/1000558468.jpg" alt="Karnaval Karangsari">
-      <div class="slide-content">
+    <div class="news-slide active">
+      <img src="1000558468.jpg" alt="Karnaval Karangsari">
+      <div class="news-info">
         <h3><a href="news/karnaval.html">Parade Kreatif Karangsari – Filosofi Bambu & Pangeran Diponegoro</a></h3>
         <p class="date">23 Agustus 2025</p>
+        <a href="news/karnaval.html" class="read-more">Baca Selengkapnya</a>
       </div>
     </div>
 
     <!-- Slide 2 -->
-    <div class="slide">
-      <img src="images/sertifikat-eas-attamimi.jpg" alt="Sertifikat EAS">
-      <div class="slide-content">
+    <div class="news-slide">
+      <img src="sertifikat-eas-attamimi.jpg" alt="Sertifikat EAS">
+      <div class="news-info">
         <h3><a href="news/sertifikat-eas-2024.html">Attamimi Tours Resmi Ter-Akreditasi EAS 2024-2029</a></h3>
         <p class="date">06 Agustus 2024</p>
+        <a href="news/sertifikat-eas-2024.html" class="read-more">Baca Selengkapnya</a>
       </div>
     </div>
 
     <!-- Slide 3 -->
-    <div class="slide">
-      <img src="images/umrah-2025-arrival.jpg" alt="Jamaah Umrah">
-      <div class="slide-content">
+    <div class="news-slide">
+      <img src="umrah-2025-arrival.jpg" alt="Jamaah Umrah">
+      <div class="news-info">
         <h3><a href="news/umrah-2025-12-juta-jamaah.html">Umrah 2025: 1,2 Juta Jamaah Tiba di Arab Saudi</a></h3>
         <p class="date">25 Agustus 2025</p>
+        <a href="news/umrah-2025-12-juta-jamaah.html" class="read-more">Baca Selengkapnya</a>
       </div>
     </div>
 
     <!-- Slide 4 -->
-    <div class="slide">
-      <img src="images/bp-haji-kementerian.jpg" alt="BP Haji">
-      <div class="slide-content">
+    <div class="news-slide">
+      <img src="bp-haji-kementerian.jpg" alt="BP Haji">
+      <div class="news-info">
         <h3><a href="news/bp-haji-jadi-kementerian-2025.html">BP Haji Resmi Jadi Kementerian Haji dan Umrah</a></h3>
         <p class="date">26 Agustus 2025</p>
+        <a href="news/bp-haji-jadi-kementerian-2025.html" class="read-more">Baca Selengkapnya</a>
       </div>
     </div>
+
+    <!-- Tombol navigasi -->
+    <button class="nav-btn prev" onclick="changeSlide(-1)">‹ Prev</button>
+    <button class="nav-btn next" onclick="changeSlide(1)">Next ›</button>
   </div>
 
-  <!-- CSS slider -->
+  <!-- CSS -->
   <style>
-    .news-slider{position:relative;max-width:800px;margin:auto;overflow:hidden;background:#fff;border-radius:16px;box-shadow:0 8px 20px rgba(0,0,0,.08)}
-    .slide{display:none;align-items:center;gap:20px;padding:20px;animation:fade 1.2s}
-    .slide.active{display:flex}
-    @keyframes fade{from{opacity:.4}to{opacity:1}}
-    .slide img{width:140px;height:80px;object-fit:cover;border-radius:8px}
-    .slide-content{flex:1}
-    .slide-content h3{margin:0 0 4px;font-size:1.1rem}
-    .slide-content a{color:var(--primary);text-decoration:none}
-    .slide-content a:hover{color:var(--accent)}
-    .slide-content .date{font-size:.9rem;color:#666}
+    .news-manual-slider{position:relative;max-width:800px;margin:auto;overflow:hidden;background:#fff;border-radius:16px;box-shadow:0 8px 20px rgba(0,0,0,.08)}
+    .news-slide{display:none;align-items:center;gap:20px;padding:20px}
+    .news-slide.active{display:flex}
+    .news-slide img{width:120px;height:80px;object-fit:cover;border-radius:8px}
+    .news-info{flex:1}
+    .news-info h3{margin:0 0 4px;font-size:1.1rem}
+    .news-info a{color:var(--primary);text-decoration:none}
+    .read-more{display:inline-block;margin-top:8px;background:var(--accent);color:#fff;padding:6px 12px;border-radius:20px;font-size:.8rem;text-decoration:none}
+    .nav-btn{position:absolute;top:50%;transform:translateY(-50%);background:#663399;color:#fff;border:none;padding:8px 12px;cursor:pointer;border-radius:4px;font-size:1rem}
+    .prev{left:10px}
+    .next{right:10px}
   </style>
 
-  <!-- JS slider -->
+  <!-- JavaScript -->
   <script>
-    let slideIndex = 0;
-    const slides = document.querySelectorAll('.news-slider .slide');
-    function showSlides(){
-      slides.forEach(s=>s.classList.remove('active'));
-      slideIndex++; if(slideIndex >= slides.length) slideIndex = 0;
-      slides[slideIndex].classList.add('active');
+    let slideIdx = 0;
+    const slides = document.querySelectorAll('.news-slide');
+    function changeSlide(dir){
+      slides[slideIdx].classList.remove('active');
+      slideIdx += dir;
+      if(slideIdx < 0) slideIdx = slides.length - 1;
+      if(slideIdx >= slides.length) slideIdx = 0;
+      slides[slideIdx].classList.add('active');
     }
-    setInterval(showSlides, 4000);
   </script>
 </section>
 
