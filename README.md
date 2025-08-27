@@ -17,6 +17,9 @@ Jl. KH. Azhar DUSUN KEBONAGUNG RT.01 RW.01 DESA KARANGSARI KECAMATAN PURWODADI K
 - Izin Umroh Kemenag RI: PPIU U.352/2020  
 - Izin Haji Khusus Kemenag RI: PIHK 02202072929030002/2024  
 - Anggota ASITA Jawa Tengah  
+- amphuri
+- IATA
+- EAS SERTIFIKASI
 
 ## 📦 Fasilitas
 - Visa & manasik gratis  
