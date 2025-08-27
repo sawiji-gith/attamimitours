@@ -85,3 +85,20 @@ footer{background:#333;color:#ccc;text-align:center;padding:28px 12px}
   .nav-links.open{transform:translateX(0)}
   .hamburger{display:flex}
 }
+/* FAQ */
+.faq-list {
+  max-width: 800px;
+  margin: auto;
+}
+details {
+  background: #fff;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  padding: 16px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.05);
+  cursor: pointer;
+}
+summary {
+  font-weight: 700;
+  color: var(--primary);
+}
