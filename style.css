@@ -121,3 +121,34 @@ summary {
   border-radius: 8px;
   width: 100%;
 }
+.form-daftar {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-row label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--primary);
+}
+
+.form-row input,
+.form-row select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.form-daftar .btn {
+  margin-top: 10px;
+  align-self: flex-start;
+}
