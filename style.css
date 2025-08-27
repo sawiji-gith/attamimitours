@@ -102,3 +102,22 @@ summary {
   font-weight: 700;
   color: var(--primary);
 }
+.form-daftar {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-daftar label {
+  font-weight: 600;
+}
+
+.form-daftar input,
+.form-daftar select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+}
