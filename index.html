@@ -338,5 +338,28 @@
       slides[slideIdx].classList.add('active');
     }
   </script>
+  <script>
+document.querySelector('.form-daftar').addEventListener('submit', function (e) {
+  e.preventDefault(); // agar halaman tidak reload
+
+  const nama  = this.nama.value;
+  const email = this.email.value;
+  const wa    = this.whatsapp.value;
+  const paket = this.paket.value;
+
+  const msg = `📋 Pendaftaran baru\nNama: ${nama}\nEmail: ${email}\nWhatsApp: ${wa}\nPaket: ${paket}`;
+  const token  = '8470444840:AAH4VQDFuSNGoTlx2assgz-hM9Fi3mKRWew';
+  const chatID = 987413154;
+
+  fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ chat_id: chatID, text: msg })
+  })
+  .then(() => {
+    window.location.href = 'https://attamimitours.biz.id/thanks.html';
+  });
+});
+</script>
 </body>
 </html>
