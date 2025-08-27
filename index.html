@@ -258,27 +258,32 @@
   <!-- ===== FORM PENDAFTARAN ===== -->
 <section id="form-daftar" class="container">
   <h2 class="section-title">Form Pendaftaran Online</h2>
-  <form action="https://formspree.io/f/xandykvn" method="POST">
-    <label>Nama Lengkap<br>
+
+  <form action="https://formspree.io/f/xandykvn" method="POST" class="form-daftar">
+    <div class="form-row">
+      <label>Nama Lengkap</label>
       <input type="text" name="nama" required>
-    </label>
+    </div>
 
-    <label>Email<br>
+    <div class="form-row">
+      <label>Email</label>
       <input type="email" name="email" required>
-    </label>
+    </div>
 
-    <label>WhatsApp<br>
+    <div class="form-row">
+      <label>WhatsApp</label>
       <input type="tel" name="whatsapp" required>
-    </label>
+    </div>
 
-    <label>Paket Dipilih<br>
+    <div class="form-row">
+      <label>Paket Dipilih</label>
       <select name="paket" required>
         <option value="">-- Pilih Paket --</option>
         <option>Umroh 9 Hari</option>
         <option>Umroh 12 Hari</option>
         <option>Haji Khusus</option>
       </select>
-    </label>
+    </div>
 
     <input type="hidden" name="_next" value="https://attamimitours.biz.id/thanks.html">
     <button type="submit" class="btn">Kirim Pendaftaran</button>
