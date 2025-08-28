@@ -216,4 +216,21 @@ summary {
   100% { transform: translateX(-1380px); } /* 5 card x 260px + 4 gap 0.75rem */
 }
 
+/*umroh-purworejo*/
+.price-wrapper {
+  position: relative;
+  margin: 0.5rem 0 1rem;
+}
+.stiker-promo {
+  display: inline-block;
+  background: #ff3e3e;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
 
