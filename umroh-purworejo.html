@@ -143,8 +143,64 @@
   </footer>
 
   <script src="script.js" defer></script>
-</body>
-<!-- Meta Pixel Code -->
+  <script>
+document.querySelector('.form-daftar').addEventListener('submit', function (e) {
+  e.preventDefault(); // mencegah reload halaman
+
+  const form = new FormData(this);
+  const nama   = form.get('nama');
+  const email  = form.get('email');
+  const wa     = form.get('whatsapp');
+  const paket  = form.get('paket');
+
+  const msg = `📋 Pendaftaran Baru – Umroh Purworejo\nNama: ${nama}\nEmail: ${email}\nWhatsApp: ${wa}\nPaket: ${paket}`;
+
+  <!-- ===== TELEGRAM NOTIF ===== -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.querySelector('.form-daftar');
+  if (!form) return;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); // stop reload halaman
+
+    const fd   = new FormData(this);
+    const data = {
+      nama  : fd.get('nama'),
+      email : fd.get('email'),
+      wa    : fd.get('whatsapp'),
+      paket : fd.get('paket')
+    };
+
+    const msg = `📋 Pendaftaran Baru – Umroh Purworejo
+Nama   : ${data.nama}
+Email  : ${data.email}
+WA     : ${data.wa}
+Paket  : ${data.paket}`;
+
+    const token   = '8470444840:AAH4VQDFuSNGoTlx2assgz-hM9Fi3mKRWew';
+    const chatID  = 987413154;
+
+    fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+      method : 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body   : JSON.stringify({ chat_id: chatID, text: msg })
+    })
+    .then(res => res.json())
+    .then(res => {
+      if (res.ok) {
+        alert('✅ Pendaftaran terkirim! Kami akan hubungi via WhatsApp.');
+        form.reset();
+      } else {
+        throw new Error(res.description || 'Telegram error');
+      }
+    })
+    .catch(err => alert('❌ Gagal mengirim: ' + err.message));
+  });
+});
+</script>
+  
+  <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -161,4 +217,6 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=2471836583200451&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
+  
+</body>
 </html>
