@@ -3,9 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Preconnect & Preload untuk font & CDN -->
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"></noscript>
+
+<!-- Defer semua script eksternal -->
+<script src="https://www.googletagmanager.com/gtag/js?id=G-69KG75SMLR" defer></script>
   <link rel="icon" href="favicon.ico">
   <title>Attamimi Tours – Haji & Umroh Resmi Yogyakarta & Jawa Tengah</title>
 
+<style>
+  /* Font-display:swap mempercepat rendering teks */
+  @font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecnFHGPc.woff2) format('woff2');}
+  @font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2) format('woff2');}
+  @font-face{font-family:'Poppins';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2) format('woff2');}
+</style>
+  
   <!-- SEO Meta -->
   <meta name="description" content="Attamimi Tours – Haji & Umroh Resmi Yogyakarta & Jawa Tengah. Hotel bintang 5, visa lengkap, berangkat tanpa antri.">
   <meta name="keywords" content="umroh jogja, umroh yogyakarta, travel umroh jogja, haji khusus jogja, biro umroh resmi jogja, paket umroh jawa tengah, umroh semarang, umroh solo, umroh purworejo, travel haji jawa tengah">
@@ -65,7 +80,8 @@
   }
   </script>
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="style.css"></noscript>
 </head>
 
 <body>
@@ -73,7 +89,7 @@
   <header class="navbar">
     <div class="nav-container">
       <a href="#hero" class="brand">
-        <img src="Logo.png" alt="Attamimi" height="46">
+        <img src="Logo.png" alt="Attamimi" height="46"loading="lazy">
         <span>AT-TAMIMI Tours</span>
       </a>
 
@@ -135,7 +151,7 @@
     <h2 class="section-title">Pilihan Paket</h2>
     <div class="paket">
       <div class="card">
-        <img src="umroh9.jpg" alt="Umroh 9 Hari">
+        <img src="umroh9.jpg" alt="Umroh 9 Hari"loading="lazy">>
         <div class="card-body">
           <h3>Umroh 9 Hari</h3>
           <p>Lion Air | Hotel 3★ | 3× Umroh</p>
@@ -144,7 +160,7 @@
         </div>
       </div>
       <div class="card">
-        <img src="umroh12.jpg" alt="Umroh 12 Hari">
+        <img src="umroh12.jpg" alt="Umroh 12 Hari"loading="lazy">>
         <div class="card-body">
           <h3>Umroh 12 Hari</h3>
           <p>Malaysia Airlines | Hotel 4★ | 3× Umroh</p>
@@ -160,7 +176,7 @@
     <h2 class="section-title">Berita & Tips</h2>
     <div class="news-slider">
       <div class="news-slide active">
-        <img src="images/1000558468.jpg" alt="Karnaval Karangsari">
+        <img src="images/1000558468.jpg" alt="Karnaval Karangsari"loading="lazy">>
         <div class="news-info">
           <h3><a href="news/karnaval.html">Parade Kreatif Karangsari – Filosofi Bambu & Pangeran Diponegoro</a></h3>
           <p class="date">23 Agustus 2025</p>
@@ -169,7 +185,7 @@
       </div>
 
       <div class="news-slide">
-        <img src="images/sertifikat-eas-attamimi.jpg" alt="Sertifikat EAS">
+        <img src="images/sertifikat-eas-attamimi.jpg" alt="Sertifikat EAS"loading="lazy">>
         <div class="news-info">
           <h3><a href="news/sertifikat-eas-2024.html">Attamimi Tours Resmi Ter-Akreditasi EAS 2024-2029</a></h3>
           <p class="date">06 Agustus 2024</p>
@@ -178,7 +194,7 @@
       </div>
 
       <div class="news-slide">
-        <img src="images/umrah-2025-arrival.jpg" alt="Jamaah Umrah">
+        <img src="images/umrah-2025-arrival.jpg" alt="Jamaah Umrah"loading="lazy">>
         <div class="news-info">
           <h3><a href="news/umrah-2025-12-juta-jamaah.html">Umrah 2025: 1,2 Juta Jamaah Tiba di Arab Saudi</a></h3>
           <p class="date">25 Agustus 2025</p>
@@ -187,7 +203,7 @@
       </div>
 
       <div class="news-slide">
-        <img src="images/bp-haji-kementerian.jpg" alt="BP Haji">
+        <img src="images/bp-haji-kementerian.jpg" alt="BP Haji"loading="lazy">>
         <div class="news-info">
           <h3><a href="news/bp-haji-jadi-kementerian-2025.html">BP Haji Resmi Jadi Kementerian Haji dan Umrah</a></h3>
           <p class="date">26 Agustus 2025</p>
@@ -204,8 +220,8 @@
   <section id="gallery" class="container">
     <h2 class="section-title">Galeri Perjalanan</h2>
     <div class="galeri-track">
-      <img src="galeri1.jpg" alt="Mekkah">
-      <img src="galeri2.jpg" alt="Madinah">
+      <img src="galeri1.jpg" alt="Mekkah"loading="lazy">
+      <img src="galeri2.jpg" alt="Madinah"loading="lazy">
           </div>
   </section>
 
@@ -213,7 +229,7 @@
   <section id="testimoni" class="container">
     <h2 class="section-title">Testimoni Jamaah</h2>
     <div class="card testi-card">
-      <img src="testimoni.jpg" alt="Testimoni">
+      <img src="testimoni.jpg" alt="Testimoni"loading="lazy">>
       <div class="card-body">
         <p>“Le sanjang kok paling sae pelayanane… Alhamdulillah, ibadah lancar, hotel dekat Masjidil Haram, makanan enak, pendamping ramah.”</p>
         <strong>– Ibu Siti, Purworejo</strong>
@@ -323,9 +339,9 @@
 
   <!-- SOCIAL -->
   <section class="social-bar">
-    <a href="https://www.facebook.com/attamimi.tours" target="_blank"><img src="facebook.png" alt="FB"></a>
-    <a href="https://www.instagram.com/attamimi.tours/" target="_blank"><img src="instagram.png" alt="IG"></a>
-    <a href="https://www.threads.com/@attamimi.tours" target="_blank"><img src="threads.png" alt="Threads"></a>
+    <a href="https://www.facebook.com/attamimi.tours" target="_blank"><img src="facebook.png" alt="FB"loading="lazy">></a>
+    <a href="https://www.instagram.com/attamimi.tours/" target="_blank"><img src="instagram.png" alt="IG"loading="lazy">></a>
+    <a href="https://www.threads.com/@attamimi.tours" target="_blank"><img src="threads.png" alt="Threads"loading="lazy">></a>
   </section>
 
   <!-- FOOTER -->
