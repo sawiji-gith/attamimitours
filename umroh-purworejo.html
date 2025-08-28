@@ -144,46 +144,26 @@
   <script src="script.js" defer></script>
   
   <!-- ===== TELEGRAM NOTIF ===== -->
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const form = document.querySelector('.form-daftar');
-  if (!form) return;
+<script defer>
+document.querySelector('.form-daftar').addEventListener('submit', function (e) {
+  e.preventDefault(); // agar halaman tidak reload
 
-  form.addEventListener('submit', function (e) {
-    e.preventDefault(); // stop reload halaman
+  const nama  = this.nama.value;
+  const email = this.email.value;
+  const wa    = this.whatsapp.value;
+  const paket = this.paket.value;
 
-    const fd   = new FormData(this);
-    const data = {
-      nama  : fd.get('nama'),
-      email : fd.get('email'),
-      wa    : fd.get('whatsapp'),
-      paket : fd.get('paket')
-    };
+  const msg = `📋 Pendaftaran baru\nNama: ${nama}\nEmail: ${email}\nWhatsApp: ${wa}\nPaket: ${paket}`;
+  const token  = '8470444840:AAH4VQDFuSNGoTlx2assgz-hM9Fi3mKRWew';
+  const chatID = 987413154;
 
-    const msg = `📋 Pendaftaran Baru – Umroh Purworejo
-Nama   : ${data.nama}
-Email  : ${data.email}
-WA     : ${data.wa}
-Paket  : ${data.paket}`;
-
-    const token   = '8470444840:AAH4VQDFuSNGoTlx2assgz-hM9Fi3mKRWew';
-    const chatID  = 987413154;
-
-    fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
-      method : 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body   : JSON.stringify({ chat_id: chatID, text: msg })
-    })
-    .then(res => res.json())
-    .then(res => {
-      if (res.ok) {
-        alert('✅ Pendaftaran terkirim! Kami akan hubungi via WhatsApp.');
-        form.reset();
-      } else {
-        throw new Error(res.description || 'Telegram error');
-      }
-    })
-    .catch(err => alert('❌ Gagal mengirim: ' + err.message));
+  fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ chat_id: chatID, text: msg })
+  })
+  .then(() => {
+    window.location.href = 'https://attamimitours.biz.id/thanks.html';
   });
 });
 </script>
