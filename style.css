@@ -162,3 +162,18 @@ summary {
   margin-top: 10px;
   align-self: flex-start;
 }
+#testimoni {
+  --gap: 1rem;
+  display: flex;
+  gap: var(--gap);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1rem;
+}
+
+.testi-card {
+  scroll-snap-align: start;
+  min-width: 280px;   /* ukuran card */
+  flex: 0 0 auto;
+}
+
