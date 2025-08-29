@@ -91,33 +91,72 @@
     </div>
   </section>
 
-  <!-- ===== FORM & KONTAK ===== -->
-  <section id="form-daftar" class="container">
-    <h2 class="section-title">Form Pendaftaran Online</h2>
-    <form action="https://formspree.io/f/xandykvn" method="POST" class="form-daftar">
-      <div class="form-row">
-        <label>Nama Lengkap</label>
-        <input type="text" name="nama" required>
-      </div>
-      <div class="form-row">
-        <label>Email (optional)</label>
-        <input type="email" name="email" required>
-      <!/div>
-      <div class="form-row">
-        <label>WhatsApp</label>
-        <input type="tel" name="whatsapp" required>
-      </div>
-      <div class="form-row">
-        <label>Paket Dipilih</label>
-        <select name="paket" required>
-          <option value="">-- Pilih Paket --</option>
-          <option>Umroh Promo Merdeka Purworejo</option>
-          <option>Umroh 9/12/14 Hari Purworejo</option>
-        </select>
-      </div>
-      <button type="submit" class="btn">Kirim Pendaftaran</button>
-    </form>
-  </section>
+  <!-- ===== FORM LANGSUNG KE TELEGRAM ===== -->
+<section id="form-daftar" class="container">
+  <h2 class="section-title">Form Pendaftaran Online</h2>
+
+  <form id="tgForm" class="form-daftar">
+    <div class="form-row">
+      <label>Nama Lengkap</label>
+      <input type="text" name="nama" required>
+    </div>
+
+    <div class="form-row">
+      <label>WhatsApp</label>
+      <input type="tel" name="whatsapp" required>
+    </div>
+
+    <div class="form-row">
+      <label>Email (opsional)</label>
+      <input type="email" name="email" placeholder="boleh dikosongkan">
+    </div>
+
+    <div class="form-row">
+      <label>Paket Dipilih</label>
+      <select name="paket" required>
+        <option value="">-- Pilih Paket --</option>
+        <option>Umroh Promo Merdeka Purworejo</option>
+        <option>Umroh 9/12/14 Hari Purworejo</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn">Kirim Pendaftaran</button>
+
+    <div id="formMsg" style="margin-top:10px;color:green;"></div>
+  </form>
+</section>
+
+<script>
+document.getElementById('tgForm').addEventListener('submit', async e => {
+  e.preventDefault();
+
+  const nama  = e.target.nama.value.trim();
+  const wa    = e.target.whatsapp.value.trim();
+  const email = e.target.email.value.trim();
+  const paket = e.target.paket.value.trim();
+
+  const text = `📋 Pendaftaran baru
+Nama: ${nama}
+WhatsApp: ${wa}${email ? `\nEmail: ${email}` : ''}
+Paket: ${paket}`;
+
+  const token   = '8470444840:AAH4VQDFuSNGoTlx2assgz-hM9Fi3mKRWew';
+  const chatID  = 987413154;
+
+  try {
+    await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({ chat_id: chatID, text })
+    });
+    document.getElementById('formMsg').textContent = 'Pendaftaran terkirim! Admin akan segera menghubungi Anda via WhatsApp.';
+    e.target.reset();
+  } catch {
+    document.getElementById('formMsg').textContent = 'Gagal mengirim, coba lagi.';
+  }
+});
+</script>
+
 
   <section id="contact" class="container">
     <h2 class="section-title">Alamat & Kontak</h2>
