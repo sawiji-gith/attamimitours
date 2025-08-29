@@ -99,9 +99,9 @@
         <label>Nama Lengkap</label>
         <input type="text" name="nama" required>
       </div>
-      <!div class="form-row">
-        <!label>Email</label>
-        <!input type="email" name="email" required>
+      <div class="form-row">
+        <label>Email</label>
+        <input type="email" name="email" required>
       <!/div>
       <div class="form-row">
         <label>WhatsApp</label>
@@ -149,7 +149,7 @@ document.querySelector('.form-daftar').addEventListener('submit', function (e) {
   e.preventDefault(); // agar halaman tidak reload
 
   const nama  = this.nama.value;
-  !const email = this.email.value;
+  const email = this.email.value;
   const wa    = this.whatsapp.value;
   const paket = this.paket.value;
 
