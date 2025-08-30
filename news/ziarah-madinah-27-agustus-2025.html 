@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO & Meta -->
+  <title>Rombongan Jamaah Umroh Attamimi Tours Ziarah Gunung Uhud Madinah</title>
+  <meta name="description" content="Rombongan jamaah umroh Attamimi Tours ziarah Gunung Uhud Madinah 30 Agustus 2025. Suasana kebersamaan & hikmah perjalanan ibadah.">
+  <meta name="keywords" content="umroh purworejo, ziarah gunung uhud, attamimi tours, umroh 2025">
+  <meta name="author" content="Attamimi Tours">
+  <meta name="geo.region" content="ID-JT">
+  <meta name="geo.placename" content="Purworejo">
+  <meta name="geo.position" content="-7.7086,109.9966">
+
+  <!-- Google Search Console -->
+  <meta name="google-site-verification" content="Umo75pcrRNEr-g9k5pQHi5maV5Y7-P8K3OMUdF7IYLY">
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-69KG75SMLR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-69KG75SMLR');
+  </script>
+
+  <!-- Open Graph & Twitter -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Rombongan Jamaah Umroh Attamimi Tours Ziarah Gunung Uhud Madinah">
+  <meta property="og:description" content="Suasana kebersamaan & hikmah perjalanan ibadah umroh Attamimi Tours di Gunung Uhud, 30 Agustus 2025.">
+  <meta property="og:url" content="https://attamimitours.biz.id/news/ziarah-gunung-uhud-30-agustus-2025.html">
+  <meta property="og:image" content="https://attamimitours.biz.id/images/ziarah-gunung-uhud.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ziarah Gunung Uhud – Attamimi Tours">
+  <meta name="twitter:image" content="https://attamimitours.biz.id/images/ziarah-gunung-uhud.jpg">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://attamimitours.biz.id/news/ziarah-gunung-uhud-30-agustus-2025.html">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <a href="../index.html" class="back">← Kembali</a>
+
+    <article>
+      <span class="badge">Liputan Langsung</span>
+      <h1>Rombongan Jamaah Umroh Attamimi Tours Ziarah ke Gunung Uhud Madinah</h1>
+      <p class="meta">30 Agustus 2025 | Attamimi Tours</p>
+
+      <figure>
+        <img src="images/ziarah-gunung-uhud.jpg" alt="Jamaah Umroh Attamimi Tours di Gunung Uhud Madinah" loading="lazy">
+        <figcaption>Jamaah Umroh Attamimi Tours berfoto bersama di depan Gunung Uhud, Madinah.</figcaption>
+      </figure>
+
+      <p>
+        Rombongan jamaah <strong>Attamimi Tours</strong> kembali melaksanakan perjalanan ibadah <strong>umroh akbar 2025</strong>. Salah satu agenda penting adalah kunjungan ke <strong>Gunung Uhud</strong> di Madinah Al-Munawwarah.
+      </p>
+
+      <p>
+        Para jamaah mendapatkan penjelasan mengenai sejarah perjuangan para sahabat Nabi Muhammad SAW, serta merenungi hikmah dari peristiwa Perang Uhud. Suasana penuh khidmat, kebersamaan, dan semangat ibadah terasa di tengah rombongan.
+      </p>
+
+      <h2>Suasana Kebersamaan Jamaah</h2>
+      <p>
+        Jamaah tampak kompak mengenakan perlengkapan resmi dari Attamimi Tours, berfoto bersama sambil membawa spanduk tanda kebersamaan. Dengan latar Gunung Uhud yang menjulang dan langit biru cerah, momen ini menjadi salah satu kenangan terbaik.
+      </p>
+
+      <h2>Pendaftaran Umroh Berikutnya</h2>
+      <p>
+        Attamimi Tours membuka pendaftaran untuk keberangkatan <strong>Umroh Akbar 27 September 2025</strong> dengan harga mulai <strong>Rp 29,9 juta</strong>. Fasilitas hotel dekat Masjidil Haram dan Masjid Nabawi, serta bimbingan ibadah sesuai sunnah.
+      </p>
+      <p>
+        📞 <a href="https://wa.me/6285183049514" target="_blank">0851-8304-9514</a> – <strong>Sisa seat terbatas hanya 10 jamaah!</strong>
+      </p>
+
+      <footer>
+        <p><em>Attamimi Tours – Travel Umroh Resmi, Amanah, dan Terpercaya.</em></p>
+      </footer>
+    </article>
+  </div>
+</body>
+</html>
