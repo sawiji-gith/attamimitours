@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO -->
   <title>Berita Terkini – Attamimi Tours</title>
   <meta name="description"
         content="Semua berita & update terkini seputar umrah, haji, dan kegiatan komunitas Attamimi Tours Purworejo.">
@@ -11,8 +13,58 @@
   <meta name="author" content="Attamimi Tours">
   <meta name="geo.region" content="ID-JT">
   <meta name="geo.placename" content="Purworejo">
-  <meta name="geo.position" content="-7.7086;109.9966">
+  <meta name="geo.position" content="-7.7086,109.9966">
+
+  <!-- Google Search Console -->
+  <meta name="google-site-verification" content="Umo75pcrRNEr-g9k5pQHi5maV5Y7-P8K3OMUdF7IYLY">
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-69KG75SMLR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-69KG75SMLR');
+  </script>
+
+  <!-- Open Graph & Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Berita Terkini – Attamimi Tours">
+  <meta property="og:description" content="Semua berita & update terkini seputar umrah, haji, dan kegiatan komunitas Attamimi Tours Purworejo.">
+  <meta property="og:url" content="https://attamimitours.biz.id/news/">
+  <meta property="og:image" content="https://attamimitours.biz.id/images/berita-index.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Berita Terkini – Attamimi Tours">
+  <meta name="twitter:image" content="https://attamimitours.biz.id/images/berita-index.jpg">
+
+  <link rel="canonical" href="https://attamimitours.biz.id/news/">
   <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --primary:#0f766e;
+      --bg:#f8fafc;
+      --card:#fff;
+      --text:#1e293b;
+      --muted:#64748b;
+      --radius:12px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Inter,system-ui;background:var(--bg);color:var(--text);line-height:1.7}
+    .container{max-width:960px;margin:auto;padding:1rem}
+    .back{color:var(--primary);text-decoration:none}
+    h1{margin:1rem 0;color:var(--primary)}
+    .meta{font-size:.9rem;color:var(--muted)}
+    .badge{display:inline-block;background:var(--primary);color:#fff;font-size:.75rem;padding:.25rem .5rem;border-radius:999px;margin-bottom:.5rem}
+    .news-list{display:flex;flex-direction:column;gap:2rem;margin-top:1.5rem}
+    .news-card{background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+    .news-card:hover{transform:translateY(-2px)}
+    .news-card img{width:100%;height:200px;object-fit:cover}
+    .news-card h2{font-size:1.125rem;margin:.75rem 1rem 0}
+    .news-card p{margin:0 1rem 1rem;font-size:.95rem;color:var(--muted)}
+    .share{margin:2rem 0;font-size:.9rem}
+    .share a{margin-right:.75rem}
+    @media(min-width:600px){.news-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}}
+  </style>
 </head>
 
 <body>
@@ -22,50 +74,49 @@
     <h1>Berita & Update Attamimi Tours</h1>
     <p class="meta">Ikuti perkembangan terbaru kami di Purworejo dan sekitarnya.</p>
 
-    <!-- Daftar Berita -->
     <section class="news-list">
       <!-- Berita 1 -->
       <article class="news-card">
-        <img src="../images/1000558468.jpg" alt="Karnaval Karangsari">
+        <img src="../images/1000558468.jpg" alt="Karnaval Karangsari" loading="lazy">
         <h2><a href="karnaval.html">Parade Kreatif Karangsari: Filosofi Bambu & Pangeran Diponegoro</a></h2>
-        <p class="meta">23 Agustus 2025</p>
-        <p>Replika bambu raksasa Pangeran Diponegoro di HUT RI ke-80.</p>
+        <p>23 Agustus 2025</p>
       </article>
 
       <!-- Berita 2 -->
       <article class="news-card">
-        <img src="../images/sertifikat-eas-attamimi.jpg" alt="Sertifikat EAS">
+        <img src="../images/sertifikat-eas-attamimi.jpg" alt="Sertifikat EAS" loading="lazy">
         <h2><a href="sertifikat-eas-2024.html">Attamimi Tours Resmi Ter-Akreditasi EAS 2024-2029</a></h2>
-        <p class="meta">06 Agustus 2024</p>
-        <p>Sertifikasi nasional untuk penyelenggaraan umrah berstandar.</p>
+        <p>06 Agustus 2024</p>
       </article>
 
       <!-- Berita 3 -->
       <article class="news-card">
-        <img src="../images/umrah-2025-arrival.jpg" alt="Jamaah Umrah">
+        <img src="../images/umrah-2025-arrival.jpg" alt="Jamaah Umrah" loading="lazy">
         <h2><a href="umrah-2025-12-juta-jamaah.html">Umrah 2025: 1,2 Juta Jamaah Tiba di Arab Saudi</a></h2>
-        <p class="meta">25 Agustus 2025</p>
-        <p>Lonjakan 30 % jemaah global & paket umrah Purworejo terbaru.</p>
+        <p>25 Agustus 2025</p>
       </article>
 
       <!-- Berita 4 -->
       <article class="news-card">
-        <img src="../images/bp-haji-kementerian.jpg" alt="BP Haji">
+        <img src="../images/bp-haji-kementerian.jpg" alt="BP Haji" loading="lazy">
         <h2><a href="bp-haji-jadi-kementerian-2025.html">BP Haji Resmi Jadi Kementerian Haji dan Umrah</a></h2>
-        <p class="meta">26 Agustus 2025</p>
-        <p>Ditjen PHU Kemenag akan dihapus efektif 1 Januari 2026.</p>
+        <p>26 Agustus 2025</p>
       </article>
 
       <!-- Berita 5 -->
       <article class="news-card">
-        <img src="../images/ziarah-gunung-uhud.webp" alt="ziarah gunung Uhud">
-       <h2><a href="ziarah-gunung-uhud-30-agustus-2025.html">Rombongan Jamaah Umroh Attamimi Tours Ziarah ke Gunung Uhud</a></h2>
-        <p class="meta">30 Agustus 2025</p>
-        <p>Rihlah</p>
+        <img src="../images/ziarah-gunung-uhud.webp" alt="Ziarah Gunung Uhud" loading="lazy">
+        <h2><a href="ziarah-gunung-uhud-30-agustus-2025.html">Rombongan Jamaah Umroh Attamimi Tours Ziarah ke Gunung Uhud</a></h2>
+        <p>30 Agustus 2025</p>
       </article>
-    
-    </section>
 
+      <!-- Berita 6 -->
+      <article class="news-card">
+        <img src="../images/kampung-haji-2028.jpg" alt="Kampung Haji Indonesia" loading="lazy">
+        <h2><a href="kampung-haji-2028.html">Kampung Haji Indonesia 2028, Tampung 200.000 Jamaah</a></h2>
+        <p>30 Agustus 2025</p>
+      </article>
+    </section>
 
     <div class="share">
       <strong>Bagikan:</strong>
@@ -73,48 +124,5 @@
       <a href="https://www.facebook.com/sharer/sharer.php?u=https://attamimitours.biz.id/news/" target="_blank">Facebook</a>
     </div>
   </div>
-
-  <!-- Tambahan CSS inline agar card tampil rapi -->
-  <style>
-    .news-list {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      margin-top: 1.5rem;
-    }
-    .news-card {
-      background: var(--card);
-      border-radius: var(--radius);
-      overflow: hidden;
-      box-shadow: 0 2px 6px rgba(0,0,0,.08);
-      transition: .2s;
-    }
-    .news-card:hover { transform: translateY(-2px); }
-    .news-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-    .news-card h2 {
-      font-size: 1.125rem;
-      margin: .75rem 1rem 0;
-      line-height: 1.4;
-    }
-    .news-card p.meta {
-      margin: .25rem 1rem .75rem;
-      font-size: .875rem;
-      color: var(--muted);
-    }
-    .news-card p {
-      margin: 0 1rem 1rem;
-      font-size: .95rem;
-    }
-    @media (min-width:600px) {
-      .news-list {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      }
-    }
-  </style>
 </body>
 </html>
