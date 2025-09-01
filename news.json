@@ -1,0 +1,32 @@
+{
+  "berita": [
+    {
+      "judul": "Parade Kreatif Karangsari: Filosofi Bambu & Pangeran Diponegoro",
+      "tanggal": "23 Agustus 2025",
+      "url": "news/index.html#berita1",
+      "ringkasan": "Perayaan budaya dengan tema filosofi bambu dan sejarah Pangeran Diponegoro",
+      "gambar": "assets/images/parade-karangsari.jpg"
+    },
+    {
+      "judul": "Attamimi Tours Resmi Ter-Akreditasi EAS 2024-2029",
+      "tanggal": "06 Agustus 2024",
+      "url": "news/index.html#berita2",
+      "ringkasan": "Penghargaan penting untuk layanan travel haji dan umrah",
+      "gambar": "assets/images/akreditasi-eas.jpg"
+    },
+    {
+      "judul": "Umrah 2025: 1,2 Juta Jamaah Tiba di Arab Saudi",
+      "tanggal": "25 Agustus 2025",
+      "url": "news/index.html#berita3",
+      "ringkasan": "Peningkatan signifikan jumlah jamaah umrah dari Indonesia",
+      "gambar": "assets/images/jamaah-umrah.jpg"
+    },
+    {
+      "judul": "BP Haji Resmi Jadi Kementerian Haji dan Umrah",
+      "tanggal": "26 Agustus 2025",
+      "url": "news/index.html#berita4",
+      "ringkasan": "Restrukturisasi kelembagaan haji Indonesia",
+      "gambar": "assets/images/kementerian-haji.jpg"
+    }
+  ]
+}
