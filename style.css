@@ -46,14 +46,6 @@ body{font-family:'Poppins', sans-serif;background:var(--bg);color:var(--black);l
 .card-body{padding:24px;text-align:center}
 .price{color:var(--primary);font-weight:800;margin:8px 0 16px;font-size:1.1rem}
 
-/* ===== FORCE 3 COLUMNS DESKTOP ===== */
-@media (min-width: 992px){
-  .paket{
-    grid-template-columns:repeat(3,1fr); /* 3 kolom sama besar */
-    align-items:stretch;                 /* tinggi kartu sama */
-  }
-}
-
 /* NEWS SLIDER */
 .news-slider{max-width:900px;margin:40px auto;background:#fff;border-radius:16px;box-shadow:0 8px 20px rgba(0,0,0,.08);overflow:hidden;position:relative}
 .news-slide{display:none;flex-direction:column;gap:20px;padding:24px}
