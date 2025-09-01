@@ -95,3 +95,15 @@ h1{
 @media(min-width:600px){
   .news-grid{grid-template-columns:repeat(auto-fit,minmax(300px,1fr));}
 }
+
+/* Gambar berita proporsional di HP */
+@media (max-width:600px){
+  .news-card img{
+    height:160px;   /* lebih pendek di HP */
+    width:100%;
+    object-fit:cover;
+  }
+  .news-card h2{
+    font-size:1rem; /* judul lebih kecil */
+  }
+}
