@@ -152,3 +152,24 @@ article img,
     gap:1rem;
   }
 }
+/* ===== Gambar dalam halaman detail berita ===== */
+article img,
+article .figure-img {
+  max-width: 100%;   /* biar tidak melebihi layar */
+  height: auto;      /* jaga proporsi */
+  display: block;
+  margin: 1rem auto; /* center dengan jarak */
+  border-radius: 8px;
+}
+
+article figure {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+article figcaption {
+  font-size: .85rem;
+  color: var(--muted);
+  margin-top: .5rem;
+  line-height: 1.4;
+}
