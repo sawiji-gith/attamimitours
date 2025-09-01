@@ -7,103 +7,133 @@
   --radius:12px;
 }
 
-*{
+* {
   box-sizing:border-box;
   margin:0;
   padding:0;
 }
-body{
-  font-family:Inter,system-ui;
+
+body {
+  font-family:Inter,system-ui,sans-serif;
   background:var(--bg);
   color:var(--text);
   line-height:1.7;
+  -webkit-font-smoothing:antialiased;
 }
-.container{
+
+.container {
   max-width:960px;
   margin:auto;
   padding:1rem;
 }
-.back{
+
+.back {
   color:var(--primary);
   text-decoration:none;
   font-weight:600;
 }
-h1{
+
+h1 {
   margin:1rem 0;
   color:var(--primary);
+  font-size:1.5rem;
+  line-height:1.4;
 }
-.meta{
+
+.meta {
   font-size:.9rem;
   color:var(--muted);
 }
 
-/* Grid berita ala Kompas/Detik */
-.news-grid{
+/* Grid berita */
+.news-grid {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:2rem;
+  gap:1.25rem;
   margin-top:1.5rem;
 }
-.news-card{
+
+.news-card {
   background:var(--card);
   border-radius:var(--radius);
   overflow:hidden;
   box-shadow:0 2px 6px rgba(0,0,0,.08);
   transition:transform .3s;
+  word-wrap:break-word;
 }
-.news-card:hover{
+
+.news-card:hover {
   transform:translateY(-2px);
 }
-.news-card img{
+
+.news-card img {
   width:100%;
   height:200px;
   object-fit:cover;
+  display:block;
 }
-.news-card h2{
+
+.news-card h2 {
   font-size:1.125rem;
   margin:.75rem 1rem 0;
   line-height:1.4;
 }
-.news-card h2 a{
+
+.news-card h2 a {
   text-decoration:none;
   color:inherit;
 }
-.news-card h2 a:hover{
+
+.news-card h2 a:hover {
   color:var(--primary);
 }
-.news-card p{
+
+.news-card p {
   margin:0 1rem 1rem;
   font-size:.95rem;
   color:var(--muted);
+  line-height:1.6;
 }
 
 /* Share buttons */
-.share{
+.share {
   margin:2rem 0;
   font-size:.9rem;
 }
-.share a{
+
+.share a {
   margin-right:.75rem;
   color:var(--primary);
   text-decoration:none;
 }
-.share a:hover{
+
+.share a:hover {
   text-decoration:underline;
 }
 
 /* Responsive */
 @media(min-width:600px){
-  .news-grid{grid-template-columns:repeat(auto-fit,minmax(300px,1fr));}
+  .news-grid {
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:1.5rem;
+  }
 }
 
-/* Gambar berita proporsional di HP */
-@media (max-width:600px){
-  .news-card img{
-    height:160px;   /* lebih pendek di HP */
-    width:100%;
-    object-fit:cover;
+@media(max-width:600px){
+  body {
+    font-size:15px; /* agar teks tetap nyaman dibaca */
   }
-  .news-card h2{
+  .container {
+    padding:.75rem; /* lebih rapat di HP */
+  }
+  .news-card img {
+    height:160px;   /* lebih pendek di HP */
+  }
+  .news-card h2 {
     font-size:1rem; /* judul lebih kecil */
+    line-height:1.35;
+  }
+  .news-card p {
+    font-size:.9rem;
   }
 }
