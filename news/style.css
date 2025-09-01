@@ -69,7 +69,7 @@ h1 {
 .news-card img {
   width:100%;
   height:auto;          /* biar proporsional */
-  max-height:180px;     /* batasi tinggi agar tidak kegedean */
+  max-height:180px;     /* batasi tinggi thumbnail */
   object-fit:cover;
   display:block;
 }
@@ -94,6 +94,16 @@ h1 {
   font-size:.95rem;
   color:var(--muted);
   line-height:1.6;
+}
+
+/* Gambar di dalam isi/detail berita */
+article img,
+.news-content img {
+  max-width:100%;
+  height:auto;
+  display:block;
+  margin:1rem auto;
+  border-radius:8px;
 }
 
 /* Share buttons */
@@ -128,7 +138,7 @@ h1 {
     padding:.75rem;
   }
   .news-card img {
-    max-height:120px;   /* lebih pendek di HP */
+    max-height:120px;   /* lebih pendek thumbnail di HP */
   }
   .news-card h2 {
     font-size:1rem;
