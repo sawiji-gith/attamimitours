@@ -220,7 +220,7 @@ a {
 }
 
 /* === OVERRIDE GAMBAR PAKET === */
-.card img {
+#packages .card img {
   width: 100% !important;
   height: auto !important;
   max-height: none !important;
