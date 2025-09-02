@@ -3,25 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Attamimi Tours – Haji & Umroh Resmi</title>
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <!-- Preconnect & Preload untuk font & CDN -->
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"></noscript>
 
-  <!-- SEO -->
+<!-- Defer semua script eksternal -->
+<script src="https://www.googletagmanager.com/gtag/js?id=G-69KG75SMLR" defer></script>
+  <link rel="icon" href="favicon.ico">
+  <title>Attamimi Tours – Haji & Umroh Resmi Yogyakarta & Jawa Tengah</title>
+
+  <!-- SEO Meta -->
   <meta name="description" content="Attamimi Tours – Haji & Umroh Resmi Yogyakarta & Jawa Tengah. Hotel bintang 5, visa lengkap, berangkat tanpa antri.">
-  <meta name="keywords" content="umroh jogja, umroh yogyakarta, travel umroh jogja, haji khusus jogja, biro umroh resmi jogja, paket umroh jawa tengah">
+  <meta name="keywords" content="umroh jogja, umroh yogyakarta, travel umroh jogja, haji khusus jogja, biro umroh resmi jogja, paket umroh jawa tengah, umroh semarang, umroh solo, umroh purworejo, travel haji jawa tengah">
   <meta name="author" content="Attamimi Tours">
-
-  <!-- Google Search Console & GA4 -->
-  <meta name="google-site-verification" content="Umo75pcrRNEr-g9k5pQHi5maV5Y7-P8K3OMUdF7IYLY">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-69KG75SMLR"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-69KG75SMLR');</script>
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Attamimi Tours – Haji & Umroh Resmi">
-  <meta property="og:description" content="Paket Umroh & Haji resmi dari Yogyakarta & Jawa Tengah. Hotel bintang 5, maskapai terpercaya.">
+  <meta property="og:title" content="Attamimi Tours – Haji & Umroh Resmi Yogyakarta & Jawa Tengah">
+  <meta property="og:description" content="Paket Umroh & Haji resmi dari Yogyakarta & Jawa Tengah. Hotel bintang 5, maskapai terpercaya, bimbingan ibadah amanah.">
   <meta property="og:url" content="https://attamimitours.biz.id">
   <meta property="og:image" content="https://attamimitours.biz.id/Logo.png">
-  <link rel="stylesheet" href="style.css">
+  <meta property="og:site_name" content="Attamimi Tours">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Attamimi Tours – Haji & Umroh Resmi">
+  <meta name="twitter:description" content="Paket Umroh & Haji resmi dari Yogyakarta & Jawa Tengah. Hotel bintang 5, maskapai terpercaya.">
+  <meta name="twitter:image" content="https://attamimitours.biz.id/Logo.png">
+
+  <!-- Google Search Console -->
+  <meta name="google-site-verification" content="Umo75pcrRNEr-g9k5pQHi5maV5Y7-P8K3OMUdF7IYLY">
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-69KG75SMLR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-69KG75SMLR');
+  </script>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "Attamimi Tours",
+    "image": "https://attamimitours.biz.id/Logo.png",
+    "url": "https://attamimitours.biz.id",
+    "telephone": "+62-851-8304-9514",
+    "email": "attamimi.tour@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Kompleks Pondok Pesantren Putra Putri Al Azhar",
+      "addressLocality": "Purworejo",
+      "addressRegion": "Jawa Tengah",
+      "postalCode": "54111",
+      "addressCountry": "ID"
+    },
+    "areaServed": ["Yogyakarta", "Jawa Tengah", "Jawa Timur", "Jawa Barat"],
+    "serviceType": ["Umroh", "Haji Khusus", "Visa Arab Saudi", "Manasik", "Ziara Wali"],
+    "sameAs": [
+      "https://www.facebook.com/attamimi.tours",
+      "https://www.instagram.com/attamimi.tours",
+      "https://www.threads.com/@attamimi.tours"
+    ]
+  }
+  </script>
+
+  <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="style.css"></noscript>
 </head>
 
 <body>
@@ -29,9 +84,10 @@
   <header class="navbar">
     <div class="nav-container">
       <a href="#hero" class="brand">
-        <img src="Logo.png" alt="Logo" loading="lazy">
+        <img src="Logo.png" alt="Attamimi" loading="lazy">
         <span>AT-TAMIMI Tours</span>
       </a>
+
       <nav class="nav-links" id="navLinks">
         <a href="#about">Tentang</a>
         <a href="#packages">Paket</a>
@@ -40,13 +96,14 @@
         <a href="#faq">FAQ</a>
         <a href="#contact">Kontak</a>
       </nav>
+
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span>
       </button>
     </div>
   </header>
 
-  <!-- HERO (bersih) -->
+  <!-- HERO -->
   <section id="hero" class="hero">
     <div class="hero-content">
       <h1>Attamimi Tours</h1>
@@ -58,12 +115,29 @@
   <!-- ABOUT -->
   <section id="about" class="container">
     <h2 class="section-title">Tentang Kami</h2>
-    <p>Saya adalah seorang Umroh Travel Advisor yang berdedikasi membantu jamaah dalam merencanakan dan melaksanakan perjalanan ibadah.</p>
+    <p>
+      Saya adalah seorang Umroh Travel Advisor yang berdedikasi membantu jamaah dalam merencanakan dan melaksanakan perjalanan ibadah.</p>
+<p>Peran saya adalah memberikan:</p>
+
+<li>1.Konsultasi paket umroh sesuai kebutuhan</li>
+<li>2.Informasi detail keberangkatan</li>
+<li>3.Pendampingan dalam proses pendaftaran</li>
+<li>4.Edukasi manasik serta tips perjalanan</li><br>
+
+
+<p]Bersama Attamimi Tours, saya siap mendampingi setiap langkah jamaah agar perjalanan menuju Baitullah menjadi pengalaman spiritual yang indah, tenang, dan penuh berkah.</p>
+
+<p>💡 Misi saya adalah melayani dengan sepenuh hati, menghadirkan solusi perjalanan terbaik, dan memastikan jamaah dapat fokus beribadah dengan nyaman.</p><br>
+<ul>
+
+<p>Attamimi Tours adalah biro perjalanan ibadah Haji dan Umroh resmi yang berdiri sejak 2015. Kami berkomitmen memberikan layanan ibadah yang nyaman, aman, dan berkah dengan didukung tim berpengalaman dan legalitas resmi dari Kementerian Agama RI.
+    </p></ul>
     <ul>
-      <li>Konsultasi paket umroh sesuai kebutuhan</li>
-      <li>Informasi detail keberangkatan</li>
-      <li>Pendampingan dalam proses pendaftaran</li>
-      <li>Edukasi manasik serta tips perjalanan</li>
+      <li>Resmi & Terpercaya – Berizin PPIU U.352/2020 & PIHK 02202072929030002/2024</li>
+      <li>Fasilitas Lengkap – Tiket, hotel bintang 5, perlengkapan ibadah, manasik</li>
+      <li>Pendamping Profesional – Tour Leader & Mutawwif berpengalaman</li>
+      <li>Pelayanan Optimal – Ziarah wali, Air Zam-Zam, dokumentasi</li>
+      <li>Layanan – Seluruh Indonesia</li>
     </ul>
   </section>
 
@@ -71,48 +145,301 @@
   <section id="packages" class="container">
     <h2 class="section-title">Pilihan Paket</h2>
     <div class="paket">
-      <div class="card"><img src="umroh9.webp" alt="Umroh 9 Hari"><h3>Umroh 9 Hari</h3><p>Lion Air | 3★ | 3× Umroh</p><div class="price">Rp 28,5 Jt</div><a class="btn" href="https://wa.me/6285183049514">Pesan via WA</a></div>
-      <div class="card"><img src="umroh12.webp" alt="Umroh 12 Hari"><h3>Umroh 12 Hari</h3><p>Malaysia Airlines | 4★ | 3× Umroh</p><div class="price">Rp 33 Jt</div><a class="btn" href="https://wa.me/6285183049514">Pesan via WA</a></div>
-      <div class="card"><img src="umroh14.webp" alt="Umroh 14 Hari"><h3>Umroh 14 Hari</h3><p>Saudia Air | 4★ | 3× Umroh</p><div class="price">Rp 35,5 Jt</div><a class="btn" href="https://wa.me/6285183049514">Pesan via WA</a></div>
-      <div class="card"><img src="paket-haji.webp" alt="Haji Khusus"><h3>Haji Khusus Langsung Berangkat</h3><p>Saudia Garuda Indonesia Air | 4★</p><div class="price">Rp 295 Jt</div><a class="btn" href="https://wa.me/6285183049514">Pesan via WA</a></div>
+      <div class="card">
+        <img src="umroh9.webp" alt="Umroh 9 Hari" width="400" height="267" loading="lazy">>
+        <div class="card-body">
+          <h3>Umroh 9 Hari</h3>
+          <p>Lion Air | Hotel 3★ | 3× Umroh</p>
+          <div class="price">Rp 28,5 Jt</div>
+          <a class="btn" href="https://wa.me/6285183049514?text=Saya%20tertarik%20Umroh%209%20Hari">Pesan via WA</a>
+        </div>
+      </div>
+      <div class="paket">
+      <div class="card">
+        <img src="umroh12.webp" alt="Umroh 12 Hari" width="400" height="267" loading="lazy">>
+        <div class="card-body">
+          <h3>Umroh 12 Hari</h3>
+          <p>Malaysia Airlines | Hotel 4★ | 3× Umroh</p>
+          <div class="price">Rp 33 Jt</div>
+          <a class="btn" href="https://wa.me/6285183049514?text=Saya%20tertarik%20Umroh%2012%20Hari">Pesan via WA</a>
+        </div>
+         </div>
+        <div class="paket">
+        <div class="card">
+        <img src="umroh14.webp" alt="Umroh 14 Hari" width="400" height="267" loading="lazy">>
+        <div class="card-body">
+          <h3>Umroh 14 Hari</h3>
+          <p>Saudia Air | Hotel 4★ | 3× Umroh</p>
+          <div class="price">Rp 35,5 Jt</div>
+          <a class="btn" href="https://wa.me/6285183049514?text=Saya%20tertarik%20Umroh%209%20Hari">Pesan via WA</a>
+        </div>
+        </div>
+          <div class="paket">
+          <div class="card">
+        <img src="paket-haji.webp" alt="Haji Khusus Langsung Berangkat" width="400" height="267" loading="lazy">>
+        <div class="card-body">
+          <h3>Haji Khusus Langsung Berangkat</h3>
+          <p>Saudia Garuda Indonesia Air | Hotel 4★ | Makan Terjamin</p>
+          <div class="price">Rp 295 Jt</div>
+          <a class="btn" href="https://wa.me/6285183049514?text=Saya%20tertarik%20Umroh%209%20Hari">Pesan via WA</a>
+        </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- NEWS SLIDER (auto-load dari news/index.html) -->
-  <section id="news" class="container">
-    <h2 class="section-title">Berita & Tips</h2>
-    <div class="news-slider" id="newsSlider">
-      <!-- diisi via JS -->
-    </div>
-    <button class="news-btn prev" onclick="changeNewsSlide(-1)">‹</button>
-    <button class="news-btn next" onclick="changeNewsSlide(1)">›</button>
+<!-- NEWS SLIDER -->
+<section id="news" class="container">
+  <h2 class="section-title">Berita & Tips</h2>
+  <div class="news-slider" id="newsSlider">
+    <!-- Berita akan di-load otomatis dari news/index.html -->
+  </div>
+
+ <button class="news-btn prev" onclick="changeNewsSlide(-1)">‹</button>
+<button class="news-btn next" onclick="changeNewsSlide(1)">›</button>
+
+<script>
+let currentSlide = 0;
+
+async function loadNews() {
+  try {
+    const response = await fetch("news/index.html");
+    const text = await response.text();
+
+    // Ambil hanya artikel berita
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(text, "text/html");
+    const articles = doc.querySelectorAll(".news-card");
+
+    const slider = document.getElementById("newsSlider");
+    slider.innerHTML = "";
+
+    articles.forEach((article, i) => {
+      const img = article.querySelector("img").outerHTML;
+      const title = article.querySelector("h2").innerHTML;
+      const date = article.querySelector("p").innerText;
+      const link = article.querySelector("a").getAttribute("href");
+
+      const slide = document.createElement("div");
+      slide.classList.add("news-slide");
+      if (i === 0) slide.classList.add("active");
+
+      slide.innerHTML = `
+        ${img}
+        <div class="news-info">
+          <h3><a href="news/${link}">${title}</a></h3>
+          <p class="date">${date}</p>
+          <a href="news/${link}" class="read-more">Baca Selengkapnya</a>
+        </div>
+      `;
+      slider.appendChild(slide);
+    });
+  } catch (error) {
+    console.error("Gagal load berita:", error);
+  }
+}
+
+function changeSlide(direction) {
+  const slides = document.querySelectorAll(".news-slide");
+  slides[currentSlide].classList.remove("active");
+
+  currentSlide = (currentSlide + direction + slides.length) % slides.length;
+
+  slides[currentSlide].classList.add("active");
+}
+
+// Jalankan setelah halaman selesai load
+document.addEventListener("DOMContentLoaded", loadNews);
+</script>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="container">
+    <h2 class="section-title">Galeri Perjalanan</h2>
+    <div class="galeri-track">
+      <img src="galeri1.jpg" alt="Mekkah" width="400" height="267" loading="lazy">
+      <img src="galeri2.jpg" alt="Madinah" width="400" height="267" loading="lazy">
+          </div>
   </section>
+
+  <!-- TESTIMONI AUTO-SWIPE -->
+<section id="testimoni">
+  <h2 class="section-title">Testimoni Jamaah</h2>
+
+  <div class="slider-wrapper">
+    <div class="slider-track">
+      <!-- 1 -->
+      <div class="slide">
+        <img src="1000564050.jpg" alt="Waserda Pandan">
+        <strong>Waserda Pandan</strong>
+        <span>★★★★★</span>
+        <p>Pelayanan sangat memuaskan, fasilitas istimewa.</p>
+      </div>
+
+      <!-- 2 -->
+      <div class="slide">
+        <img src="1000564052.jpg" alt="Roni Epotech">
+        <strong>Roni Epotech</strong>
+        <span>★★★★★</span>
+        <p>Ruangan luas & bersih, lokasi mudah dijangkau.</p>
+      </div>
+
+      <!-- 3 -->
+      <div class="slide">
+        <img src="1000564054.jpg" alt="E Yasir">
+        <strong>E Yasir</strong>
+        <span>★★★★★</span>
+        <p>Mbah Tamim yang sudah lama mukim di Mekkah.</p>
+      </div>
+
+      <!-- 4 -->
+      <div class="slide">
+        <img src="1000564056.jpg" alt="Ranandi">
+        <strong>Ranandi</strong>
+        <span>★★★★★</span>
+        <p>Pelayanan is the best.</p>
+      </div>
+
+      <!-- 5 -->
+      <div class="slide">
+        <img src="1000564058.jpg" alt="Bondan">
+        <strong>Bondan Wicaksono</strong>
+        <span>★★★★★</span>
+        <p>Yogyakakin! Next year ikut lagi.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
   <!-- FAQ -->
   <section id="faq" class="container">
-    <h2 class="section-title">FAQ</h2>
-    <details><summary>Apakah sudah resmi?</summary><p>Ya, berizin Kemenag RI PPIU U.352/2020 & PIHK 02202072929030002/2024.</p></details>
-    <details><summary>Apakah termasuk visa?</summary><p>Ya, termasuk visa, tiket, dan akomodasi.</p></details>
-    <details><summary>Apakah ada manasik?</summary><p>Tentu, GRATIS bimbingan manasik.</p></details>
+    <h2 class="section-title">FAQ (Pertanyaan Umum)</h2>
+    <div class="faq-list">
+      <details>
+        <summary>Apakah Attamimi Tours sudah resmi?</summary>
+        <p>Ya, kami berizin resmi dari Kemenag RI PPIU U.352/2020 & PIHK 02202072929030002/2024.</p>
+      </details>
+      <details>
+        <summary>Apakah paket sudah termasuk visa?</summary>
+        <p>Ya, semua paket kami sudah termasuk visa umroh, tiket pesawat, dan akomodasi.</p>
+      </details>
+      <details>
+        <summary>Berapa lama proses pendaftaran?</summary>
+        <p>Proses pendaftaran kurang lebih 7–14 hari kerja tergantung ketersediaan seat.</p>
+      </details>
+      <details>
+        <summary>Apakah ada uang muka?</summary>
+        <p>Ya, DP 5 juta, sisanya bisa dicicil hingga keberangkatan.</p>
+      </details>
+      <details>
+        <summary>Apakah ada manasik?</summary>
+        <p>Tentu, kami sediakan manasik umroh dan bimbingan ibadah secara GRATIS.</p>
+      </details>
+      <details>
+        <summary>Apakah ada asuransi?</summary>
+        <p>Ya, setiap jamaah kami lengkapi dengan asuransi perjalanan.</p>
+      </details>
+      <details>
+        <summary>Apakah ada pendamping?</summary>
+        <p>Ada, setiap rombongan didampingi Tour Leader & Mutawwif berpengalaman.</p>
+      </details>
+      <details>
+        <summary>Apakah ada paket keluarga?</summary>
+        <p>Ya, kami menyediakan paket khusus keluarga dengan harga lebih hemat.</p>
+      </details>
+      <details>
+        <summary>Berapa jumlah jamaah per rombongan?</summary>
+        <p>Rata-rata 25–40 jamaah per rombongan tergantung pesawat dan hotel.</p>
+      </details>
+      <details>
+        <summary>Apakah bisa berangkat dari luar Purworejo?</summary>
+        <p>Bisa, kami melayani penjemputan dari Jogja & Jateng.</p>
+      </details>
+      <details>
+      <summary>Bagaimana untuk pembayaran DP?</summary>
+      <p>Bisa Transfer ke BRI KANCA WATES/ BSI KANCA PURWOREJO No. Rekening : 015201001931560
+      </p>
+      </summary>
+      </details>
+    </div>
   </section>
 
-  <!-- FORM PENDAFTARAN -->
-  <section id="form-daftar" class="container">
-    <h2 class="section-title">Form Pendaftaran Online</h2>
-    <form id="tgForm" class="form-daftar">
-      <div class="form-row"><label>Nama Lengkap</label><input type="text" name="nama" required></div>
-      <div class="form-row"><label>WhatsApp</label><input type="tel" name="whatsapp" required></div>
-      <div class="form-row"><label>Paket</label>
-        <select name="paket" required>
-          <option value="">-- Pilih Paket --</option>
-          <option>Umroh 9 Hari</option><option>Umroh 12 Hari</option><option>Umroh 14 Hari</option><option>Haji Khusus</option>
-        </select>
-      </div>
-      <button type="submit" class="btn">Kirim Pendaftaran</button>
-    </form>
-  </section>
+  <!-- ===== FORM LANGSUNG KE TELEGRAM ===== -->
+<section id="form-daftar" class="container">
+  <h2 class="section-title">Form Pendaftaran Online</h2>
 
-  <!-- CONTACT & MAPS -->
+<!-- STRIP URGENSI -->
+<p style="background:#ffecec;color:#c0392b;padding:8px;border-radius:4px;font-weight:bold;text-align:center;">
+  ⏰ Sisa Slot Terbatas!!!
+</p>
+
+  <form id="tgForm" class="form-daftar">
+    <div class="form-row">
+      <label>Nama Lengkap</label>
+      <input type="text" name="nama" required>
+    </div>
+
+    <div class="form-row">
+      <label>WhatsApp</label>
+      <input type="tel" name="whatsapp" required>
+    </div>
+
+    <div class="form-row">
+      <label>Email (opsional)</label>
+      <input type="email" name="email" placeholder="boleh dikosongkan">
+    </div>
+
+    <div class="form-row">
+      <label>Paket Dipilih</label>
+      <select name="paket" required>
+        <option value="">-- Pilih Paket --</option>
+        <option>Paket Umroh 9 Hari</option>
+        <option>Paket Umroh 12 Hari</option>
+        <option>Paket Umroh 14 Hari</option>
+        <option>Paket Haji Khusus Langsung Berangkat</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn">Kirim Pendaftaran</button>
+
+    <div id="formMsg" style="margin-top:10px;color:green;"></div>
+  </form>
+</section>
+
+<script>
+document.getElementById('tgForm').addEventListener('submit', async e => {
+  e.preventDefault();
+
+  const nama  = e.target.nama.value.trim();
+  const wa    = e.target.whatsapp.value.trim();
+  const email = e.target.email.value.trim();
+  const paket = e.target.paket.value.trim();
+
+  const text = `📋 Pendaftaran baru
+Nama: ${nama}
+WhatsApp: ${wa}${email ? `\nEmail: ${email}` : ''}
+Paket: ${paket}`;
+
+  const token   = '8470444840:AAH4VQDFuSNGoTlx2assgz-hM9Fi3mKRWew';
+  const chatID  = 987413154;
+
+  try {
+    await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({ chat_id: chatID, text })
+    });
+    document.getElementById('formMsg').textContent = 'Pendaftaran terkirim! Admin akan segera menghubungi Anda via WhatsApp.';
+    e.target.reset();
+  } catch {
+    document.getElementById('formMsg').textContent = 'Gagal mengirim, coba lagi.';
+  }
+});
+</script>
+
+
+  <!-- CONTACT -->
   <section id="contact" class="container">
     <h2 class="section-title">Kontak & Alamat</h2>
     <div class="map-wrapper">
@@ -120,7 +447,14 @@
     </div>
     <p><strong>Alamat:</strong> Kompleks Pondok Pesantren Putra Putri Al Azhar, Purworejo</p>
     <p><strong>Email:</strong> attamimi.tour@gmail.com</p>
-    <p><strong>WhatsApp:</strong> +62 851-8304-9514</p>
+    <p><strong>WhatsApp:</strong> <a href="https://wa.me/6285183049514">+62 851-8304-9514</a></p>
+  </section>
+
+  <!-- SOCIAL -->
+  <section class="social-bar">
+    <a href="https://www.facebook.com/attamimi.tours" target="_blank"><img src="facebook.png" alt="FB" width="32" height="32" loading="lazy">></a>
+    <a href="https://www.instagram.com/attamimi.tours/" target="_blank"><img src="instagram.png" alt="IG" width="32" height="32" loading="lazy">></a>
+    <a href="https://www.threads.com/@attamimi.tours" target="_blank"><img src="threads.png" alt="Threads" width="32" height="32" loading="lazy">></a>
   </section>
 
   <!-- FOOTER -->
@@ -129,53 +463,68 @@
     Izin PPIU U.352/2020 & PIHK 02202072929030002/2024
   </footer>
 
-  <!-- JS -->
+  <!-- WHATSAPP FLOAT -->
+  <a class="wa-float" href="https://wa.me/6285183049514" aria-label="Chat WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WA">
+  </a>
+
+  <!-- SCRIPT -->
   <script>
-    /* Hamburger */
     const burger = document.getElementById('hamburger');
     const nav = document.getElementById('navLinks');
-    burger.addEventListener('click', () => nav.classList.toggle('open'));
+    burger.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
 
-    /* News slider (auto-load dari news/) */
-    let currentNews = 0;
-    async function loadNews() {
-      const slider = document.getElementById('newsSlider');
-      if (!slider) return;
-      try {
-        const res = await fetch('news/index.html');
-        const text = await res.text();
-        const doc = new DOMParser().parseFromString(text, 'text/html');
-        const articles = doc.querySelectorAll('.news-card');
-        slider.innerHTML = '';
-        articles.forEach((article, i) => {
-          const img   = article.querySelector('img').outerHTML;
-          const title = article.querySelector('h2').innerHTML;
-          const date  = article.querySelector('p').innerText;
-          const link  = article.querySelector('a').getAttribute('href');
-          const slide = document.createElement('div');
-          slide.className = 'news-slide' + (i === 0 ? ' active' : '');
-          slide.innerHTML = `
-            ${img}
-            <div class="news-info">
-              <h3><a href="news/${link}">${title}</a></h3>
-              <p class="date">${date}</p>
-              <a href="news/${link}" class="read-more">Baca Selengkapnya</a>
-            </div>
-          `;
-          slider.appendChild(slide);
-        });
-      } catch {
-        slider.innerHTML = '<p>Gagal memuat berita.</p>';
-      }
+    let slideIdx = 0;
+    const slides = document.querySelectorAll('.news-slide');
+    function changeSlide(dir) {
+      slides.forEach(s => s.classList.remove('active'));
+      slideIdx += dir;
+      if (slideIdx < 0) slideIdx = slides.length - 1;
+      if (slideIdx >= slides.length) slideIdx = 0;
+      slides[slideIdx].classList.add('active');
     }
-    function changeNewsSlide(dir) {
-      const slides = document.querySelectorAll('.news-slide');
-      if (!slides.length) return;
-      slides[currentNews].classList.remove('active');
-      currentNews = (currentNews + dir + slides.length) % slides.length;
-      slides[currentNews].classList.add('active');
-    }
-    document.addEventListener('DOMContentLoaded', loadNews);
   </script>
+  <script defer>
+document.querySelector('.form-daftar').addEventListener('submit', function (e) {
+  e.preventDefault(); // agar halaman tidak reload
+
+  const nama  = this.nama.value;
+  const email = this.email.value;
+  const wa    = this.whatsapp.value;
+  const paket = this.paket.value;
+
+  const msg = `📋 Pendaftaran baru\nNama: ${nama}\nEmail: ${email}\nWhatsApp: ${wa}\nPaket: ${paket}`;
+  const token  = '8470444840:AAH4VQDFuSNGoTlx2assgz-hM9Fi3mKRWew';
+  const chatID = 987413154;
+
+  fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ chat_id: chatID, text: msg })
+  })
+  .then(() => {
+    window.location.href = 'https://attamimitours.biz.id/thanks.html';
+  });
+});
+</script>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2471836583200451');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2471836583200451&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </body>
 </html>
