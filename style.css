@@ -229,6 +229,33 @@ a {
   border-radius: 12px 12px 0 0;
 }
 
+/* ===== JARAK + BORDER PAKET ===== */
+.paket {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;              /* jarak antar card */
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e0e0e0;   /* batas tipis */
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0,0,0,.08);
+  transition: transform .3s, box-shadow .3s;
+  padding: 0 0 1.5rem 0;        /* hanya bawah card */
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0,0,0,.12);
+}
+
+/* Jarak gambar ke konten */
+.card-body {
+  padding: 1.25rem 1.5rem 0;
+}
+
 /* =========================================================
    NEWS SLIDER
    ========================================================= */
