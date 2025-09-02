@@ -481,40 +481,12 @@ src="https://www.facebook.com/tr?id=2471836583200451&ev=PageView&noscript=1"
 <!-- End Meta Pixel Code -->
 
 <script>
-/* === NEWS SLIDER MANUAL === */
-const slides = document.querySelectorAll('.news-slide');
-const btnPrev = document.querySelector('.news-btn.prev');
-const btnNext = document.querySelector('.news-btn.next');
-let current = 0;
-
-function showSlide(index) {
-  slides.forEach((s, i) => {
-    s.classList.toggle('active', i === index);
-  });
-}
-
-btnNext.addEventListener('click', () => {
-  current = (current + 1) % slides.length;
-  showSlide(current);
-});
-
-btnPrev.addEventListener('click', () => {
-  current = (current - 1 + slides.length) % slides.length;
-  showSlide(current);
-});
-
-// tampilkan slide pertama
-showSlide(0);
-</script>
-
-<script>
 let currentSlide = 0;
-let newsData = []; // array berita dari folder news
+let newsData = [];
 
-// 1. ambil semua artikel dari news/index.html
 async function loadNews() {
   try {
-    const res  = await fetch('news/index.html');
+    const res = await fetch('news/index.html');
     const html = await res.text();
 
     const doc = new DOMParser().parseFromString(html, 'text/html');
@@ -527,18 +499,23 @@ async function loadNews() {
       link : card.querySelector('a')?.getAttribute('href') || '#'
     }));
 
+    if (!newsData.length) {
+      document.getElementById('newsSlider').innerHTML = '<p>Tidak ada berita.</p>';
+      return;
+    }
+
     renderSlide(currentSlide);
+    // tampilkan tombol setelah data dimuat
+    document.getElementById('newsPrev').style.display = 'block';
+    document.getElementById('newsNext').style.display = 'block';
   } catch (err) {
     console.error('Gagal load berita:', err);
   }
 }
 
-// 2. render 1 slide berdasarkan index
-function renderSlide(index) {
+function renderSlide(idx) {
   const slider = document.getElementById('newsSlider');
-  if (!newsData.length) return;
-
-  const item = newsData[index];
+  const item = newsData[idx];
   slider.innerHTML = `
     <div class="news-slide active">
       <img src="news/${item.img}" alt="">
@@ -551,20 +528,19 @@ function renderSlide(index) {
   `;
 }
 
-// 3. navigasi manual
 function changeSlide(dir) {
   if (!newsData.length) return;
   currentSlide = (currentSlide + dir + newsData.length) % newsData.length;
   renderSlide(currentSlide);
 }
 
-// 4. pasang listener tombol
-document.getElementById('newsPrev').addEventListener('click', () => changeSlide(-1));
-document.getElementById('newsNext').addEventListener('click', () => changeSlide(1));
-
-// 5. jalankan saat DOM siap
-document.addEventListener('DOMContentLoaded', loadNews);
+document.addEventListener('DOMContentLoaded', () => {
+  loadNews();
+  document.getElementById('newsPrev').addEventListener('click', () => changeSlide(-1));
+  document.getElementById('newsNext').addEventListener('click', () => changeSlide(1));
+});
 </script>
+
 
 </body>
 </html>
