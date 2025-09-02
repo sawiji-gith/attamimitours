@@ -188,71 +188,19 @@
     </div>
   </section>
 
-<!-- NEWS SLIDER -->
+<!-- ===== NEWS SLIDER (load dari folder news) ===== -->
 <section id="news" class="container">
   <h2 class="section-title">Berita & Tips</h2>
+
   <div class="news-slider" id="newsSlider">
-
-<!-- Di index.html -->
-<button class="news-btn prev" aria-label="Berita Sebelumnya">‹</button>
-<button class="news-btn next" aria-label="Berita Selanjutnya">›</button>
-
-    <!-- Berita akan di-load otomatis dari news/index.html -->
+    <!-- slide 1, 2, 3... akan diisi JS -->
   </div>
 
-<script>
-let currentSlide = 0;
+  <!-- tombol navigasi manual -->
+  <button class="news-btn prev" id="newsPrev">‹</button>
+  <button class="news-btn next" id="newsNext">›</button>
+</section>
 
-async function loadNews() {
-  try {
-    const response = await fetch("news/index.html");
-    const text = await response.text();
-
-    // Ambil hanya artikel berita
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(text, "text/html");
-    const articles = doc.querySelectorAll(".news-card");
-
-    const slider = document.getElementById("newsSlider");
-    slider.innerHTML = "";
-
-    articles.forEach((article, i) => {
-      const img = article.querySelector("img").outerHTML;
-      const title = article.querySelector("h2").innerHTML;
-      const date = article.querySelector("p").innerText;
-      const link = article.querySelector("a").getAttribute("href");
-
-      const slide = document.createElement("div");
-      slide.classList.add("news-slide");
-      if (i === 0) slide.classList.add("active");
-
-      slide.innerHTML = `
-        ${img}
-        <div class="news-info">
-          <h3><a href="news/${link}">${title}</a></h3>
-          <p class="date">${date}</p>
-          <a href="news/${link}" class="read-more">Baca Selengkapnya</a>
-        </div>
-      `;
-      slider.appendChild(slide);
-    });
-  } catch (error) {
-    console.error("Gagal load berita:", error);
-  }
-}
-
-function changeSlide(direction) {
-  const slides = document.querySelectorAll(".news-slide");
-  slides[currentSlide].classList.remove("active");
-
-  currentSlide = (currentSlide + direction + slides.length) % slides.length;
-
-  slides[currentSlide].classList.add("active");
-}
-
-// Jalankan setelah halaman selesai load
-document.addEventListener("DOMContentLoaded", loadNews);
-</script>
 
   <!-- GALLERY -->
   <section id="gallery" class="container">
@@ -554,6 +502,65 @@ btnPrev.addEventListener('click', () => {
 
 // tampilkan slide pertama
 showSlide(0);
+</script>
+
+<script>
+let currentSlide = 0;
+let newsData = []; // array berita dari folder news
+
+// 1. ambil semua artikel dari news/index.html
+async function loadNews() {
+  try {
+    const res  = await fetch('news/index.html');
+    const html = await res.text();
+
+    const doc = new DOMParser().parseFromString(html, 'text/html');
+    const articles = doc.querySelectorAll('.news-card');
+
+    newsData = Array.from(articles).map(card => ({
+      img  : card.querySelector('img')?.getAttribute('src') || 'placeholder.jpg',
+      title: card.querySelector('h2')?.innerText || 'Judul Artikel',
+      date : card.querySelector('p')?.innerText || 'Tanggal',
+      link : card.querySelector('a')?.getAttribute('href') || '#'
+    }));
+
+    renderSlide(currentSlide);
+  } catch (err) {
+    console.error('Gagal load berita:', err);
+  }
+}
+
+// 2. render 1 slide berdasarkan index
+function renderSlide(index) {
+  const slider = document.getElementById('newsSlider');
+  if (!newsData.length) return;
+
+  const item = newsData[index];
+  slider.innerHTML = `
+    <div class="news-slide active">
+      <img src="news/${item.img}" alt="">
+      <div class="news-info">
+        <h3><a href="news/${item.link}">${item.title}</a></h3>
+        <p class="date">${item.date}</p>
+        <a href="news/${item.link}" class="read-more">Baca Selengkapnya</a>
+      </div>
+    </div>
+  `;
+}
+
+// 3. navigasi manual
+function changeSlide(dir) {
+  if (!newsData.length) return;
+  currentSlide = (currentSlide + dir + newsData.length) % newsData.length;
+  renderSlide(currentSlide);
+}
+
+// 4. pasang listener tombol
+document.getElementById('newsPrev').addEventListener('click', () => changeSlide(-1));
+document.getElementById('newsNext').addEventListener('click', () => changeSlide(1));
+
+// 5. jalankan saat DOM siap
+document.addEventListener('DOMContentLoaded', loadNews);
 </script>
 
 </body>
