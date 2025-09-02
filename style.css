@@ -256,11 +256,11 @@ a {
    NEWS SLIDER
    ========================================================= */
 #news {
-  position: relative;   /* penanda area tombol */
+  position: relative;
 }
 
 .news-slider {
-  position: relative;   /* penting agar tombol mengikuti slider */
+  position: relative;
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,.1);
@@ -282,6 +282,7 @@ a {
 }
 .news-btn.prev { left: 12px; }
 .news-btn.next { right: 12px; }
+
 
 
 /* =========================================================
