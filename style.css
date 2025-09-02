@@ -219,21 +219,15 @@ a {
   padding: 3.75rem 1.125rem;
 }
 
-/* === FIX GAMBAR PAKET === */
-.paket {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
-
+/* === OVERRIDE GAMBAR PAKET === */
 .card img {
-  width: 100%;
-  height: auto;        /* biar proporsional */
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
   display: block;
   border-radius: 12px 12px 0 0;
 }
-
-
 
 /* =========================================================
    NEWS SLIDER
