@@ -192,11 +192,13 @@
 <section id="news" class="container">
   <h2 class="section-title">Berita & Tips</h2>
   <div class="news-slider" id="newsSlider">
+
+<!-- Di index.html -->
+<button class="news-btn prev" aria-label="Berita Sebelumnya">‹</button>
+<button class="news-btn next" aria-label="Berita Selanjutnya">›</button>
+
     <!-- Berita akan di-load otomatis dari news/index.html -->
   </div>
-
- <button class="news-btn prev" onclick="changeNewsSlide(-1)">‹</button>
-<button class="news-btn next" onclick="changeNewsSlide(1)">›</button>
 
 <script>
 let currentSlide = 0;
