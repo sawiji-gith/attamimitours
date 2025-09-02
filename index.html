@@ -189,78 +189,69 @@
   </section>
 
 <!-- NEWS SLIDER -->
-
-  <section id="news" class="container">
-    <h2 class="section-title">Berita & Tips</h2>
-    <div class="news-slider">
-      <div class="news-slide active">
-        <img src="images/1000558468.jpg" alt="Karnaval Karangsari"loading="lazy">>
-        <div class="news-info">
-          <h3><a href="news/karnaval.html">Parade Kreatif Karangsari – Filosofi Bambu & Pangeran Diponegoro</a></h3>
-          <p class="date">23 Agustus 2025</p>
-          <a href="news/karnaval.html" class="read-more">Baca Selengkapnya</a>
-        </div>
-      </div>
-
-      <div class="news-slide">
-        <img src="images/sertifikat-eas-attamimi.jpg" alt="Sertifikat EAS"loading="lazy">>
-        <div class="news-info">
-          <h3><a href="news/sertifikat-eas-2024.html">Attamimi Tours Resmi Ter-Akreditasi EAS 2024-2029</a></h3>
-          <p class="date">06 Agustus 2024</p>
-          <a href="news/sertifikat-eas-2024.html" class="read-more">Baca Selengkapnya</a>
-        </div>
-      </div>
-
-      <div class="news-slide">
-        <img src="images/umrah-2025-arrival.jpg" alt="Jamaah Umrah"loading="lazy">>
-        <div class="news-info">
-          <h3><a href="news/umrah-2025-12-juta-jamaah.html">Umrah 2025: 1,2 Juta Jamaah Tiba di Arab Saudi</a></h3>
-          <p class="date">25 Agustus 2025</p>
-          <a href="news/umrah-2025-12-juta-jamaah.html" class="read-more">Baca Selengkapnya</a>
-        </div>
-      </div>
-
-      <div class="news-slide">
-        <img src="images/bp-haji-kementerian.jpg" alt="BP Haji"loading="lazy">>
-        <div class="news-info">
-          <h3><a href="news/bp-haji-jadi-kementerian-2025.html">BP Haji Resmi Jadi Kementerian Haji dan Umrah</a></h3>
-          <p class="date">26 Agustus 2025</p>
-          <a href="news/bp-haji-jadi-kementerian-2025.html" class="read-more">Baca Selengkapnya</a>
-        </div>
-      </div>
-      
-<div class="news-slide">
-  <img src="images/ziarah-27-agustus-2025.jpg" alt="Jamaah Purworejo ziarah Madinah" loading="lazy">
-  <div class="news-info">
-    <h3><a href="news/ziarah-madinah-27-agustus-2025.html">Jamaah Purworejo Ziarah Masjid Nabawi, 27 Agustus 2025</a></h3>
-    <p class="date">27 Agustus 2025</p>
-    <a href="news/ziarah-madinah-27-agustus-2025.html" class="read-more">Baca Selengkapnya</a>
+<section id="news" class="container">
+  <h2 class="section-title">Berita & Tips</h2>
+  <div class="news-slider" id="newsSlider">
+    <!-- Berita akan di-load otomatis dari news/index.html -->
   </div>
-</div>
-      
-  <div class="news-slide">
-        <img src="../images/ziarah-gunung-uhud.webp" alt="Ziarah Gunung Uhud" loading="lazy">
-    <div class="news-info">
-        <h3><a href="ziarah-gunung-uhud-30-agustus-2025.html">Rombongan Jamaah Umroh Attamimi Tours Ziarah ke Gunung Uhud</a></h3>
-        <p>30 Agustus 2025</p>
-        <a href="news/ziarah-gunung-uhud-30-agustus-2025.html" class="read-more">Baca Selengkapnya</a>
-      </article>
-    </div>
-   </div>
-      
-      <div class="news-slide">
-  <img src="images/kampung-haji-2028.jpg" alt="ilustrasi Kampung Haji Indonesia" loading="lazy">
-  <div class="news-info">
-    <h3><a href="news/kampung-haji-2028.html">Kampung Haji Indonesia 2028, Tampung 200.000 Jamaah</a></h3>
-    <p class="date">30 Agustus 2025</p>
-    <a href="news/kampung-haji-2028.html" class="read-more">Baca Selengkapnya</a>
-  </div>
-</div>
-      
-      <button class="nav-btn prev" onclick="changeSlide(-1)">‹ Prev</button>
-      <button class="nav-btn next" onclick="changeSlide(1)">Next ›</button>
-    </div>
-  </section>
+
+  <button class="nav-btn prev" onclick="changeSlide(-1)">‹ Prev</button>
+  <button class="nav-btn next" onclick="changeSlide(1)">Next ›</button>
+</section>
+
+<script>
+let currentSlide = 0;
+
+async function loadNews() {
+  try {
+    const response = await fetch("news/index.html");
+    const text = await response.text();
+
+    // Ambil hanya artikel berita
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(text, "text/html");
+    const articles = doc.querySelectorAll(".news-card");
+
+    const slider = document.getElementById("newsSlider");
+    slider.innerHTML = "";
+
+    articles.forEach((article, i) => {
+      const img = article.querySelector("img").outerHTML;
+      const title = article.querySelector("h2").innerHTML;
+      const date = article.querySelector("p").innerText;
+      const link = article.querySelector("a").getAttribute("href");
+
+      const slide = document.createElement("div");
+      slide.classList.add("news-slide");
+      if (i === 0) slide.classList.add("active");
+
+      slide.innerHTML = `
+        ${img}
+        <div class="news-info">
+          <h3><a href="news/${link}">${title}</a></h3>
+          <p class="date">${date}</p>
+          <a href="news/${link}" class="read-more">Baca Selengkapnya</a>
+        </div>
+      `;
+      slider.appendChild(slide);
+    });
+  } catch (error) {
+    console.error("Gagal load berita:", error);
+  }
+}
+
+function changeSlide(direction) {
+  const slides = document.querySelectorAll(".news-slide");
+  slides[currentSlide].classList.remove("active");
+
+  currentSlide = (currentSlide + direction + slides.length) % slides.length;
+
+  slides[currentSlide].classList.add("active");
+}
+
+// Jalankan setelah halaman selesai load
+document.addEventListener("DOMContentLoaded", loadNews);
+</script>
 
   <!-- GALLERY -->
   <section id="gallery" class="container">
