@@ -542,3 +542,21 @@ summary {
     color: var(--gray-100);
   }
 }
+/* ===== TOMBOL READ-MORE ===== */
+.read-more {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 16px;
+  background: var(--accent);      /* warna oranye */
+  color: #fff !important;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background .25s;
+}
+.read-more:hover {
+  background: color-mix(in srgb, var(--accent) 85%, black);
+  transform: translateY(-1px);
+}
+
