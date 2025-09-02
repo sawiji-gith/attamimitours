@@ -219,38 +219,21 @@ a {
   padding: 3.75rem 1.125rem;
 }
 
-/* =========================================================
-   PAKET
-   ========================================================= */
+/* === FIX GAMBAR PAKET === */
 .paket {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 }
 
-.card {
-  background: var(--white);
-  border-radius: 1rem;
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
-  transition: transform var(--duration) var(--ease);
+.card img {
+  width: 100%;
+  height: auto;        /* biar proporsional */
+  aspect-ratio: 16/10; /* rasio lebar:tinggi (opsional) */
+  object-fit: cover;   /* potong otomatis, tidak distorsi */
+  border-radius: 12px 12px 0 0;
 }
 
-.card:hover {
-  transform: translateY(-4px);
-}
-
-.card-body {
-  padding: 1.5rem;
-  text-align: center;
-}
-
-.price {
-  font-weight: 800;
-  color: var(--primary);
-  margin: 0.5rem 0 1rem;
-  font-size: 1.125rem;
-}
 
 /* =========================================================
    NEWS SLIDER
