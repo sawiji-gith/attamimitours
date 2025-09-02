@@ -37,6 +37,7 @@
         <a href="#packages">Paket</a>
         <a href="#gallery">Galeri</a>
         <a href="news/">Berita & Tips</a>
+        <a href="#faq">FAQ</a>
         <a href="#contact">Kontak</a>
       </nav>
       <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -45,7 +46,7 @@
     </div>
   </header>
 
-  <!-- HERO -->
+  <!-- HERO (bersih) -->
   <section id="hero" class="hero">
     <div class="hero-content">
       <h1>Attamimi Tours</h1>
@@ -66,46 +67,14 @@
     </ul>
   </section>
 
-  <!-- PACKETS -->
+  <!-- PACKAGES -->
   <section id="packages" class="container">
     <h2 class="section-title">Pilihan Paket</h2>
     <div class="paket">
-      <div class="card">
-        <img src="umroh9.webp" alt="Umroh 9 Hari" loading="lazy">
-        <div class="card-body">
-          <h3>Umroh 9 Hari</h3>
-          <p>Lion Air | Hotel 3★ | 3× Umroh</p>
-          <div class="price">Rp 28,5 Jt</div>
-          <a class="btn" href="https://wa.me/6285183049514?text=Saya%20tertarik%20Umroh%209%20Hari">Pesan via WA</a>
-        </div>
-      </div>
-      <div class="card">
-        <img src="umroh12.webp" alt="Umroh 12 Hari" loading="lazy">
-        <div class="card-body">
-          <h3>Umroh 12 Hari</h3>
-          <p>Malaysia Airlines | Hotel 4★ | 3× Umroh</p>
-          <div class="price">Rp 33 Jt</div>
-          <a class="btn" href="https://wa.me/6285183049514?text=Saya%20tertarik%20Umroh%2012%20Hari">Pesan via WA</a>
-        </div>
-      </div>
-      <div class="card">
-        <img src="umroh14.webp" alt="Umroh 14 Hari" loading="lazy">
-        <div class="card-body">
-          <h3>Umroh 14 Hari</h3>
-          <p>Saudia Air | Hotel 4★ | 3× Umroh</p>
-          <div class="price">Rp 35,5 Jt</div>
-          <a class="btn" href="https://wa.me/6285183049514?text=Saya%20tertarik%20Umroh%2014%20Hari">Pesan via WA</a>
-        </div>
-      </div>
-      <div class="card">
-        <img src="paket-haji.webp" alt="Haji Khusus" loading="lazy">
-        <div class="card-body">
-          <h3>Haji Khusus Langsung Berangkat</h3>
-          <p>Saudia Garuda Indonesia Air | Hotel 4★</p>
-          <div class="price">Rp 295 Jt</div>
-          <a class="btn" href="https://wa.me/6285183049514?text=Saya%20tertarik%20Paket%20Haji%20Khusus">Pesan via WA</a>
-        </div>
-      </div>
+      <div class="card"><img src="umroh9.webp" alt="Umroh 9 Hari"><h3>Umroh 9 Hari</h3><p>Lion Air | 3★ | 3× Umroh</p><div class="price">Rp 28,5 Jt</div><a class="btn" href="https://wa.me/6285183049514">Pesan via WA</a></div>
+      <div class="card"><img src="umroh12.webp" alt="Umroh 12 Hari"><h3>Umroh 12 Hari</h3><p>Malaysia Airlines | 4★ | 3× Umroh</p><div class="price">Rp 33 Jt</div><a class="btn" href="https://wa.me/6285183049514">Pesan via WA</a></div>
+      <div class="card"><img src="umroh14.webp" alt="Umroh 14 Hari"><h3>Umroh 14 Hari</h3><p>Saudia Air | 4★ | 3× Umroh</p><div class="price">Rp 35,5 Jt</div><a class="btn" href="https://wa.me/6285183049514">Pesan via WA</a></div>
+      <div class="card"><img src="paket-haji.webp" alt="Haji Khusus"><h3>Haji Khusus Langsung Berangkat</h3><p>Saudia Garuda Indonesia Air | 4★</p><div class="price">Rp 295 Jt</div><a class="btn" href="https://wa.me/6285183049514">Pesan via WA</a></div>
     </div>
   </section>
 
@@ -113,37 +82,51 @@
   <section id="news" class="container">
     <h2 class="section-title">Berita & Tips</h2>
     <div class="news-slider" id="newsSlider">
-      <!-- berita di-load via JS -->
+      <!-- diisi via JS -->
     </div>
     <button class="news-btn prev" onclick="changeNewsSlide(-1)">‹</button>
     <button class="news-btn next" onclick="changeNewsSlide(1)">›</button>
   </section>
 
-  <!-- GALLERY -->
-  <section id="gallery" class="container">
-    <h2 class="section-title">Galeri Perjalanan</h2>
-    <div class="galeri-track">
-      <img src="galeri1.jpg" alt="Mekkah" loading="lazy">
-      <img src="galeri2.jpg" alt="Madinah" loading="lazy">
-      <img src="galeri3.jpg" alt="Arafah" loading="lazy">
-    </div>
+  <!-- FAQ -->
+  <section id="faq" class="container">
+    <h2 class="section-title">FAQ</h2>
+    <details><summary>Apakah sudah resmi?</summary><p>Ya, berizin Kemenag RI PPIU U.352/2020 & PIHK 02202072929030002/2024.</p></details>
+    <details><summary>Apakah termasuk visa?</summary><p>Ya, termasuk visa, tiket, dan akomodasi.</p></details>
+    <details><summary>Apakah ada manasik?</summary><p>Tentu, GRATIS bimbingan manasik.</p></details>
   </section>
 
-  <!-- CONTACT -->
+  <!-- FORM PENDAFTARAN -->
+  <section id="form-daftar" class="container">
+    <h2 class="section-title">Form Pendaftaran Online</h2>
+    <form id="tgForm" class="form-daftar">
+      <div class="form-row"><label>Nama Lengkap</label><input type="text" name="nama" required></div>
+      <div class="form-row"><label>WhatsApp</label><input type="tel" name="whatsapp" required></div>
+      <div class="form-row"><label>Paket</label>
+        <select name="paket" required>
+          <option value="">-- Pilih Paket --</option>
+          <option>Umroh 9 Hari</option><option>Umroh 12 Hari</option><option>Umroh 14 Hari</option><option>Haji Khusus</option>
+        </select>
+      </div>
+      <button type="submit" class="btn">Kirim Pendaftaran</button>
+    </form>
+  </section>
+
+  <!-- CONTACT & MAPS -->
   <section id="contact" class="container">
     <h2 class="section-title">Kontak & Alamat</h2>
     <div class="map-wrapper">
-      <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="400" style="border:0;" allowfullscreen loading="lazy"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1976.0970051766535!2d110.03633320941621!3d-7.874758061388144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7ae795e6ede6a5%3A0xe6588f56f4e820d4!2sPT%20ATTAMIMI%20TAWAKKAL%20ALALLOH%20Travel%20Umroh%20dan%20Hajji%20Khusus%20Purworejo!5e0!3m2!1sid!2sid!4v1756091923849!5m2!1sid!2sid" width="100%" height="400" style="border:0;" allowfullscreen loading="lazy"></iframe>
     </div>
     <p><strong>Alamat:</strong> Kompleks Pondok Pesantren Putra Putri Al Azhar, Purworejo</p>
     <p><strong>Email:</strong> attamimi.tour@gmail.com</p>
     <p><strong>WhatsApp:</strong> +62 851-8304-9514</p>
   </section>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer>
-    &copy; 2025 Attamimi Tours – Purworejo
-    <p>Izin PPIU U.352/2020 & PIHK 02202072929030002/2024</p>
+    &copy; 2025 Attamimi Tours – Purworejo<br>
+    Izin PPIU U.352/2020 & PIHK 02202072929030002/2024
   </footer>
 
   <!-- JS -->
@@ -153,25 +136,22 @@
     const nav = document.getElementById('navLinks');
     burger.addEventListener('click', () => nav.classList.toggle('open'));
 
-    /* News slider */
+    /* News slider (auto-load dari news/) */
     let currentNews = 0;
     async function loadNews() {
       const slider = document.getElementById('newsSlider');
       if (!slider) return;
-
       try {
         const res = await fetch('news/index.html');
         const text = await res.text();
         const doc = new DOMParser().parseFromString(text, 'text/html');
         const articles = doc.querySelectorAll('.news-card');
-
         slider.innerHTML = '';
         articles.forEach((article, i) => {
           const img   = article.querySelector('img').outerHTML;
           const title = article.querySelector('h2').innerHTML;
           const date  = article.querySelector('p').innerText;
           const link  = article.querySelector('a').getAttribute('href');
-
           const slide = document.createElement('div');
           slide.className = 'news-slide' + (i === 0 ? ' active' : '');
           slide.innerHTML = `
