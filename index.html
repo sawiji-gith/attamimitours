@@ -188,24 +188,19 @@
     </div>
   </section>
 
-<!-- ===== NEWS SLIDER ===== -->
+<!-- ===== NEWS SLIDER (fetch dari news/index.html) ===== -->
 <section id="news" class="container">
   <h2 class="section-title">Berita & Tips</h2>
 
-  <div class="news-slider" style="position:relative;">
-    <div class="news-slide active">
-      <img src="news1.jpg" alt="">
-      <div class="news-info">
-        <h3><a href="#">Judul Berita 1</a></h3>
-        <p class="date">2 Sep 2025</p>
-        <a href="#" class="read-more">Baca</a>
-      </div>
-    </div>
-
-    <button class="news-btn prev" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);">‹</button>
-    <button class="news-btn next" style="position:absolute;right:12px;top:50%;transform:translateY(-50%);">›</button>
+  <div class="news-slider" id="newsSlider">
+    <!-- slide akan diisi JS -->
   </div>
+
+  <!-- tombol harus di dalam section #news -->
+  <button class="news-btn prev" id="newsPrev" style="display:none;">‹</button>
+  <button class="news-btn next" id="newsNext" style="display:none;">›</button>
 </section>
+
 
 
 
