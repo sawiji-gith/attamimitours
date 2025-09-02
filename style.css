@@ -155,6 +155,32 @@ body{font-family:'Poppins', sans-serif;background:var(--bg);color:var(--black);l
 #news .nav-btn.prev { left: 10px; }
 #news .nav-btn.next { right: 10px; }
 
+/* === Tombol navigasi khusus slider berita === */
+.news-slider {
+  position: relative;
+}
+
+.news-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.4rem;
+  transition: background 0.3s;
+  z-index: 10;
+}
+
+.news-btn:hover {
+  background: rgba(0,0,0,0.85);
+}
+
+.news-btn.prev { left: 10px; }
+.news-btn.next { right: 10px; }
 /* === Responsif === */
 @media (max-width: 768px) {
   .news-info h3 {
