@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Form Pendaftaran Umroh & Haji | Attamimi Tours</title>
+
+  <!-- Meta SEO -->
+  <meta name="description" content="Formulir pendaftaran umroh dan haji resmi Attamimi Tours. Upload KTP, KK, dan paspor langsung via form ini.">
+  <meta name="keywords" content="form pendaftaran umroh, umroh jogja, haji khusus, attamimi tours">
+  <link rel="canonical" href="https://attamimitours.biz.id/form-daftar.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Form Pendaftaran Umroh & Haji | Attamimi Tours" />
+  <meta property="og:description" content="Daftar umroh & haji khusus resmi dari Yogyakarta. Upload dokumen langsung via form." />
+  <meta property="og:image" content="https://attamimitours.biz.id/hero-kaaba.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Form Pendaftaran Umroh & Haji | Attamimi Tours" />
+  <meta name="twitter:image" content="https://attamimitours.biz.id/hero-kaaba.jpg" />
+
+  <!-- Google Search Console -->
+  <meta name="google-site-verification" content="Umo75pcrRNEr-g9k5pQHi5maV5Y7-P8K3OMUdF7IYLY" />
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-69KG75SMLR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-69KG75SMLR');
+  </script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: url('hero-kaaba.jpg') no-repeat center center/cover;
+      background-attachment: fixed;
+      color: #fff;
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.6);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .form-container {
+      background: #fff;
+      color: #000;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: 600;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    button {
+      margin-top: 20px;
+      background: #007bff;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      width: 100%;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    .loading {
+      display: none;
+      text-align: center;
+      color: #007bff;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <div class="form-container">
+      <h2>Formulir Pendaftaran Umroh & Haji</h2>
+      <form id="tgForm">
+        <label>Nama Lengkap</label>
+        <input type="text" name="nama" required />
+
+        <label>Jenis Kelamin</label>
+        <select name="jenis_kelamin" required>
+          <option value="">-- Pilih --</option>
+          <option>Laki-laki</option>
+          <option>Perempuan</option>
+        </select>
+
+        <label>Tempat Lahir</label>
+        <input type="text" name="tempat_lahir" required />
+
+        <label>Tanggal Lahir</label>
+        <input type="date" name="tanggal_lahir" required />
+
+        <label>Nomor KTP</label>
+        <input type="text" name="no_ktp" required />
+
+        <label>Alamat Lengkap</label>
+        <textarea name="alamat" rows="3" required></textarea>
+
+        <label>Email</label>
+        <input type="email" name="email" />
+
+        <label>Nomor WhatsApp</label>
+        <input type="tel" name="whatsapp" required />
+
+        <label>Paket Dipilih</label>
+        <select name="paket" required>
+          <option value="">-- Pilih Paket --</option>
+          <option>Umroh 9 Hari</option>
+          <option>Umroh 12 Hari</option>
+          <option>Umroh 14 Hari</option>
+          <option>Haji Khusus Langsung Berangkat</option>
+        </select>
+
+        <label>Tanggal Keberangkatan</label>
+        <input type="date" name="tanggal_berangkat" required />
+
+        <label>Foto KTP</label>
+        <input type="file" name="foto_ktp" accept="image/*" required />
+
+        <label>Foto KK</label>
+        <input type="file" name="foto_kk" accept="image/*" required />
+
+        <label>Foto Paspor (jika sudah ada)</label>
+        <input type="file" name="foto_paspor" accept="image/*" />
+
+        <button type="submit">Kirim Pendaftaran</button>
+        <div class="loading" id="loading">Mengirim data...</div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('tgForm');
+    const loading = document.getElementById('loading');
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      loading.style.display = 'block';
+
+      const formData = new FormData(form);
+      const token = '8470444840:AAH4VQDFuSNGoTlx2assgz-hM9Fi3mKRWew';
+      const chatID = '987413154';
+
+      let caption = `📋 Pendaftaran Baru\n\n`;
+      for (let [key, value] of formData.entries()) {
+        if (value instanceof File) continue;
+        caption += `*${key.replace('_', ' ')}*: ${value}\n`;
+      }
+
+      // Kirim pesan teks
+      await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          chat_id: chatID,
+          text: caption,
+          parse_mode: 'Markdown'
+        })
+      });
+
+      // Kirim foto satu per satu
+      const files = ['foto_ktp', 'foto_kk', 'foto_paspor'];
+      for (let key of files) {
+        const file = formData.get(key);
+        if (file && file.size > 0) {
+          const data = new FormData();
+          data.append('chat_id', chatID);
+          data.append('photo', file);
+          data.append('caption', `📎 ${key.replace('_', ' ').toUpperCase()}`);
+          await fetch(`https://api.telegram.org/bot${token}/sendPhoto`, {
+            method: 'POST',
+            body: data
+          });
+        }
+      }
+
+      alert('Pendaftaran berhasil dikirim! Admin akan segera menghubungi Anda.');
+      form.reset();
+      loading.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
