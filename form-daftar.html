@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Form Pendaftaran Umroh & Haji | Attamimi Tours</title>
+  <title>Form Pendaftaran Umroh & Haji - Attamimi Tours</title>
 
   <!-- Meta SEO -->
-  <meta name="description" content="Formulir pendaftaran umroh dan haji resmi Attamimi Tours. Upload KTP, KK, dan paspor langsung via form ini.">
-  <meta name="keywords" content="form pendaftaran umroh, umroh jogja, haji khusus, attamimi tours">
+  <meta name="description" content="Formulir pendaftaran umroh & haji resmi dari Attamimi Tours. Berizin PPIU & PIHK Kemenag RI.">
+  <meta name="keywords" content="form pendaftaran umroh, umroh resmi, haji khusus, attamimi tours, PPIU, PIHK">
   <link rel="canonical" href="https://attamimitours.biz.id/form-daftar.html" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Form Pendaftaran Umroh & Haji | Attamimi Tours" />
-  <meta property="og:description" content="Daftar umroh & haji khusus resmi dari Yogyakarta. Upload dokumen langsung via form." />
-  <meta property="og:image" content="https://attamimitours.biz.id/hero-kaaba.jpg" />
+  <meta property="og:title" content="Form Pendaftaran Umroh & Haji - Attamimi Tours" />
+  <meta property="og:description" content="Daftar umroh & haji khusus resmi dari Yogyakarta. Berizin PPIU & PIHK Kemenag RI." />
+  <meta property="og:image" content="https://attamimitours.biz.id/logo.png" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Form Pendaftaran Umroh & Haji | Attamimi Tours" />
-  <meta name="twitter:image" content="https://attamimitours.biz.id/hero-kaaba.jpg" />
+  <meta name="twitter:title" content="Form Pendaftaran Umroh & Haji - Attamimi Tours" />
+  <meta name="twitter:image" content="https://attamimitours.biz.id/logo.png" />
 
   <!-- Google Search Console -->
   <meta name="google-site-verification" content="Umo75pcrRNEr-g9k5pQHi5maV5Y7-P8K3OMUdF7IYLY" />
@@ -60,9 +60,22 @@
       box-shadow: 0 0 15px rgba(0,0,0,0.4);
     }
 
+    .form-container img.logo {
+      width: 100px;
+      display: block;
+      margin: 0 auto 20px;
+    }
+
     .form-container h2 {
       text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .form-container .legal {
+      text-align: center;
+      font-size: 0.9em;
       margin-bottom: 20px;
+      color: #555;
     }
 
     label {
@@ -79,8 +92,16 @@
       box-sizing: border-box;
     }
 
+    .rekening {
+      background: #f9f9f9;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      font-size: 0.9em;
+    }
+
     button {
-      margin-top: 20px;
       background: #007bff;
       color: #fff;
       padding: 12px;
@@ -100,13 +121,19 @@
       text-align: center;
       color: #007bff;
       font-weight: bold;
+      margin-top: 10px;
     }
   </style>
 </head>
 <body>
   <div class="overlay">
     <div class="form-container">
+      <img src="https://attamimitours.biz.id/logo.png" alt="Attamimi Tours" class="logo" />
       <h2>Formulir Pendaftaran Umroh & Haji</h2>
+      <div class="legal">
+        Berizin Resmi: PPIU U.352/2020 & PIHK 02202072929030002/2024
+      </div>
+
       <form id="tgForm">
         <label>Nama Lengkap</label>
         <input type="text" name="nama" required />
@@ -157,6 +184,16 @@
         <label>Foto Paspor (jika sudah ada)</label>
         <input type="file" name="foto_paspor" accept="image/*" />
 
+        <div class="rekening">
+          <strong>Rekening Pembayaran:</strong><br>
+          Bank: <strong>BRI Kanca Wates</strong> atau <strong>BSI Kanca Purworejo</strong><br>
+          No. Rekening: <strong>015201001931560</strong><br>
+          Atas Nama: <strong>PT Attamimi Tawakkal Alallah</strong>
+        </div>
+
+        <label>Bukti Transfer (kosongi bila belum)</label>
+        <input type="file" name="bukti_transfer" accept="image/*" />
+
         <button type="submit">Kirim Pendaftaran</button>
         <div class="loading" id="loading">Mengirim data...</div>
       </form>
@@ -193,7 +230,7 @@
       });
 
       // Kirim foto satu per satu
-      const files = ['foto_ktp', 'foto_kk', 'foto_paspor'];
+      const files = ['foto_ktp', 'foto_kk', 'foto_paspor', 'bukti_transfer'];
       for (let key of files) {
         const file = formData.get(key);
         if (file && file.size > 0) {
@@ -208,7 +245,7 @@
         }
       }
 
-      alert('Pendaftaran berhasil dikirim! Admin akan segera menghubungi Anda.');
+      alert('Pendaftaran berhasil dikirim! Admin akan segera menghubungi Anda via WhatsApp.');
       form.reset();
       loading.style.display = 'none';
     });
